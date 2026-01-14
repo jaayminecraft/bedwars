@@ -198,6 +198,15 @@ summary.mapSummary{
   backdrop-filter: blur(8px);
 }
 
+.mapPill.mapPill-teams{
+  top:12px;
+}
+
+.mapPill.mapPill-season{
+  top:42px; /* pushes season pill under the teams pill */
+}
+
+
 .mapOverlay{
   position:absolute;
   left:12px;
@@ -361,6 +370,19 @@ tr.row-out{
   height:16px;
   color:#5865F2;
   flex:0 0 auto;
+}
+
+.hypixel-logo {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.footer-hypixel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 
