@@ -1,6 +1,4 @@
 function basePath(){
-  // If hosted at https://jaayminecraft.github.io/bedwars/
-  // this returns "/bedwars"
   return window.location.pathname.replace(/\/[^\/]*$/, '');
 }
 
