@@ -10,6 +10,7 @@ async function loadSeasonalData(){
   return await res.json();
 }
 
+
 function norm(s){ return (s ?? '').toString().trim().toLowerCase(); }
 
 function byName(a,b){
