@@ -90,7 +90,6 @@
     return (diffDays >= 0) ? diffDays : 0;
   }
 
-  // ---- Build combined dataset (normal + seasonal) ----
 
   const normalMaps = (data.maps || []).map(m => ({
     ...m,
@@ -106,7 +105,6 @@
       seasonOrder: seasonOrderIndex(seasonLabel),
       seasonEmoji: seasonEmoji(seasonLabel),
 
-      // normalize fields so table logic works
       name: stripLeadingEmoji(m.name || ''),
       mode: 'Seasonal',
       status: (m.status || 'out'),
@@ -126,7 +124,6 @@
     const mode = els.mode.value;
     const status = els.status.value;
 
-    // Mode dropdown now includes Seasonal as a "mode"
     if(mode !== 'all' && m.mode !== mode) return false;
     if(status !== 'all' && m.status !== status) return false;
 
@@ -152,7 +149,6 @@
   }
 
   function daysValForSort(m){
-    // Unknown should be treated as "largest"
     const live = daysLiveFromEffective(m);
     if(live == null) return Number.POSITIVE_INFINITY;
     return live;
@@ -164,10 +160,9 @@
     const isNameSort = (sortKey === 'name_asc' || sortKey === 'name_desc');
     const isDaysSort = (sortKey === 'days_asc' || sortKey === 'days_desc');
 
-    // NAME sorts: normal first, seasonal block last, seasonal grouped by season order
     if(isNameSort){
       if(!!a.isSeasonal !== !!b.isSeasonal){
-        return a.isSeasonal ? 1 : -1; // seasonal always at bottom for name sorts
+        return a.isSeasonal ? 1 : -1;
       }
 
       if(a.isSeasonal && b.isSeasonal){
@@ -175,14 +170,12 @@
         const sb = (typeof b.seasonOrder === 'number') ? b.seasonOrder : 999;
         if(sa !== sb) return sa - sb;
 
-        // alphabetical within season
         return (sortKey === 'name_desc') ? -byName(a,b) : byName(a,b);
       }
 
       return (sortKey === 'name_desc') ? -byName(a,b) : byName(a,b);
     }
 
-    // DAYS sorts: mix seasonal + normal together by days
     if(isDaysSort){
       const da = daysValForSort(a);
       const db = daysValForSort(b);
@@ -206,10 +199,8 @@
     for(const m of filtered){
       const tr = document.createElement('tr');
 
-      // Row tint (matches CSS: tr.row-in / tr.row-out)
       tr.classList.add(m.status === 'in' ? 'row-in' : 'row-out');
 
-      // Map column: add emoji for seasonal maps
       const mapLabel = m.isSeasonal
         ? `${m.seasonEmoji || '🎉'} ${m.name || ''}`
         : (m.name || '');
@@ -222,23 +213,18 @@
         'nowrap'
       ));
 
-      // Status text + color (matches CSS: .status-in / .status-out)
       tr.appendChild(td(
         m.status === 'in' ? 'In' : 'Out',
         `nowrap ${m.status === 'in' ? 'status-in' : 'status-out'}`
       ));
 
-      // Let this wrap (NO nowrap) like your old version
       tr.appendChild(td(m.effective_date || ''));
 
-      // Days (live) stays nowrap
       const liveDays = daysLiveFromEffective(m);
       tr.appendChild(td(liveDays == null ? 'Unknown' : String(liveDays), 'nowrap'));
 
-      // Let playstyle wrap (NO nowrap) like your old version
       tr.appendChild(td(m.playstyle || ''));
 
-      // Gen speed: only meaningful for Solos/Doubles (keep blank for 3s/4s + Seasonal)
       tr.appendChild(tdHtml(
         (m.mode !== '3s/4s' && m.mode !== 'Seasonal') ? (m.gen_html || '') : '',
         'nowrap'
