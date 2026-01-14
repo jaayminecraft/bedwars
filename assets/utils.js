@@ -1,3 +1,9 @@
+function basePath(){
+  // If hosted at https://jaayminecraft.github.io/bedwars/
+  // this returns "/bedwars"
+  return window.location.pathname.replace(/\/[^\/]*$/, '');
+}
+
 async function loadData(){
   const res = await fetch(`${basePath()}/data/maps.json`, { cache: 'no-store' });
   if(!res.ok) throw new Error(`Failed to load maps.json: ${res.status}`);
