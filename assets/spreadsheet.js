@@ -11,7 +11,8 @@
     mode: document.getElementById('mode'),
     status: document.getElementById('status'),
     sort: document.getElementById('sort'),
-    tbody: document.querySelector('#tbl tbody'),
+    tbodyNormal: document.querySelector('#tbl-normal tbody'),
+    tbodySeasonal: document.querySelector('#tbl-seasonal tbody'),
   };
 
   const SEASON_ORDER = [
@@ -90,6 +91,10 @@
     return (diffDays >= 0) ? diffDays : 0;
   }
 
+  function formatDaysLive(m){
+    const n = daysLiveFromEffective(m);
+    return (n == null) ? '—' : String(n);
+  }
 
   const normalMaps = (data.maps || []).map(m => ({
     ...m,
@@ -106,7 +111,7 @@
       seasonEmoji: seasonEmoji(seasonLabel),
 
       name: stripLeadingEmoji(m.name || ''),
-      mode: 'Seasonal',
+      mode: (m.mode || 'Solos/Doubles'),
       status: (m.status || 'out'),
       effective_date: m.effective_date || m.dateStatus || m.last_seen || 'Unknown',
       released: m.released || 'Unknown',
@@ -114,24 +119,20 @@
       wiki: m.wiki || '',
       note: m.note || '',
       gen_html: m.gen_html || '',
+      emoji: m.emoji || '', // keep your JSON emoji if present
     };
   });
 
-  const mapsRaw = normalMaps.concat(seasonalMaps);
+  function modeMatches(m, selectedMode){
+    if(selectedMode === 'all') return true;
 
-  function matches(m){
-    const q = norm(els.q.value);
-    const mode = els.mode.value;
-    const status = els.status.value;
+    // only show seasonal in seasonal mode if you later add that option
+    return m.mode === selectedMode;
+  }
 
-    if(mode !== 'all' && m.mode !== mode) return false;
-    if(status !== 'all' && m.status !== status) return false;
-
-    if(q){
-      const blob = `${m.name} ${m.mode} ${m.status} ${m.playstyle} ${m.effective_date || ''} ${m.note || ''}`.toLowerCase();
-      if(!blob.includes(q)) return false;
-    }
-    return true;
+  function statusMatches(m, selectedStatus){
+    if(selectedStatus === 'all') return true;
+    return m.status === selectedStatus;
   }
 
   function td(text, cls){
@@ -192,54 +193,111 @@
     return byName(a,b);
   }
 
+  function stripBBCode(s){
+    if(s == null) return '';
+    let t = String(s);
+
+    t = t.replace(/\[\/?[a-z0-9]+(?:=[^\]]+)?\]/gi, '');
+
+    t = t.replace(/\[(?:color|url|img|b|i|u|s|quote|spoiler|size|center|left|right)[^\]]*\]/gi, '');
+
+    t = t.replace(/\s+/g, ' ').trim();
+    return t;
+  }
+
   function render(){
-    els.tbody.innerHTML = '';
-    const filtered = mapsRaw.filter(matches).slice().sort(compareMaps);
+    els.tbodyNormal.innerHTML = '';
+    els.tbodySeasonal.innerHTML = '';
 
-    for(const m of filtered){
+    const q = norm(els.q.value);
+    const mode = els.mode.value;
+    const status = els.status.value;
+
+    function matchesShared(m){
+      if(!modeMatches(m, mode)) return false;
+      if(!statusMatches(m, status)) return false;
+
+      if(q){
+        const blob = `${m.name} ${m.mode} ${m.status} ${m.effective_date || m.dateStatus || ''} ${m.note || ''}`.toLowerCase();
+        if(!blob.includes(q)) return false;
+      }
+      return true;
+    }
+
+    const filteredNormal = normalMaps
+      .filter(matchesShared)
+      .slice()
+      .sort(compareMaps);
+
+    const filteredSeasonal = seasonalMaps
+      .filter(matchesShared)
+      .slice()
+      .sort(compareMaps);
+
+
+    for(const m of filteredNormal){
       const tr = document.createElement('tr');
-
       tr.classList.add(m.status === 'in' ? 'row-in' : 'row-out');
 
-      const mapLabel = m.isSeasonal
-        ? `${m.seasonEmoji || '🎉'} ${m.name || ''}`
-        : (m.name || '');
-
-      tr.appendChild(td(mapLabel));
+      tr.appendChild(td(m.name));
 
       tr.appendChild(td(
-        m.mode === 'Seasonal' ? 'Seasonal'
-        : (m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles'),
+        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles',
         'nowrap'
       ));
 
       tr.appendChild(td(
-        m.status === 'in' ? 'In' : 'Out',
+        m.status === 'in' ? 'IN' : 'OUT',
         `nowrap ${m.status === 'in' ? 'status-in' : 'status-out'}`
       ));
 
-      tr.appendChild(td(m.effective_date || ''));
+      tr.appendChild(td(m.effective_date || m.dateStatus || ''));
 
-      const liveDays = daysLiveFromEffective(m);
-      tr.appendChild(td(liveDays == null ? 'Unknown' : String(liveDays), 'nowrap'));
+      tr.appendChild(td(formatDaysLive(m), 'nowrap'));
 
       tr.appendChild(td(m.playstyle || ''));
 
-      tr.appendChild(tdHtml(
-        (m.mode !== '3s/4s' && m.mode !== 'Seasonal') ? (m.gen_html || '') : '',
+      tr.appendChild(tdHtml(m.mode !== '3s/4s' ? (m.gen_html || '') : ''));
+
+      tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
+
+      tr.appendChild(td(stripBBCode(m.note || '')));
+
+      els.tbodyNormal.appendChild(tr);
+    }
+
+    for(const m of filteredSeasonal){
+      const tr = document.createElement('tr');
+      tr.classList.add(m.status === 'in' ? 'row-in' : 'row-out');
+
+      const emoji = (m.emoji || m.seasonEmoji || '').trim();
+      const mapLabel = emoji ? `${emoji} ${m.name || ''}` : (m.name || '');
+      tr.appendChild(td(mapLabel));
+
+      tr.appendChild(td(
+        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles',
         'nowrap'
       ));
 
-      tr.appendChild(tdHtml(
-        m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : '',
-        'nowrap'
+      tr.appendChild(td(
+        m.status === 'in' ? 'IN' : 'OUT',
+        `nowrap ${m.status === 'in' ? 'status-in' : 'status-out'}`
       ));
+
+      tr.appendChild(td(m.effective_date || m.dateStatus || ''));
+
+      tr.appendChild(td(formatDaysLive(m), 'nowrap'));
+
+      tr.appendChild(td(m.playstyle || ''));
+
+      tr.appendChild(tdHtml(''));
+
+      tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
 
       tr.appendChild(tdHtml(m.note || ''));
 
-      els.tbody.appendChild(tr);
+      els.tbodySeasonal.appendChild(tr);
     }
-
   }
 
   for(const el of [els.q, els.mode, els.status, els.sort]){
