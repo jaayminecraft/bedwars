@@ -67,10 +67,10 @@
       ...m,
 
       name: stripLeadingEmoji(m.name || ''),
-      mode: 'Seasonal',
+      mode: (m.mode || 'Solos/Doubles'),
+      isSeasonal: true,
       status: (m.status || 'out'),
       inRotation: !!m.inRotation,
-      isSeasonal: true,
 
       seasonLabel,
       seasonOrder: seasonOrderIndex(seasonLabel),
@@ -92,7 +92,7 @@
 
   const meta = data.meta || {};
   document.getElementById('metaLine').textContent =
-    `Latest update: ${meta.latest_update || ''} • Latest rotation: ${meta.latest_rotation || ''}`;
+    `Latest rotation: ${meta.latest_rotation || ''}`;
 
   const USE_REAL_TODAY = true;
 
@@ -132,8 +132,12 @@
     return (diffDays >= 0) ? String(diffDays) : '0';
   }
 
+  const playstyles = uniq(
+    maps
+      .map(m => (m.playstyle ?? '').toString().trim())
+      .filter(p => p && p.toLowerCase() !== 'not specified.' && p.toLowerCase() !== 'not specified')
+  );
 
-  const playstyles = uniq(maps.map(m=>m.playstyle));
   const psSel = document.getElementById('playstyle');
   for(const p of playstyles){
     const opt = document.createElement('option');
@@ -152,21 +156,34 @@
     out_list: document.getElementById('out-list'),
   };
 
-
   function matches(m){
     const q = norm(els.q.value);
     const mode = els.mode.value;
     const status = els.status.value;
-    const playstyle = els.playstyle.value;
+    const playstyle = els.playstyle ? els.playstyle.value : 'all';
 
-    if(mode !== 'all' && m.mode !== mode) return false;
+    if(mode === 'Seasonal'){
+      if(!m.isSeasonal) return false;
+    }else if(mode === 'Solos/Doubles' || mode === '3s/4s'){
+      if(m.isSeasonal){
+        if(m.status !== 'in') return false;
+        if(m.mode !== mode) return false; // seasonal must match the selected mode
+      }else{
+        if(m.mode !== mode) return false;
+      }
+    }else{
+      if(m.isSeasonal && m.status !== 'in') return false;
+    }
+
     if(status !== 'all' && m.status !== status) return false;
+
     if(playstyle !== 'all' && m.playstyle !== playstyle) return false;
 
     if(q){
       const blob = `${m.name} ${m.note || ''}`.toLowerCase();
       if(!blob.includes(q)) return false;
     }
+
     return true;
   }
 
@@ -185,12 +202,23 @@
       hero.style.backgroundImage = `url("${m.image_url}")`;
     }
 
-    const modePill = document.createElement('div');
-    modePill.className = 'mapPill';
-    modePill.textContent = m.isSeasonal
-      ? `${m.seasonEmoji || '🎉'} ${m.seasonLabel || 'Seasonal'}`
-      : ((m.mode === '3s/4s') ? '4 teams' : '8 teams');
-    hero.appendChild(modePill);
+    if(m.isSeasonal){
+      const teamsPill = document.createElement('div');
+      teamsPill.className = 'mapPill mapPill-teams';
+      teamsPill.textContent = (m.mode === '3s/4s') ? '4 teams' : '8 teams';
+      hero.appendChild(teamsPill);
+
+      const seasonPill = document.createElement('div');
+      seasonPill.className = 'mapPill mapPill-season';
+      seasonPill.textContent = `${m.seasonEmoji || '🎉'} ${m.seasonLabel || 'Seasonal'}`;
+      hero.appendChild(seasonPill);
+    }else{
+      const modePill = document.createElement('div');
+      modePill.className = 'mapPill';
+      modePill.textContent = (m.mode === '3s/4s') ? '4 teams' : '8 teams';
+      hero.appendChild(modePill);
+    }
+
 
     const overlay = document.createElement('div');
     overlay.className = 'mapOverlay';
