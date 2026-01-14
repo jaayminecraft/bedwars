@@ -164,7 +164,7 @@
     if(playstyle !== 'all' && m.playstyle !== playstyle) return false;
 
     if(q){
-      const blob = `${m.name} ${m.playstyle} ${m.note || ''}`.toLowerCase();
+      const blob = `${m.name} ${m.note || ''}`.toLowerCase();
       if(!blob.includes(q)) return false;
     }
     return true;
