@@ -1,19 +1,14 @@
-function basePath(){
-  return window.location.pathname.replace(/\/[^\/]*$/, '');
-}
-
 async function loadData(){
-  const res = await fetch(`${basePath()}/data/maps.json`, { cache: 'no-store' });
+  const res = await fetch('./data/maps.json', { cache: 'no-store' });
   if(!res.ok) throw new Error(`Failed to load maps.json: ${res.status}`);
   return await res.json();
 }
 
 async function loadSeasonalData(){
-  const res = await fetch(`${basePath()}/data/seasonal_maps.json`, { cache: 'no-store' });
+  const res = await fetch('./data/seasonal_maps.json', { cache: 'no-store' });
   if(!res.ok) return { maps: [] };
   return await res.json();
 }
-
 
 function norm(s){ return (s ?? '').toString().trim().toLowerCase(); }
 
