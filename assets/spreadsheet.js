@@ -3,8 +3,8 @@
   const seasonal = await loadSeasonalData();
 
   const meta = data.meta || {};
-  document.getElementById('metaLine').textContent =
-    `Latest update: ${meta.latest_update || ''} • Latest rotation: ${meta.latest_rotation || ''}`;
+  document.getElementById('metaLine').innerHTML =
+      `Latest update: ${meta.latest_rotation || ''}`;
 
   const els = {
     q: document.getElementById('q'),
@@ -22,6 +22,14 @@
     'Halloween',
     'Winter',
   ];
+
+  function forceEmojiPresentation(s){
+    if(!s) return s;
+    return String(s)
+      .replace(/☀️?/g, '☀️')
+      .replace(/❄️?/g, '❄️')
+      .replace(/⛅️?/g, '⛅️');
+  }
 
   function seasonOrderIndex(label){
     const i = SEASON_ORDER.indexOf(label);
@@ -119,16 +127,27 @@
       wiki: m.wiki || '',
       note: m.note || '',
       gen_html: m.gen_html || '',
-      emoji: m.emoji || '', // keep your JSON emoji if present
+      emoji: m.emoji || '',
     };
   });
 
   function modeMatches(m, selectedMode){
     if(selectedMode === 'all') return true;
 
-    // only show seasonal in seasonal mode if you later add that option
     return m.mode === selectedMode;
   }
+
+  function modeClass(mode){
+    return (mode === '3s/4s') ? 'mode-34' : 'mode-sd';
+  }
+
+  function playstyleClass(ps){
+    const s = (ps || '').toLowerCase();
+    if(s.includes('quick')) return 'ps-quick';
+    if(s.includes('long')) return 'ps-long';
+    return 'ps-unknown';
+  }
+
 
   function statusMatches(m, selectedStatus){
     if(selectedStatus === 'all') return true;
@@ -238,24 +257,33 @@
     for(const m of filteredNormal){
       const tr = document.createElement('tr');
       tr.classList.add(m.status === 'in' ? 'row-in' : 'row-out');
+      const statusStrong = (m.status === 'in') ? 'status-in' : 'status-out';
+      const statusSoft = (m.status === 'in') ? 'status-in-soft' : 'status-out-soft';
+
 
       tr.appendChild(td(m.name));
 
+      const modeLabel =
+        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles';
+
       tr.appendChild(td(
-        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles',
-        'nowrap'
+        modeLabel,
+        `nowrap cell-mode ${modeClass(m.mode)}`
       ));
 
       tr.appendChild(td(
         m.status === 'in' ? 'IN' : 'OUT',
-        `nowrap ${m.status === 'in' ? 'status-in' : 'status-out'}`
+        `nowrap ${statusStrong}`
       ));
 
-      tr.appendChild(td(m.effective_date || m.dateStatus || ''));
+      tr.appendChild(td(formatDaysLive(m), `nowrap ${statusSoft}`));
 
-      tr.appendChild(td(formatDaysLive(m), 'nowrap'));
+      tr.appendChild(td(m.effective_date || m.dateStatus || '', statusSoft));
 
-      tr.appendChild(td(m.playstyle || ''));
+      tr.appendChild(td(
+        m.playstyle || '',
+        `cell-playstyle ${playstyleClass(m.playstyle)}`
+      ));
 
       tr.appendChild(tdHtml(m.mode !== '3s/4s' ? (m.gen_html || '') : ''));
 
@@ -270,34 +298,44 @@
       const tr = document.createElement('tr');
       tr.classList.add(m.status === 'in' ? 'row-in' : 'row-out');
 
+      const statusStrong = (m.status === 'in') ? 'status-in' : 'status-out';
+      const statusSoft = (m.status === 'in') ? 'status-in-soft' : 'status-out-soft';
+
       const emoji = (m.emoji || m.seasonEmoji || '').trim();
       const mapLabel = emoji ? `${emoji} ${m.name || ''}` : (m.name || '');
       tr.appendChild(td(mapLabel));
 
+      const modeLabel =
+        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles';
+
       tr.appendChild(td(
-        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles',
-        'nowrap'
+        modeLabel,
+        `nowrap cell-mode ${modeClass(m.mode)}`
       ));
 
       tr.appendChild(td(
         m.status === 'in' ? 'IN' : 'OUT',
-        `nowrap ${m.status === 'in' ? 'status-in' : 'status-out'}`
+        `nowrap ${statusStrong}`
       ));
 
-      tr.appendChild(td(m.effective_date || m.dateStatus || ''));
+      tr.appendChild(td(formatDaysLive(m), `nowrap ${statusSoft}`));
 
-      tr.appendChild(td(formatDaysLive(m), 'nowrap'));
+      tr.appendChild(td(m.effective_date || m.dateStatus || '', statusSoft));
 
-      tr.appendChild(td(m.playstyle || ''));
+      tr.appendChild(td(
+        m.playstyle || '',
+        `cell-playstyle ${playstyleClass(m.playstyle)}`
+      ));
 
       tr.appendChild(tdHtml(''));
 
       tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
 
-      tr.appendChild(tdHtml(m.note || ''));
+      tr.appendChild(td(stripBBCode(forceEmojiPresentation(m.note || ''))));
 
       els.tbodySeasonal.appendChild(tr);
     }
+
   }
 
   for(const el of [els.q, els.mode, els.status, els.sort]){
@@ -306,6 +344,7 @@
   }
 
   render();
+  revealOnLoad();
 })().catch(err=>{
   console.error(err);
   alert(err.message || String(err));
