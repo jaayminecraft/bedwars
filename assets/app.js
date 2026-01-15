@@ -91,8 +91,12 @@
 
 
   const meta = data.meta || {};
-  document.getElementById('metaLine').textContent =
-    `Latest rotation: ${meta.latest_rotation || ''}`;
+  const metaLine = document.getElementById('metaLine');
+  if(metaLine){
+    metaLine.textContent =
+      `Latest update: ${meta.latest_update}`;
+  }
+
 
   const USE_REAL_TODAY = true;
 
@@ -167,7 +171,7 @@
     }else if(mode === 'Solos/Doubles' || mode === '3s/4s'){
       if(m.isSeasonal){
         if(m.status !== 'in') return false;
-        if(m.mode !== mode) return false; // seasonal must match the selected mode
+        if(m.mode !== mode) return false;
       }else{
         if(m.mode !== mode) return false;
       }
@@ -187,6 +191,20 @@
     return true;
   }
 
+  const bgIO = ('IntersectionObserver' in window)
+    ? new IntersectionObserver((entries, obs) => {
+        for(const e of entries){
+          if(!e.isIntersecting) continue;
+          const el = e.target;
+          const bg = el.dataset.bg;
+          if(bg){
+            el.style.backgroundImage = `url("${bg}")`;
+            delete el.dataset.bg;
+          }
+          obs.unobserve(el);
+        }
+      }, { rootMargin: '600px 0px' })
+    : null;
 
   function mapCard(m){
     const d = document.createElement('details');
@@ -199,8 +217,14 @@
     const hero = document.createElement('div');
     hero.className = 'mapHero';
     if(m.image_url){
-      hero.style.backgroundImage = `url("${m.image_url}")`;
+      if(bgIO){
+        hero.dataset.bg = m.image_url;
+        bgIO.observe(hero);
+      }else{
+        hero.style.backgroundImage = `url("${m.image_url}")`;
+      }
     }
+
 
     if(m.isSeasonal){
       const teamsPill = document.createElement('div');
@@ -301,9 +325,22 @@
     return d;
   }
 
+  const cardCache = new Map();
+  function cardKey(m){
+    return `${m.isSeasonal ? 'S' : 'N'}|${m.mode || ''}|${m.name || ''}`;
+  }
+  function getCard(m){
+    const k = cardKey(m);
+    let el = cardCache.get(k);
+    if(el) return el;
+    el = mapCard(m);
+    cardCache.set(k, el);
+    return el;
+  }
+
   function render(){
-    els.in_list.innerHTML = '';
-    els.out_list.innerHTML = '';
+    els.in_list.textContent = '';
+    els.out_list.textContent = '';
 
     const seasonalActive = maps.some(m => m.isSeasonal && m.status === 'in');
 
@@ -319,7 +356,6 @@
       return Number.isFinite(n) ? n : Number.POSITIVE_INFINITY;
     }
 
-
     function seasonalFirstOrLast(a,b){
       if(!!a.isSeasonal !== !!b.isSeasonal){
         if(seasonalActive){
@@ -331,7 +367,6 @@
     }
 
     function seasonalInternalSort(a,b, sortKey){
-      // Lunar -> Easter -> Summer -> Halloween -> Winter
       const sa = (typeof a.seasonOrder === 'number') ? a.seasonOrder : 999;
       const sb = (typeof b.seasonOrder === 'number') ? b.seasonOrder : 999;
       if(sa !== sb) return sa - sb;
@@ -371,14 +406,35 @@
     const inMaps  = filtered.filter(m => m.status === 'in').slice().sort(compare);
     const outMaps = filtered.filter(m => m.status === 'out').slice().sort(compare);
 
-    for(const m of inMaps)  els.in_list.appendChild(mapCard(m));
-    for(const m of outMaps) els.out_list.appendChild(mapCard(m));
+    const fragIn = document.createDocumentFragment();
+    const fragOut = document.createDocumentFragment();
+
+    for(const m of inMaps)  fragIn.appendChild(getCard(m));
+    for(const m of outMaps) fragOut.appendChild(getCard(m));
+
+    els.in_list.appendChild(fragIn);
+    els.out_list.appendChild(fragOut);
   }
 
+  let rafPending = false;
+  function scheduleRender(){
+    if(rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      rafPending = false;
+      render();
+    });
+  }
 
-  for(const el of [els.q, els.mode, els.status, els.playstyle, els.sort]){
-    el.addEventListener('input', render);
-    el.addEventListener('change', render);
+  let qTimer = 0;
+  function scheduleRenderDebounced(){
+    clearTimeout(qTimer);
+    qTimer = setTimeout(scheduleRender, 90);
+  }
+
+  els.q.addEventListener('input', scheduleRenderDebounced);
+  for(const el of [els.mode, els.status, els.playstyle, els.sort]){
+    el.addEventListener('change', scheduleRender);
   }
 
   function seasonalSortKey(m, seasonalActive){
@@ -389,7 +445,22 @@
   }
 
   render();
+  revealOnLoad();
+
+
 })().catch(err=>{
   console.error(err);
   alert(err.message || String(err));
 });
+
+document.addEventListener('toggle', (e) => {
+  const opened = e.target;
+  if(!(opened instanceof HTMLDetailsElement)) return;
+  if(!opened.classList.contains('mapcard')) return;
+  if(!opened.open) return;
+
+  document.querySelectorAll('details.mapcard[open]').forEach(d => {
+    if(d !== opened) d.open = false;
+  });
+}, true);
+
