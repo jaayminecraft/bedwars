@@ -103,7 +103,7 @@ body, table, td, th{
 }
 
 
-.wrap{max-width:1400px; margin:0 auto; padding:18px}
+.wrap{max-width:1600px; margin:0 auto; padding:18px}
 
 .site-header{
   display:flex;
@@ -622,14 +622,18 @@ tr.row-out{
 
 #tbl-normal th:nth-child(8),
 #tbl-seasonal th:nth-child(8){
-  width: 70px; /* Wiki */
+  width: 120px; /* Released */
 }
 
 #tbl-normal th:nth-child(9),
 #tbl-seasonal th:nth-child(9){
-  width: 320px;
+  width: 70px; /* Wiki */
 }
 
+#tbl-normal th:nth-child(10),
+#tbl-seasonal th:nth-child(10){
+  width: 340px; /* Note */
+}
 #tbl-normal td:nth-child(3),
 #tbl-normal td:nth-child(4),
 #tbl-seasonal td:nth-child(3),
