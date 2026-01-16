@@ -61,7 +61,7 @@ body, table, td, th{
 
   background:
     linear-gradient(rgba(125, 211, 252, 0.22), rgba(125, 211, 252, 0.22)),
-    url("https://i.imgur.com/43lPZSU.png");
+    url("/bedwars/aquarium_background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
