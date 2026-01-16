@@ -174,11 +174,20 @@
     return live;
   }
 
+  function releasedValForSort(m){
+    const dt = parseDateLoose(m.released || '');
+    if(!dt) return Number.POSITIVE_INFINITY;
+    return dt.getTime();
+  }
+
+
   function compareMaps(a, b){
     const sortKey = els.sort.value;
 
     const isNameSort = (sortKey === 'name_asc' || sortKey === 'name_desc');
     const isDaysSort = (sortKey === 'days_asc' || sortKey === 'days_desc');
+    const isReleasedSort = (sortKey === 'released_asc' || sortKey === 'released_desc');
+
 
     if(isNameSort){
       if(!!a.isSeasonal !== !!b.isSeasonal){
@@ -209,6 +218,18 @@
       }
     }
 
+    if(isReleasedSort){
+      const ra = releasedValForSort(a);
+      const rb = releasedValForSort(b);
+
+      if(sortKey === 'released_asc'){
+        if(ra !== rb) return ra - rb;
+        return byName(a,b);
+      }else{
+        if(ra !== rb) return rb - ra;
+        return byName(a,b);
+      }
+    }
     return byName(a,b);
   }
 
@@ -287,6 +308,8 @@
 
       tr.appendChild(tdHtml(m.mode !== '3s/4s' ? (m.gen_html || '') : ''));
 
+      tr.appendChild(td(m.released || ''));
+
       tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
 
       tr.appendChild(td(stripBBCode(m.note || '')));
@@ -328,6 +351,9 @@
       ));
 
       tr.appendChild(tdHtml(''));
+
+      tr.appendChild(td(m.released || ''));
+
 
       tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
 
