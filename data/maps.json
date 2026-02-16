@@ -2738,6 +2738,29 @@
       "image_url": "https://hypixel.net/attachments/3484018/",
       "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
       "note": ""
+    },
+    {
+      "name": "Haven",
+      "mode": "3s/4s",
+      "playstyle": "Unknown",
+      "released": "February 16, 2026",
+      "inRotation": true,
+      "dateStatus": "February 16, 2026",
+      "imageId": 3543685,
+      "wiki": "https://hypixel.fandom.com/wiki/Haven_(Bed_Wars)",
+      "release_date": "February 16, 2026",
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "status": "in",
+      "rotation_date": "February 16, 2026",
+      "image_id": 3543685,
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/3543685/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     }
   ]
 }
