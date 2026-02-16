@@ -5,22 +5,6 @@
   },
   "maps": [
     {
-      "name": "Lunarhouse",
-      "mode": "Solos/Doubles",
-      "playstyle": "Quick & Rushy",
-      "released": "January 30, 2019",
-      "inRotation": false,
-      "dateStatus": "Unknown",
-      "imageId": "https://hypixel.net/attachments/lighthouselunar-png.1741258/",
-      "wiki": "https://hypixel.fandom.com/wiki/Lunarhouse_(Bed_Wars)",
-      "status": "out",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "note": "",
-      "season": "Lunar New Year",
-      "emoji": "🧧",
-      "base": ""
-    },
-    {
       "name": "Bloom",
       "mode": "Solos/Doubles",
       "playstyle": "Quick & Rushy",
@@ -483,23 +467,6 @@
       "season": "Holidays",
       "emoji": "❄️",
       "base": ""
-    },
-
-    {
-      "name": "Orientwood (Eastwood)",
-      "mode": "3s/4s",
-      "playstyle": "Quick & Rushy",
-      "released": "January 30, 2019",
-      "inRotation": false,
-      "dateStatus": "Unknown",
-      "imageId": "https://hypixel.net/attachments/eastwoodlunar-png.1741250/",
-      "wiki": "https://hypixel.fandom.com/wiki/Orientwood_(Bed_Wars)",
-      "status": "out",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "note": "",
-      "season": "Lunar New Year",
-      "emoji": "🧧",
-      "base": "Eastwood"
     },
     {
       "name": "Bunnywars",
@@ -984,3 +951,4 @@
     }
   ]
 }
+
