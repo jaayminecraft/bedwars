@@ -16,7 +16,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Acropolis_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/acropolis-png.1979889/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Aetius",
@@ -31,7 +39,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "December 5, 2023",
       "rotation_date": "December 18, 2023",
-      "image_id": "https://hypixel.net/attachments/aetius-png.3272056/"
+      "image_id": "https://hypixel.net/attachments/aetius-png.3272056/",
+      "effective_date": "December 18, 2023",
+      "effective_date_kind": "date_status",
+      "days": 791,
+      "days_display": "791",
+      "display_status_line": "In rotation since December 18, 2023",
+      "image_url": "https://hypixel.net/attachments/aetius-png.3272056/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Airshow",
@@ -47,7 +63,14 @@
       "release_date": "June 29, 2017",
       "image_id": "https://hypixel.net/attachments/airshow-png.1705778/",
       "note": "Reskin: 🎃 Scareshow",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/airshow-png.1705778/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>"
     },
     {
       "name": "Amazon",
@@ -62,7 +85,15 @@
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
       "release_date": "June 29, 2017",
       "image_id": "https://hypixel.net/attachments/amazon-png.1705781/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/amazon-png.1705781/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Ambush",
@@ -77,7 +108,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 3, 2023",
       "image_id": "https://hypixel.net/attachments/ambush-png.3198559/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/ambush-png.3198559/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Apollo",
@@ -93,7 +132,14 @@
       "release_date": "February 12, 2021",
       "image_id": "https://hypixel.net/attachments/apollo-png.2344864/",
       "note": "Reskin: ❄ Nutcracker",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/apollo-png.2344864/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Aqil",
@@ -108,7 +154,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/aqil-png.2976362/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/aqil-png.2976362/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Arcade",
@@ -120,7 +174,15 @@
       "imageId": "https://hypixel.net/attachments/arcade-png.3283933/",
       "wiki": "https://hypixel.fandom.com/wiki/Arcade_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "January 15, 2024",
+      "effective_date_kind": "date_status",
+      "days": 763,
+      "days_display": "763",
+      "display_status_line": "In rotation since January 15, 2024",
+      "image_url": "https://hypixel.net/attachments/arcade-png.3283933/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Arid",
@@ -132,7 +194,15 @@
       "imageId": "https://hypixel.net/attachments/arid-png.3272050/",
       "wiki": "https://hypixel.fandom.com/wiki/Arid_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "December 18, 2023",
+      "effective_date_kind": "date_status",
+      "days": 791,
+      "days_display": "791",
+      "display_status_line": "In rotation since December 18, 2023",
+      "image_url": "https://hypixel.net/attachments/arid-png.3272050/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Ashfire",
@@ -145,7 +215,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Ashfire_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/ashfire-png.2086213/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Babylon",
@@ -161,7 +239,14 @@
       "release_date": "May 12, 2020",
       "image_id": "https://hypixel.net/attachments/babylon-png.1705782/",
       "note": "Previously renamed as \"Hanging Gardens\"",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/babylon-png.1705782/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Fast Iron</span>"
     },
     {
       "name": "Bio-Hazard",
@@ -174,7 +259,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Bio-Hazard_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/bio-hazard1-png.2344841/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Blossom",
@@ -189,7 +282,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "February 8, 2018",
       "image_id": "https://hypixel.net/attachments/lunarblossom-png.1741260/",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/lunarblossom-png.1741260/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Cascade",
@@ -202,7 +303,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Cascade_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/cascade-png.2344866/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Casita",
@@ -218,7 +327,14 @@
       "release_date": "November 7, 2022",
       "rotation_date": "December 18, 2023",
       "image_id": "https://hypixel.net/attachments/casita-png.3272052/",
-      "note": "Revamped on December 5, 2023"
+      "note": "Revamped on December 5, 2023",
+      "effective_date": "December 18, 2023",
+      "effective_date_kind": "date_status",
+      "days": 791,
+      "days_display": "791",
+      "display_status_line": "In rotation since December 18, 2023",
+      "image_url": "https://hypixel.net/attachments/casita-png.3272052/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Cliffside",
@@ -231,7 +347,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Cliffside_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/cliffside-png.2344870/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Crogorm",
@@ -247,7 +371,14 @@
       "release_date": "August 22, 2019",
       "image_id": "https://hypixel.net/attachments/crogorm-png.2344843/",
       "note": "Reskin: 🎃 Ominosity",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/crogorm-png.2344843/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Crypt",
@@ -260,7 +391,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Crypt_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/crypt1-png.2344845/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Deadwood",
@@ -275,7 +414,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "November 7, 2022",
       "image_id": "https://hypixel.net/attachments/deadwood-png.3126218/",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/deadwood-png.3126218/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Dockyard",
@@ -290,7 +437,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/dockyard-png.2976364/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/dockyard-png.2976364/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Dragon Light",
@@ -302,7 +457,15 @@
       "imageId": "https://hypixel.net/attachments/dragonlight-png.3289379/",
       "wiki": "https://hypixel.fandom.com/wiki/Dragon_Light_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "Unknown",
+      "effective_date_kind": "date_status",
+      "days": null,
+      "days_display": "Unknown",
+      "display_status_line": "In rotation since Unknown",
+      "image_url": "https://hypixel.net/attachments/dragonlight-png.3289379/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Dragonstar",
@@ -315,7 +478,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Dragonstar_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/dragonstar-png.1705788/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Duye",
@@ -327,7 +498,15 @@
       "imageId": "https://hypixel.net/attachments/duye-png.3385599/",
       "wiki": "https://hypixel.fandom.com/wiki/Duye_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "January 20, 2025",
+      "effective_date_kind": "date_status",
+      "days": 392,
+      "days_display": "392",
+      "display_status_line": "In rotation since January 20, 2025",
+      "image_url": "https://hypixel.net/attachments/duye-png.3385599/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Gateway",
@@ -340,7 +519,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Gateway_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)] Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/gateway-png.2086221/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Glacier",
@@ -353,7 +540,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Glacier_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/glacier-png.1890809/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Harvest",
@@ -368,7 +563,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "November 7, 2022",
       "image_id": "https://hypixel.net/attachments/harvest-png.3126222/",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/harvest-png.3126222/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Highland Peaks",
@@ -380,7 +583,15 @@
       "imageId": "https://hypixel.net/attachments/highland-peak-png.3376882/",
       "wiki": "https://hypixel.fandom.com/wiki/Highland_Peaks_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/highland-peak-png.3376882/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Hollow",
@@ -393,7 +604,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Hollow_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/hollow-png.1705799/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Impere",
@@ -408,7 +627,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 3, 2023",
       "image_id": "https://hypixel.net/attachments/impere-png.3198572/",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/impere-png.3198572/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Ironclad",
@@ -423,7 +650,15 @@
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
       "release_date": "November 7, 2022",
       "image_id": "https://hypixel.net/attachments/ironclad-png.3126226/",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/ironclad-png.3126226/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Keep",
@@ -435,7 +670,15 @@
       "imageId": "https://hypixel.net/attachments/keep-png.3283937/",
       "wiki": "https://hypixel.fandom.com/wiki/Keep_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "January 15, 2024",
+      "effective_date_kind": "date_status",
+      "days": 763,
+      "days_display": "763",
+      "display_status_line": "In rotation since January 15, 2024",
+      "image_url": "https://hypixel.net/attachments/keep-png.3283937/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Lighthouse",
@@ -451,7 +694,14 @@
       "release_date": "March 17, 2017",
       "image_id": "https://hypixel.net/attachments/lighthouse-png.1705800/",
       "note": "Reskin: ❄ Blitzen, 🧧 Lunarhouse",
-      "last_seen": "January 26, 2026"
+      "last_seen": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "Last seen January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/lighthouse-png.1705800/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Lightstone",
@@ -467,7 +717,14 @@
       "release_date": "November 2, 2020",
       "image_id": "https://hypixel.net/attachments/lightstone-png.2086219/",
       "note": "Reskin: ❄ Fireplace",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/lightstone-png.2086219/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Lotus",
@@ -483,7 +740,14 @@
       "release_date": "April 20, 2017",
       "image_id": "https://hypixel.net/attachments/lotus-png.1710961/",
       "note": "Reskin: ❄ Lotice",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/lotus-png.1710961/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow </span><span style=\"color:rgb(71, 85, 119)\">(Solos)</span><span style=\"color:rgb(61, 142, 185)\">, </span><span style=\"color:rgb(44, 130, 201)\">Medium </span><span style=\"color:rgb(71, 85, 119)\">(Doubles)</span>"
     },
     {
       "name": "Lucky Rush",
@@ -498,7 +762,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/lucky-rush-png.2976367/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/lucky-rush-png.2976367/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Meso",
@@ -514,7 +786,14 @@
       "release_date": "February 12, 2021",
       "image_id": "https://hypixel.net/attachments/inca-png.2344871/",
       "note": "Previously named Inca",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/inca-png.2344871/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Mirage",
@@ -530,7 +809,14 @@
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/mirage-png.2976368/",
       "note": "[COLOR=rgb(184, 49, 47)]Not to be confused with the Rush Duels map \"Mirage\"[/COLOR]",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/mirage-png.2976368/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Nebuc",
@@ -546,7 +832,14 @@
       "release_date": "December 5, 2023",
       "rotation_date": "January 29, 2024",
       "image_id": "https://hypixel.net/attachments/eden-png.3272054/",
-      "note": "Previously named Eden. Design based on Babylon."
+      "note": "Previously named Eden. Design based on Babylon.",
+      "effective_date": "January 29, 2024",
+      "effective_date_kind": "date_status",
+      "days": 749,
+      "days_display": "749",
+      "display_status_line": "In rotation since January 29, 2024",
+      "image_url": "https://hypixel.net/attachments/eden-png.3272054/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Orbit",
@@ -559,7 +852,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Orbit_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/orbit-png.1890811/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Orchestra",
@@ -575,7 +876,14 @@
       "release_date": "June 29, 2017",
       "image_id": "https://hypixel.net/attachments/orchestrav2-png.1979312/",
       "note": "Revamped on May 9, 2018, Reskin: ☀ Symphonic",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/orchestrav2-png.1979312/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>"
     },
     {
       "name": "Pavilion",
@@ -590,7 +898,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)] Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/pavilion-png.2976369/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/pavilion-png.2976369/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Pernicious",
@@ -606,7 +922,14 @@
       "release_date": "February 23, 2017",
       "image_id": "https://hypixel.net/attachments/pernicious-png.2344832/",
       "note": "Revamped on March 10, 2017",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/pernicious-png.2344832/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Medium Iron</span>"
     },
     {
       "name": "Playground",
@@ -619,7 +942,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Playground_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)] Fast Iron [/COLOR][COLOR=rgb(71, 85, 119)](previously slow)[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/playground-png.1710963/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Fast Iron </span><span style=\"color:rgb(71, 85, 119)\">(previously slow)</span>",
+      "note": ""
     },
     {
       "name": "Polygon",
@@ -634,7 +965,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/polygon-png.2976370/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/polygon-png.2976370/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Rooftop",
@@ -647,7 +986,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Rooftop_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR] [COLOR=rgb(40, 50, 78)](Solos)[/COLOR][COLOR=rgb(61, 142, 185)], [/COLOR][COLOR=rgb(44, 130, 201)]Medium Iron[/COLOR] [COLOR=rgb(40, 50, 78)](Doubles)[/COLOR]",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/rooftop-png.1705808/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span> <span style=\"color:rgb(40, 50, 78)\">(Solos)</span><span style=\"color:rgb(61, 142, 185)\">, </span><span style=\"color:rgb(44, 130, 201)\">Medium Iron</span> <span style=\"color:rgb(40, 50, 78)\">(Doubles)</span>",
+      "note": ""
     },
     {
       "name": "Rooted",
@@ -660,7 +1007,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Rooted_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/rooted-png.2344872/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Sanctum",
@@ -675,7 +1030,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 3, 2023",
       "image_id": "https://hypixel.net/attachments/sanctum-png.3198573/",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/sanctum-png.3198573/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Scorched Sands",
@@ -690,7 +1053,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)] Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/scorched-sand-png.2976372/",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/scorched-sand-png.2976372/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Serenity",
@@ -705,7 +1076,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)] Fast Iron[/COLOR]",
       "release_date": "May 2, 2022",
       "image_id": "https://hypixel.net/attachments/serenity-png.2975563/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/serenity-png.2975563/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\"> Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Siege",
@@ -718,7 +1097,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Siege_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/siege-png.1890813/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Silver Birch",
@@ -730,7 +1117,15 @@
       "imageId": "https://hypixel.net/attachments/silver-birch-png.3376880/",
       "wiki": "https://hypixel.fandom.com/wiki/Silver_Birch_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/silver-birch-png.3376880/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Sky Rise",
@@ -743,7 +1138,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Sky_Rise_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/sky-rise-png.1820323/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Slumber",
@@ -755,7 +1158,15 @@
       "imageId": "https://hypixel.net/attachments/slumber-png.3283934/",
       "wiki": "https://hypixel.fandom.com/wiki/Slumber_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "December 18, 2023",
+      "effective_date_kind": "date_status",
+      "days": 791,
+      "days_display": "791",
+      "display_status_line": "In rotation since December 18, 2023",
+      "image_url": "https://hypixel.net/attachments/slumber-png.3283934/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Snails",
@@ -767,7 +1178,15 @@
       "imageId": "https://hypixel.net/attachments/snails-png.3376878/",
       "wiki": "https://hypixel.fandom.com/wiki/Snails_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/snails-png.3376878/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Solace",
@@ -780,7 +1199,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Solace_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/solace-png.2086232/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Speedway",
@@ -796,7 +1223,14 @@
       "release_date": "June 29, 2017",
       "image_id": "https://hypixel.net/attachments/speedway-png.2751024/",
       "note": "Reskin: 🎃 Screamway",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/speedway-png.2751024/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>"
     },
     {
       "name": "Steampunk",
@@ -812,7 +1246,14 @@
       "release_date": "February 1, 2018",
       "image_id": "https://hypixel.net/attachments/steampunk-png.1979221/",
       "note": "Reskin: 🎃 Steampumpkin",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/steampunk-png.1979221/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>"
     },
     {
       "name": "Terraced",
@@ -824,7 +1265,15 @@
       "imageId": "https://hypixel.net/attachments/terraced-png.3376877/",
       "wiki": "https://hypixel.fandom.com/wiki/Terraced_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/terraced-png.3376877/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Toro",
@@ -837,7 +1286,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Toro_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/toro-png.2339557/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Tuzi",
@@ -850,7 +1307,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Tuzi_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/tuzi-png.3158305/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Urban Plaza",
@@ -865,7 +1330,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "May 3, 2023",
       "image_id": "https://hypixel.net/attachments/urban-plaza-png.3198574/",
-      "last_seen": "January 26, 2026"
+      "last_seen": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "Last seen January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/urban-plaza-png.3198574/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Vigilante",
@@ -877,7 +1350,15 @@
       "imageId": "https://hypixel.net/attachments/vigilante-png.3283940/",
       "wiki": "https://hypixel.fandom.com/wiki/Vigilante_(Bed_Wars)",
       "status": "in",
-      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]"
+      "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
+      "effective_date": "January 15, 2024",
+      "effective_date_kind": "date_status",
+      "days": 763,
+      "days_display": "763",
+      "display_status_line": "In rotation since January 15, 2024",
+      "image_url": "https://hypixel.net/attachments/vigilante-png.3283940/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Waterfall",
@@ -890,7 +1371,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Waterfall_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(41, 105, 176)]Slow Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/waterfall-png.1979193/",
+      "gen_html": "<span style=\"color:rgb(41, 105, 176)\">Slow Iron</span>",
+      "note": ""
     },
     {
       "name": "Yue",
@@ -905,7 +1394,15 @@
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "release_date": "January 27, 2022",
       "image_id": "https://hypixel.net/attachments/yue-png.2957231/",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/yue-png.2957231/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Zarzul",
@@ -918,7 +1415,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Zarzul_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/zarzul-png.2013714/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Antenna",
@@ -930,7 +1435,15 @@
       "imageId": "https://hypixel.net/attachments/antenna-png.3376886/",
       "wiki": "https://hypixel.fandom.com/wiki/Antenna_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/antenna-png.3376886/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Aquarium",
@@ -943,7 +1456,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Aquarium_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/aquarium-png.2751026/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Archway",
@@ -958,7 +1479,15 @@
       "release_date": "June 29, 2017",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/archway-png.1710964/",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/archway-png.1710964/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Artemis",
@@ -973,7 +1502,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/artemis-png.2976373/",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/artemis-png.2976373/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Ashore",
@@ -986,7 +1523,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Ashore_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/ashore-png.1895937/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Boletum",
@@ -999,7 +1544,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Boletum_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/boletum-png.1890803/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Build Site",
@@ -1014,7 +1567,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/build-site-png.2976375/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/build-site-png.2976375/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Carapace",
@@ -1027,7 +1588,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Carapace_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/carapace-png.1705831/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Catalyst",
@@ -1043,7 +1612,14 @@
       "image_id": "https://hypixel.net/attachments/catalyst1-png.2344851/",
       "note": "Reskin: 🎃 Alaric",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/catalyst1-png.2344851/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Chained",
@@ -1059,7 +1635,14 @@
       "image_id": "https://hypixel.net/attachments/chained-png.1820325/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: 🎃 Unchained",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/chained-png.1820325/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Chalk Cliffs",
@@ -1071,7 +1654,15 @@
       "imageId": "https://hypixel.net/attachments/chalk-cliffs-png.3376883/",
       "wiki": "https://hypixel.fandom.com/wiki/Chalk_Cliffs_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/chalk-cliffs-png.3376883/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Crimson",
@@ -1083,7 +1674,15 @@
       "imageId": "https://hypixel.net/attachments/crimson-png.3283939/",
       "wiki": "https://hypixel.fandom.com/wiki/Crimson_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "Unknown",
+      "effective_date_kind": "date_status",
+      "days": null,
+      "days_display": "Unknown",
+      "display_status_line": "In rotation since Unknown",
+      "image_url": "https://hypixel.net/attachments/crimson-png.3283939/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Daolong",
@@ -1098,7 +1697,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/daolong-png.2976376/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/daolong-png.2976376/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Deposit",
@@ -1113,7 +1720,15 @@
       "release_date": "November 7, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/deposit-png.3126237/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/deposit-png.3126237/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Dreamgrove",
@@ -1126,7 +1741,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Dreamgrove_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/dreamgrove-png.1979225/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Eastwood",
@@ -1142,7 +1765,14 @@
       "image_id": "https://hypixel.net/attachments/eastwood-png.1979362/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: 🧧 Orientwood, ☀ Coastal, 🎃 Cauldron",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/eastwood-png.1979362/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Enchanted",
@@ -1158,7 +1788,14 @@
       "image_id": "https://hypixel.net/attachments/enchanted-png.2344873/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: ☀ Sandcastle, ❄ Grotto",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/enchanted-png.2344873/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Extinction",
@@ -1171,7 +1808,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Extinction_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/extinction-png.2344874/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Fang Outpost",
@@ -1184,7 +1829,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Fang_Outpost_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/fangoutpost-png.2086237/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Fort Doon",
@@ -1197,7 +1850,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Fort_Doon_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "January 19, 2026"
+      "last_seen": "January 19, 2026",
+      "effective_date": "January 19, 2026",
+      "effective_date_kind": "date_status",
+      "days": 28,
+      "days_display": "28",
+      "display_status_line": "Last seen January 19, 2026",
+      "image_url": "https://hypixel.net/attachments/fort-doon-png.1820326/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Frogiton",
@@ -1212,7 +1873,15 @@
       "release_date": "November 7, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/frogiton-png.3126245/",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/frogiton-png.3126245/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Graveship",
@@ -1225,7 +1894,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Graveship_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/graveship-png.1890802/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Harvesting",
@@ -1240,7 +1917,15 @@
       "release_date": "December 5, 2023",
       "rotation_date": "February 19, 2024",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "image_id": "https://hypixel.net/attachments/harvesting-png.3272053/"
+      "image_id": "https://hypixel.net/attachments/harvesting-png.3272053/",
+      "effective_date": "February 19, 2024",
+      "effective_date_kind": "date_status",
+      "days": 728,
+      "days_display": "728",
+      "display_status_line": "In rotation since February 19, 2024",
+      "image_url": "https://hypixel.net/attachments/harvesting-png.3272053/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Holmgang",
@@ -1253,7 +1938,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Holmgang_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/holmgang-png.2344878/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Horizon",
@@ -1266,7 +1959,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Horizon_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 02, 2026"
+      "last_seen": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "Last seen February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/horizon-png.1979899/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Infinite",
@@ -1281,7 +1982,15 @@
       "release_date": "May 3, 2023",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/infinite-png.3198575/",
-      "last_seen": "January 26, 2026"
+      "last_seen": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "Last seen January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/infinite-png.3198575/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Invasion",
@@ -1297,7 +2006,14 @@
       "image_id": "https://hypixel.net/attachments/invasion-png.1710966/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: ❄ Comet",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/invasion-png.1710966/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Jurassic",
@@ -1313,7 +2029,14 @@
       "image_id": "https://hypixel.net/attachments/jurassic-png.1710967/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: 🐰 Burrow",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/jurassic-png.1710967/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Katsu",
@@ -1326,7 +2049,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Katsu_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/katsu-png.1979900/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Kubo",
@@ -1341,7 +2072,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/kubo-png.2976378/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/kubo-png.2976378/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Lectus",
@@ -1357,7 +2096,14 @@
       "image_id": "https://hypixel.net/attachments/lectus-png.2086243/",
       "note": "Reskin: 🎃 Mortuus",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/lectus-png.2086243/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Lost Temple",
@@ -1369,7 +2115,15 @@
       "imageId": "https://hypixel.net/attachments/lost-temple-png.3283938/",
       "wiki": "https://hypixel.fandom.com/wiki/Lost_Temple_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "January 15, 2024",
+      "effective_date_kind": "date_status",
+      "days": 763,
+      "days_display": "763",
+      "display_status_line": "In rotation since January 15, 2024",
+      "image_url": "https://hypixel.net/attachments/lost-temple-png.3283938/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Mystery",
@@ -1384,7 +2138,15 @@
       "release_date": "January 15, 2024",
       "rotation_date": "January 15, 2024",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "image_id": "https://hypixel.net/attachments/milestone-mystery-png.3271466/"
+      "image_id": "https://hypixel.net/attachments/milestone-mystery-png.3271466/",
+      "effective_date": "January 15, 2024",
+      "effective_date_kind": "date_status",
+      "days": 763,
+      "days_display": "763",
+      "display_status_line": "In rotation since January 15, 2024",
+      "image_url": "https://hypixel.net/attachments/milestone-mystery-png.3271466/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Nostalgia",
@@ -1399,7 +2161,15 @@
       "release_date": "December 15, 2023",
       "rotation_date": "January 15, 2024",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "image_id": "https://hypixel.net/attachments/nostalgia-png.3283935/"
+      "image_id": "https://hypixel.net/attachments/nostalgia-png.3283935/",
+      "effective_date": "January 15, 2024",
+      "effective_date_kind": "date_status",
+      "days": 763,
+      "days_display": "763",
+      "display_status_line": "In rotation since January 15, 2024",
+      "image_url": "https://hypixel.net/attachments/nostalgia-png.3283935/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Obelisk",
@@ -1415,7 +2185,14 @@
       "image_id": "https://hypixel.net/attachments/obelisk-png.1890800/",
       "note": "Reskin: 🎃 Hell Temple",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/obelisk-png.1890800/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Orchid",
@@ -1430,7 +2207,15 @@
       "release_date": "May 3, 2023",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/orchid-png.3198576/",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/orchid-png.3198576/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Paladin",
@@ -1445,7 +2230,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/paladin-png.2976379/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/paladin-png.2976379/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Paradox",
@@ -1460,7 +2253,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/paradox-png.2976382/",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/paradox-png.2976382/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Pharaoh",
@@ -1473,7 +2274,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Pharaoh_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/pharoah-png.1705857/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Planet 98",
@@ -1486,7 +2295,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Planet_98_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/planet98-png.2344875/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Pool Party",
@@ -1501,7 +2318,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/pool-party-png.2976383/",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/pool-party-png.2976383/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Raze",
@@ -1516,7 +2341,15 @@
       "release_date": "May 3, 2023",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/raze-png.3198577/",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/raze-png.3198577/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Relic",
@@ -1529,7 +2362,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Relic_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/relic-png.2344876/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Rigged",
@@ -1541,7 +2382,15 @@
       "imageId": "https://hypixel.net/attachments/rigged-png.3376885/",
       "wiki": "https://hypixel.fandom.com/wiki/Rigged_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/rigged-png.3376885/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Rise",
@@ -1554,7 +2403,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Rise_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "January 26, 2026"
+      "last_seen": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "Last seen January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/rise-png.2086241/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Seraph",
@@ -1569,7 +2426,15 @@
       "release_date": "December 9, 2024",
       "rotation_date": "December 9, 2024",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "image_id": "https://hypixel.net/attachments/seraph-png.3376884/"
+      "image_id": "https://hypixel.net/attachments/seraph-png.3376884/",
+      "effective_date": "December 9, 2024",
+      "effective_date_kind": "date_status",
+      "days": 434,
+      "days_display": "434",
+      "display_status_line": "In rotation since December 9, 2024",
+      "image_url": "https://hypixel.net/attachments/seraph-png.3376884/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Sky Festival",
@@ -1582,7 +2447,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Sky_Festival_(Bed_Wars)",
       "status": "in",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/sky-festival-png.2339572/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Stilted",
@@ -1597,7 +2470,15 @@
       "release_date": "November 7, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/stilted-png.3126248/",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/stilted-png.3126248/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Stonekeep",
@@ -1613,7 +2494,14 @@
       "image_id": "https://hypixel.net/attachments/stonekeep-png.1705859/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: ❄ Snowkeep",
-      "rotation_date": "February 02, 2026"
+      "rotation_date": "February 02, 2026",
+      "effective_date": "February 02, 2026",
+      "effective_date_kind": "date_status",
+      "days": 14,
+      "days_display": "14",
+      "display_status_line": "In rotation since February 02, 2026",
+      "image_url": "https://hypixel.net/attachments/stonekeep-png.1705859/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Swashbuckle",
@@ -1629,7 +2517,14 @@
       "image_id": "https://hypixel.net/attachments/swashbuckle-png.1710968/",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "note": "Reskin: 🎃 Pumpkin Bay",
-      "rotation_date": "February 09, 2026"
+      "rotation_date": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "In rotation since February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/swashbuckle-png.1710968/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Temple",
@@ -1642,7 +2537,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Temple_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 09, 2026"
+      "last_seen": "February 09, 2026",
+      "effective_date": "February 09, 2026",
+      "effective_date_kind": "date_status",
+      "days": 7,
+      "days_display": "7",
+      "display_status_line": "Last seen February 09, 2026",
+      "image_url": "https://hypixel.net/attachments/temple-png.2086240/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Tengshe",
@@ -1654,7 +2557,15 @@
       "imageId": "https://hypixel.net/attachments/tengshe-png.3385597/",
       "wiki": "https://hypixel.fandom.com/wiki/Tengshe_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "January 20, 2025",
+      "effective_date_kind": "date_status",
+      "days": 392,
+      "days_display": "392",
+      "display_status_line": "In rotation since January 20, 2025",
+      "image_url": "https://hypixel.net/attachments/tengshe-png.3385597/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Terminal",
@@ -1669,7 +2580,15 @@
       "release_date": "November 7, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/terminal-png.3126238/",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/terminal-png.3126238/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Tigris",
@@ -1684,7 +2603,15 @@
       "release_date": "January 27, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": "https://hypixel.net/attachments/tigris-png.2957230/",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/tigris-png.2957230/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Treenan",
@@ -1697,7 +2624,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Treenan_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "status": "in",
-      "rotation_date": "February 16, 2026"
+      "rotation_date": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "In rotation since February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/treenan-png.2344850/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Unturned",
@@ -1710,7 +2645,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Unturned_(Bed_Wars)",
       "status": "out",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/3484014/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Usagi",
@@ -1723,7 +2666,15 @@
       "wiki": "https://hypixel.fandom.com/wiki/Usagi_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "status": "in",
-      "rotation_date": "January 26, 2026"
+      "rotation_date": "January 26, 2026",
+      "effective_date": "January 26, 2026",
+      "effective_date_kind": "date_status",
+      "days": 21,
+      "days_display": "21",
+      "display_status_line": "In rotation since January 26, 2026",
+      "image_url": "https://hypixel.net/attachments/3484015/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Whiskers",
@@ -1735,7 +2686,15 @@
       "imageId": "3484016",
       "wiki": "https://hypixel.fandom.com/wiki/Whiskers_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "December 18, 2023",
+      "effective_date_kind": "date_status",
+      "days": 791,
+      "days_display": "791",
+      "display_status_line": "In rotation since December 18, 2023",
+      "image_url": "https://hypixel.net/attachments/3484016/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Yandi",
@@ -1747,7 +2706,15 @@
       "imageId": "3484017",
       "wiki": "https://hypixel.fandom.com/wiki/Yandi_(Bed_Wars)",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
-      "status": "in"
+      "status": "in",
+      "effective_date": "Unknown",
+      "effective_date_kind": "date_status",
+      "days": null,
+      "days_display": "Unknown",
+      "display_status_line": "In rotation since Unknown",
+      "image_url": "https://hypixel.net/attachments/3484017/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     },
     {
       "name": "Zen Plaza",
@@ -1762,7 +2729,15 @@
       "release_date": "May 2, 2022",
       "gen": "[COLOR=rgb(61, 142, 185)]Fast Iron[/COLOR]",
       "image_id": 3484018,
-      "last_seen": "February 16, 2026"
+      "last_seen": "February 16, 2026",
+      "effective_date": "February 16, 2026",
+      "effective_date_kind": "date_status",
+      "days": 0,
+      "days_display": "0",
+      "display_status_line": "Last seen February 16, 2026",
+      "image_url": "https://hypixel.net/attachments/3484018/",
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
+      "note": ""
     }
   ]
 }
