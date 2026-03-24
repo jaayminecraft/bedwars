@@ -74,7 +74,7 @@
     if(s.includes('winter') || s.includes('holiday')) return '❄️';
     return '🎉';
   }
-  
+
   function parseDateLoose(s){
     if(!s) return null;
     const t = String(s).trim();
@@ -104,31 +104,28 @@
 
     if(month == null || !Number.isFinite(day) || !Number.isFinite(year)) return null;
 
-    return { year, month, day };
+    return new Date(year, month, day);
   }
-  
+
   function getBaseDate(){
     const now = new Date();
-    return {
-      year: now.getFullYear(),
-      month: now.getMonth(),
-      day: now.getDate()
-    };
+    now.setHours(0,0,0,0);
+    return now;
   }
-  
+
   function daysLiveFromEffective(m){
     const eff = parseDateLoose(m.effective_date || m.dateStatus || m.last_seen || 'Unknown');
     if(!eff) return null;
-
     const base = getBaseDate();
-
-    const effUtc = Date.UTC(eff.year, eff.month, eff.day);
-    const baseUtc = Date.UTC(base.year, base.month, base.day);
-
-    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
+    const diffDays = Math.floor((base.getTime() - eff.getTime()) / 86400000);
     return (diffDays >= 0) ? diffDays : 0;
   }
-  
+
+  function formatDaysLive(m){
+    const n = daysLiveFromEffective(m);
+    return (n == null) ? '—' : String(n);
+  }
+
   const normalMaps = (data.maps || []).map(m => ({
     ...m,
     isSeasonal: false,
