@@ -130,27 +130,29 @@
 
     return { year, month, day };
   }
-
+  
   function getBaseDate(){
     const now = new Date();
-    now.setHours(0,0,0,0);
-    return now;
+    return {
+      year: now.getFullYear(),
+      month: now.getMonth(),
+      day: now.getDate()
+    };
   }
+  
 
 
+  function daysLiveFromEffective(m){
+    const eff = parseDateLoose(m.effective_date || m.dateStatus || m.last_seen || 'Unknown');
+    if(!eff) return null;
 
-
-  function formatDaysLive(m){
     const base = getBaseDate();
-    const eff = parseDateLoose(m.effective_date);
 
-    if(!eff) return '—';
+    const effUtc = Date.UTC(eff.year, eff.month, eff.day);
+    const baseUtc = Date.UTC(base.year, base.month, base.day);
 
-    const diffMs = base.getTime() - eff.getTime();
-    const diffDays = Math.floor(diffMs / 86400000);
-
-    // Guard against negative if dates are weird
-    return (diffDays >= 0) ? String(diffDays) : '0';
+    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
+    return (diffDays >= 0) ? diffDays : 0;
   }
 
   const playstyles = uniq(
