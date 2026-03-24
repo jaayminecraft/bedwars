@@ -105,11 +105,32 @@
     const t = String(s).trim();
     if(!t || t.toLowerCase() === 'unknown') return null;
 
-     const parts = new Date(t);
-     if(Number.isNaN(parts.getTime())) return null;
+    const m = t.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+    if(!m) return null;
 
-     return new  Date(parts.getFullYear(), parts.getMonth(), parts.getDate());
-}
+    const months = {
+      january: 0,
+      february: 1,
+      march: 2,
+      april: 3,
+      may: 4,
+      june: 5,
+      july: 6,
+      august: 7,
+      september: 8,
+      october: 9,
+      november: 10,
+      december: 11
+    };
+
+    const month = months[m[1].toLowerCase()];
+    const day = Number(m[2]);
+    const year = Number(m[3]);
+
+    if(month == null || !Number.isFinite(day) || !Number.isFinite(year)) return null;
+
+    return new Date(year, month, day);
+  }
 
   function getBaseDate(){
     const now = new Date();
