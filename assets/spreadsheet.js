@@ -106,26 +106,29 @@
 
     return { year, month, day };
   }
-
+  
   function getBaseDate(){
     const now = new Date();
-    now.setHours(0,0,0,0);
-    return now;
+    return {
+      year: now.getFullYear(),
+      month: now.getMonth(),
+      day: now.getDate()
+    };
   }
-
+  
   function daysLiveFromEffective(m){
     const eff = parseDateLoose(m.effective_date || m.dateStatus || m.last_seen || 'Unknown');
     if(!eff) return null;
+
     const base = getBaseDate();
-    const diffDays = Math.floor((base.getTime() - eff.getTime()) / 86400000);
+
+    const effUtc = Date.UTC(eff.year, eff.month, eff.day);
+    const baseUtc = Date.UTC(base.year, base.month, base.day);
+
+    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
     return (diffDays >= 0) ? diffDays : 0;
   }
-
-  function formatDaysLive(m){
-    const n = daysLiveFromEffective(m);
-    return (n == null) ? '—' : String(n);
-  }
-
+  
   const normalMaps = (data.maps || []).map(m => ({
     ...m,
     isSeasonal: false,
