@@ -147,10 +147,20 @@
 
     if(!eff) return '—';
 
-    const diffMs = base.getTime() - eff.getTime();
-    const diffDays = Math.floor(diffMs / 86400000);
+    const baseUtc = Date.UTC(
+      base.getFullYear(),
+      base.getMonth(),
+      base.getDate()
+    );
 
-    // Guard against negative if dates are weird
+    const effUtc = Date.UTC(
+      eff.getFullYear(),
+      eff.getMonth(),
+      eff.getDate()
+    );
+
+    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
+
     return (diffDays >= 0) ? String(diffDays) : '0';
   }
 
