@@ -97,7 +97,6 @@
       `Latest update: ${meta.latest_update}`;
   }
 
-
   const USE_REAL_TODAY = true;
   
   function parseDateLoose(s){
@@ -129,7 +128,7 @@
 
     if(month == null || !Number.isFinite(day) || !Number.isFinite(year)) return null;
 
-    return new Date(year, month, day);
+    return { year, month, day };
   }
 
   function getBaseDate(){
