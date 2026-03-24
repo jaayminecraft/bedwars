@@ -74,7 +74,7 @@
     if(s.includes('winter') || s.includes('holiday')) return '❄️';
     return '🎉';
   }
-
+  
   function parseDateLoose(s){
     if(!s) return null;
     const t = String(s).trim();
@@ -104,7 +104,7 @@
 
     if(month == null || !Number.isFinite(day) || !Number.isFinite(year)) return null;
 
-    return new Date(year, month, day);
+    return { year, month, day };
   }
 
   function getBaseDate(){
