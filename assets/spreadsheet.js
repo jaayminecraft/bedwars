@@ -116,8 +116,23 @@
   function daysLiveFromEffective(m){
     const eff = parseDateLoose(m.effective_date || m.dateStatus || m.last_seen || 'Unknown');
     if(!eff) return null;
+
     const base = getBaseDate();
-    const diffDays = Math.floor((base.getTime() - eff.getTime()) / 86400000);
+
+    const baseUtc = Date.UTC(
+      base.getFullYear(),
+      base.getMonth(),
+      base.getDate()
+    );
+
+    const effUtc = Date.UTC(
+      eff.getFullYear(),
+      eff.getMonth(),
+      eff.getDate()
+    );
+
+    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
+
     return (diffDays >= 0) ? diffDays : 0;
   }
 
