@@ -99,20 +99,17 @@
 
 
   const USE_REAL_TODAY = true;
-
-
+  
   function parseDateLoose(s){
     if(!s) return null;
     const t = String(s).trim();
     if(!t || t.toLowerCase() === 'unknown') return null;
 
-    const dt = new Date(t);
-    if(Number.isNaN(dt.getTime())) return null;
+     const parts = new Date(t);
+     if(Number.isNaN(parts.getTime())) return null;
 
-    // normalize to midnight local to avoid DST hour weirdness
-    dt.setHours(0,0,0,0);
-    return dt;
-  }
+     return new  Date(parts.getFullYear(), parts.getMonth(), parts.getDate());
+}
 
   function getBaseDate(){
     const now = new Date();
