@@ -79,32 +79,10 @@
     if(!s) return null;
     const t = String(s).trim();
     if(!t || t.toLowerCase() === 'unknown') return null;
-
-    const m = t.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
-    if(!m) return null;
-
-    const months = {
-      january: 0,
-      february: 1,
-      march: 2,
-      april: 3,
-      may: 4,
-      june: 5,
-      july: 6,
-      august: 7,
-      september: 8,
-      october: 9,
-      november: 10,
-      december: 11
-    };
-
-    const month = months[m[1].toLowerCase()];
-    const day = Number(m[2]);
-    const year = Number(m[3]);
-
-    if(month == null || !Number.isFinite(day) || !Number.isFinite(year)) return null;
-
-    return new Date(year, month, day);
+    const dt = new Date(t);
+    if(Number.isNaN(dt.getTime())) return null;
+    dt.setHours(0,0,0,0);
+    return dt;
   }
 
   function getBaseDate(){
@@ -116,23 +94,8 @@
   function daysLiveFromEffective(m){
     const eff = parseDateLoose(m.effective_date || m.dateStatus || m.last_seen || 'Unknown');
     if(!eff) return null;
-
     const base = getBaseDate();
-
-    const baseUtc = Date.UTC(
-      base.getFullYear(),
-      base.getMonth(),
-      base.getDate()
-    );
-
-    const effUtc = Date.UTC(
-      eff.getFullYear(),
-      eff.getMonth(),
-      eff.getDate()
-    );
-
-    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
-
+    const diffDays = Math.floor((base.getTime() - eff.getTime()) / 86400000);
     return (diffDays >= 0) ? diffDays : 0;
   }
 
@@ -319,7 +282,11 @@
       const statusSoft = (m.status === 'in') ? 'status-in-soft' : 'status-out-soft';
 
 
-      tr.appendChild(td(m.name));
+      const mapName = m.is_new
+        ? `<span class="sheetNewPill">NEW</span> ${m.name}`
+        : m.name;
+
+      tr.appendChild(tdHtml(mapName));
 
       const modeLabel =
         m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles';
