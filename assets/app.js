@@ -99,37 +99,19 @@
 
 
   const USE_REAL_TODAY = true;
-  
+
+
   function parseDateLoose(s){
     if(!s) return null;
     const t = String(s).trim();
     if(!t || t.toLowerCase() === 'unknown') return null;
 
-    const m = t.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
-    if(!m) return null;
+    const dt = new Date(t);
+    if(Number.isNaN(dt.getTime())) return null;
 
-    const months = {
-      january: 0,
-      february: 1,
-      march: 2,
-      april: 3,
-      may: 4,
-      june: 5,
-      july: 6,
-      august: 7,
-      september: 8,
-      october: 9,
-      november: 10,
-      december: 11
-    };
-
-    const month = months[m[1].toLowerCase()];
-    const day = Number(m[2]);
-    const year = Number(m[3]);
-
-    if(month == null || !Number.isFinite(day) || !Number.isFinite(year)) return null;
-
-    return new Date(year, month, day);
+    // normalize to midnight local to avoid DST hour weirdness
+    dt.setHours(0,0,0,0);
+    return dt;
   }
 
   function getBaseDate(){
@@ -147,20 +129,10 @@
 
     if(!eff) return '—';
 
-    const baseUtc = Date.UTC(
-      base.getFullYear(),
-      base.getMonth(),
-      base.getDate()
-    );
+    const diffMs = base.getTime() - eff.getTime();
+    const diffDays = Math.floor(diffMs / 86400000);
 
-    const effUtc = Date.UTC(
-      eff.getFullYear(),
-      eff.getMonth(),
-      eff.getDate()
-    );
-
-    const diffDays = Math.floor((baseUtc - effUtc) / 86400000);
-
+    // Guard against negative if dates are weird
     return (diffDays >= 0) ? String(diffDays) : '0';
   }
 
@@ -184,6 +156,8 @@
     status: document.getElementById('status'),
     playstyle: document.getElementById('playstyle'),
     sort: document.getElementById('sort'),
+    new_section: document.getElementById('new-section'),
+    new_list: document.getElementById('new-list'),
     in_list: document.getElementById('in-list'),
     out_list: document.getElementById('out-list'),
   };
@@ -271,6 +245,12 @@
       hero.appendChild(modePill);
     }
 
+    if(m.is_new){
+      const newPill = document.createElement('div');
+      newPill.className = 'mapPill mapPill-new';
+      newPill.textContent = 'NEW';
+      hero.appendChild(newPill);
+    }
 
     const overlay = document.createElement('div');
     overlay.className = 'mapOverlay';
@@ -367,6 +347,7 @@
   }
 
   function render(){
+    els.new_list.textContent = '';
     els.in_list.textContent = '';
     els.out_list.textContent = '';
 
@@ -431,17 +412,23 @@
 
     const filtered = maps.filter(matches);
 
+    const newMaps = filtered.filter(m => m.is_new).slice().sort(compare);
     const inMaps  = filtered.filter(m => m.status === 'in').slice().sort(compare);
     const outMaps = filtered.filter(m => m.status === 'out').slice().sort(compare);
 
+    const fragNew = document.createDocumentFragment();
     const fragIn = document.createDocumentFragment();
     const fragOut = document.createDocumentFragment();
 
+    for(const m of newMaps) fragNew.appendChild(mapCard(m));
     for(const m of inMaps)  fragIn.appendChild(getCard(m));
     for(const m of outMaps) fragOut.appendChild(getCard(m));
 
+    els.new_list.appendChild(fragNew);
     els.in_list.appendChild(fragIn);
     els.out_list.appendChild(fragOut);
+
+    els.new_section.style.display = newMaps.length ? '' : 'none';
   }
 
   let rafPending = false;
