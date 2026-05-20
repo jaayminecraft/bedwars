@@ -61,7 +61,7 @@ body, table, td, th{
 
   background:
     linear-gradient(rgba(125, 211, 252, 0.22), rgba(125, 211, 252, 0.22)),
-    url("/bedwars/aquarium_background.png");
+    url("https://i.imgur.com/43lPZSU.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -429,6 +429,16 @@ summary.mapSummary{
   backdrop-filter: blur(8px);
 }
 
+.mapPill-new{
+  left:auto;
+  right:12px;
+  background:rgba(125,211,252,.92);
+  color:#062033;
+  border-color:rgba(186,230,253,.95);
+  font-weight:900;
+  box-shadow:0 0 14px rgba(125,211,252,.65);
+}
+
 .mapPill.mapPill-teams{
   top:12px;
 }
@@ -575,6 +585,26 @@ th{
   font-weight:400;
 }
 
+.sheetNewPill{
+  display:inline-block;
+  margin-right:8px;
+  padding:2px 8px;
+
+  border-radius:999px;
+
+  background:rgba(125,211,252,.92);
+  border:1px solid rgba(186,230,253,.95);
+
+  color:#062033;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.3px;
+
+  vertical-align:middle;
+
+  box-shadow:
+    0 0 10px rgba(125,211,252,.45);
+}
 
 tr.row-in{
   background: rgba(46,160,67,.08);
@@ -585,7 +615,9 @@ tr.row-out{
 }
 
 /* Spreadsheet column sizing */
-#tbl-normal th:nth-child(1),
+#tbl-normal th:nth-child(1){
+  width: 150px; /* Map */
+}
 #tbl-seasonal th:nth-child(1){
   width: 100px; /* Map */
 }
