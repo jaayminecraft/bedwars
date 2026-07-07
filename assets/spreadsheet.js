@@ -3,16 +3,37 @@
   const seasonal = await loadSeasonalData();
 
   const meta = data.meta || {};
-  document.getElementById('metaLine').innerHTML =
-      `Latest update: ${meta.latest_rotation || ''}`;
+  document.getElementById('metaLine').innerHTML = `
+    Latest update:<br>
+    <span class="topInfoValueLarge">${meta.latest_update || meta.latest_rotation || ''}</span>
+  `;
 
   const els = {
     q: document.getElementById('q'),
     mode: document.getElementById('mode'),
     status: document.getElementById('status'),
-    sort: document.getElementById('sort'),
+
+    modeFilterToggle: document.getElementById('modeFilterToggle'),
+    modeFilterLabel: document.getElementById('modeFilterLabel'),
+    modeFilterPanel: document.getElementById('modeFilterPanel'),
+
+    statusFilterToggle: document.getElementById('statusFilterToggle'),
+    statusFilterLabel: document.getElementById('statusFilterLabel'),
+    statusFilterPanel: document.getElementById('statusFilterPanel'),
+
     tbodyNormal: document.querySelector('#tbl-normal tbody'),
     tbodySeasonal: document.querySelector('#tbl-seasonal tbody'),
+  };
+
+  const sheetSorts = {
+    normal: {
+      key: 'name',
+      dir: 'asc'
+    },
+    seasonal: {
+      key: 'days',
+      dir: 'asc'
+    }
   };
 
   const SEASON_ORDER = [
@@ -91,6 +112,35 @@
     return now;
   }
 
+  function updateNextRotationCountdown(){
+    const el = document.getElementById('nextRotationCountdown');
+    if(!el) return;
+
+    const now = new Date();
+    const today = new Date(now);
+    today.setHours(0, 0, 0, 0);
+
+    const latestRotation = parseDateLoose(meta.latest_rotation || meta.latest_update);
+    const siteUpdatedToday = latestRotation && latestRotation.getTime() === today.getTime();
+
+    const day = today.getDay();
+
+    if(day === 1 && !siteUpdatedToday){
+      el.textContent = 'Today';
+      return;
+    }
+
+    if(day === 0){
+      el.textContent = 'Tomorrow';
+      return;
+    }
+
+    let daysUntilMonday = (8 - day) % 7;
+    if(daysUntilMonday === 0) daysUntilMonday = 7;
+
+    el.textContent = `${daysUntilMonday} day${daysUntilMonday === 1 ? '' : 's'}`;
+  }
+
   function daysLiveFromEffective(m){
     const eff = parseDateLoose(m.effective_date || m.dateStatus || m.last_seen || 'Unknown');
     if(!eff) return null;
@@ -104,12 +154,70 @@
     return (n == null) ? '—' : String(n);
   }
 
+  function shortDate(dateStr){
+    if(!dateStr) return '';
+
+    const months = {
+      January: 'Jan.',
+      February: 'Feb.',
+      August: 'Aug.',
+      September: 'Sept.',
+      October: 'Oct.',
+      November: 'Nov.',
+      December: 'Dec.'
+    };
+
+    for(const [longName, shortName] of Object.entries(months)){
+      if(String(dateStr).startsWith(longName)){
+        return String(dateStr).replace(longName, shortName);
+      }
+    }
+
+    return dateStr;
+  }
+
+  function cleanValue(value){
+    const raw = String(value ?? '').trim();
+    const lower = raw.toLowerCase();
+
+    if(
+      !raw ||
+      lower === 'unknown' ||
+      lower === 'not specified' ||
+      lower === 'not specified.'
+    ){
+      return '—';
+    }
+
+    return raw;
+  }
+
+  function cleanDate(value){
+    const raw = cleanValue(value);
+    return raw === '—' ? '—' : shortDate(raw);
+  }
+
+  function genBBCodeToHTML(value){
+    const raw = String(value || '').trim();
+
+    if(!raw) return '';
+
+    return raw.replace(
+      /\[COLOR=rgb\(([^)]+)\)\](.*?)\[\/COLOR\]/gi,
+      '<span style="color:rgb($1)">$2</span>'
+    );
+  }
+
   const normalMaps = (data.maps || []).map(m => ({
     ...m,
     isSeasonal: false,
   }));
 
-  const seasonalMaps = (seasonal.maps || []).map(m => {
+  const seasonalSource = Array.isArray(seasonal)
+    ? seasonal
+    : (seasonal.maps || []);
+
+  const seasonalMaps = seasonalSource.map(m => {
     const seasonLabel = detectSeasonLabel(m);
     return {
       ...m,
@@ -126,7 +234,7 @@
       playstyle: m.playstyle || 'Not specified.',
       wiki: m.wiki || '',
       note: m.note || '',
-      gen_html: m.gen_html || '',
+      gen_html: m.gen_html || genBBCodeToHTML(m.gen),
       emoji: m.emoji || '',
     };
   });
@@ -180,57 +288,76 @@
     return dt.getTime();
   }
 
+  function numSortValue(v){
+    if(v === null || v === undefined || v === '') return Number.POSITIVE_INFINITY;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : Number.POSITIVE_INFINITY;
+  }
 
-  function compareMaps(a, b){
-    const sortKey = els.sort.value;
+  function textSortValue(v){
+    return String(v || '').toLowerCase();
+  }
 
-    const isNameSort = (sortKey === 'name_asc' || sortKey === 'name_desc');
-    const isDaysSort = (sortKey === 'days_asc' || sortKey === 'days_desc');
-    const isReleasedSort = (sortKey === 'released_asc' || sortKey === 'released_desc');
+  function genSortValue(m){
+    const raw = stripBBCode(m.gen || m.gen_html || '').toLowerCase();
 
+    if(raw.includes('slow')) return 1;
+    if(raw.includes('medium')) return 2;
+    if(raw.includes('fast')) return 3;
 
-    if(isNameSort){
-      if(!!a.isSeasonal !== !!b.isSeasonal){
-        return a.isSeasonal ? 1 : -1;
+    return 999;
+  }
+
+  function sortValue(m, key){
+    switch(key){
+
+      case 'name':
+        return textSortValue(m.name);
+
+      case 'mode':
+        return m.mode === '3s/4s' ? 2 : 1;
+
+      case 'days':
+        return daysValForSort(m);
+
+      case 'playstyle':
+        return textSortValue(m.playstyle);
+
+      case 'gen':
+        return genSortValue(m);
+
+      case 'released': {
+        const d = parseDateLoose(m.released);
+        return d ? d.getTime() : Number.POSITIVE_INFINITY;
       }
 
-      if(a.isSeasonal && b.isSeasonal){
-        const sa = (typeof a.seasonOrder === 'number') ? a.seasonOrder : 999;
-        const sb = (typeof b.seasonOrder === 'number') ? b.seasonOrder : 999;
-        if(sa !== sb) return sa - sb;
+      case 'buildMinY':
+        return numSortValue(m.buildMinY);
 
-        return (sortKey === 'name_desc') ? -byName(a,b) : byName(a,b);
-      }
+      case 'buildMaxY':
+        return numSortValue(m.buildMaxY);
 
-      return (sortKey === 'name_desc') ? -byName(a,b) : byName(a,b);
+      case 'buildRange':
+        return numSortValue(m.buildRange);
+
+      case 'buildRadius':
+        return numSortValue(m.buildRadius);
+
+      default:
+        return textSortValue(m.name);
     }
+  }
 
-    if(isDaysSort){
-      const da = daysValForSort(a);
-      const db = daysValForSort(b);
+  function compareMaps(sortState){
+    return function(a, b){
+      const av = sortValue(a, sortState.key);
+      const bv = sortValue(b, sortState.key);
 
-      if(sortKey === 'days_asc'){
-        if(da !== db) return da - db;
-        return byName(a,b);
-      }else{
-        if(da !== db) return db - da;
-        return byName(a,b);
-      }
-    }
+      if(av < bv) return sortState.dir === 'asc' ? -1 : 1;
+      if(av > bv) return sortState.dir === 'asc' ? 1 : -1;
 
-    if(isReleasedSort){
-      const ra = releasedValForSort(a);
-      const rb = releasedValForSort(b);
-
-      if(sortKey === 'released_asc'){
-        if(ra !== rb) return ra - rb;
-        return byName(a,b);
-      }else{
-        if(ra !== rb) return rb - ra;
-        return byName(a,b);
-      }
-    }
-    return byName(a,b);
+      return byName(a, b);
+    };
   }
 
   function stripBBCode(s){
@@ -243,6 +370,96 @@
 
     t = t.replace(/\s+/g, ' ').trim();
     return t;
+  }
+
+  function modeLabel(value){
+    if(value === 'Solos/Doubles') return 'Solos/Doubles';
+    if(value === '3s/4s') return '3s/4s';
+    return 'All Modes';
+  }
+
+  function statusLabel(value){
+    if(value === 'in') return 'In rotation';
+    if(value === 'out') return 'Out of rotation';
+    return 'In + Out';
+  }
+
+  function closeFilterPanels(exceptPanel = null){
+    [els.modeFilterPanel, els.statusFilterPanel].forEach(panel => {
+      if(panel && panel !== exceptPanel){
+        panel.hidden = true;
+      }
+    });
+
+    if(exceptPanel !== els.modeFilterPanel){
+      els.modeFilterToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if(exceptPanel !== els.statusFilterPanel){
+      els.statusFilterToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function positionFilterPanel(toggle, panel){
+    const controls = toggle.closest('.controls');
+    const controlsRect = controls.getBoundingClientRect();
+    const toggleRect = toggle.getBoundingClientRect();
+
+    panel.style.left = `${toggleRect.left - controlsRect.left}px`;
+    panel.style.right = 'auto';
+    panel.style.top = `${toggleRect.bottom - controlsRect.top + 8}px`;
+  }
+
+  function togglePanel(toggle, panel){
+    const opening = panel.hidden;
+
+    closeFilterPanels(panel);
+
+    if(opening){
+      positionFilterPanel(toggle, panel);
+    }
+
+    panel.hidden = !opening;
+    toggle.setAttribute('aria-expanded', opening ? 'true' : 'false');
+  }
+
+  function updateFilterLabels(){
+    els.modeFilterLabel.textContent = modeLabel(els.mode.value);
+    els.statusFilterLabel.textContent = statusLabel(els.status.value);
+
+    document.querySelectorAll('[data-mode-value]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.modeValue === els.mode.value);
+    });
+
+    document.querySelectorAll('[data-status-value]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.statusValue === els.status.value);
+    });
+  }
+
+  function updateFilterCounts(){
+    const allMaps = normalMaps.concat(seasonalMaps);
+
+    const modeCounts = {
+      all: allMaps.length,
+      'Solos/Doubles': allMaps.filter(m => m.mode === 'Solos/Doubles').length,
+      '3s/4s': allMaps.filter(m => m.mode === '3s/4s').length
+    };
+
+    const statusCounts = {
+      all: allMaps.length,
+      in: allMaps.filter(m => m.status === 'in').length,
+      out: allMaps.filter(m => m.status === 'out').length
+    };
+
+    Object.entries(modeCounts).forEach(([key, count]) => {
+      const el = document.querySelector(`[data-mode-count="${key}"]`);
+      if(el) el.textContent = count;
+    });
+
+    Object.entries(statusCounts).forEach(([key, count]) => {
+      const el = document.querySelector(`[data-status-count="${key}"]`);
+      if(el) el.textContent = count;
+    });
   }
 
   function render(){
@@ -267,12 +484,12 @@
     const filteredNormal = normalMaps
       .filter(matchesShared)
       .slice()
-      .sort(compareMaps);
+      .sort(compareMaps(sheetSorts.normal));
 
     const filteredSeasonal = seasonalMaps
       .filter(matchesShared)
       .slice()
-      .sort(compareMaps);
+      .sort(compareMaps(sheetSorts.seasonal));
 
 
     for(const m of filteredNormal){
@@ -289,7 +506,7 @@
       tr.appendChild(tdHtml(mapName));
 
       const modeLabel =
-        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles';
+        m.mode === '3s/4s' ? '4 teams' : '8 teams';
 
       tr.appendChild(td(
         modeLabel,
@@ -303,16 +520,21 @@
 
       tr.appendChild(td(formatDaysLive(m), `nowrap ${statusSoft}`));
 
-      tr.appendChild(td(m.effective_date || m.dateStatus || '', statusSoft));
+      tr.appendChild(td(cleanDate(m.effective_date || m.dateStatus || ''), statusSoft));
 
       tr.appendChild(td(
-        m.playstyle || '',
+        cleanValue(m.playstyle),
         `cell-playstyle ${playstyleClass(m.playstyle)}`
       ));
 
-      tr.appendChild(tdHtml(m.mode !== '3s/4s' ? (m.gen_html || '') : ''));
+      tr.appendChild(tdHtml(cleanValue(m.gen_html)));
 
-      tr.appendChild(td(m.released || ''));
+      tr.appendChild(td(cleanDate(m.released || '')));
+
+      tr.appendChild(td(cleanValue(m.buildMinY)));
+      tr.appendChild(td(cleanValue(m.buildMaxY)));
+      tr.appendChild(td(cleanValue(m.buildRange)));
+      tr.appendChild(td(cleanValue(m.buildRadius)));
 
       tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
 
@@ -333,7 +555,7 @@
       tr.appendChild(td(mapLabel));
 
       const modeLabel =
-        m.mode === '3s/4s' ? '3v3v3v3/4v4v4v4' : 'Solos/Doubles';
+        m.mode === '3s/4s' ? '4 teams' : '8 teams';
 
       tr.appendChild(td(
         modeLabel,
@@ -347,17 +569,21 @@
 
       tr.appendChild(td(formatDaysLive(m), `nowrap ${statusSoft}`));
 
-      tr.appendChild(td(m.effective_date || m.dateStatus || '', statusSoft));
+      tr.appendChild(td(cleanDate(m.effective_date || m.dateStatus || ''), statusSoft));
 
       tr.appendChild(td(
         m.playstyle || '',
         `cell-playstyle ${playstyleClass(m.playstyle)}`
       ));
 
-      tr.appendChild(tdHtml(''));
+      tr.appendChild(tdHtml(cleanValue(m.gen_html)));
 
-      tr.appendChild(td(m.released || ''));
+      tr.appendChild(td(cleanDate(m.released || '')));
 
+      tr.appendChild(td(cleanValue(m.buildMinY)));
+      tr.appendChild(td(cleanValue(m.buildMaxY)));
+      tr.appendChild(td(cleanValue(m.buildRange)));
+      tr.appendChild(td(cleanValue(m.buildRadius)));
 
       tr.appendChild(tdHtml(m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : ''));
 
@@ -366,15 +592,103 @@
       els.tbodySeasonal.appendChild(tr);
     }
 
+    updateFilterLabels();
+    updateFilterCounts();
+    updateSortHeaders();
   }
 
-  for(const el of [els.q, els.mode, els.status, els.sort]){
-    el.addEventListener('input', render);
-    el.addEventListener('change', render);
+  function updateSortHeaders(){
+    document.querySelectorAll('th[data-sort]').forEach(th => {
+      const table = th.closest('table');
+      const tableKey = table && table.id === 'tbl-seasonal'
+        ? 'seasonal'
+        : 'normal';
+
+      const sortState = sheetSorts[tableKey];
+      const key = th.dataset.sort;
+      const label = th.dataset.label || th.textContent.replace(/[▲▼↑↓]/g, '').trim();
+
+      th.dataset.label = label;
+
+      if(key === sortState.key){
+        th.textContent = `${label} ${sortState.dir === 'asc' ? '↑' : '↓'}`;
+        th.classList.add('sort-active');
+      }else{
+        th.textContent = label;
+        th.classList.remove('sort-active');
+      }
+    });
   }
+
+  document.querySelectorAll('th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const table = th.closest('table');
+      const tableKey = table && table.id === 'tbl-seasonal'
+        ? 'seasonal'
+        : 'normal';
+
+      const sortState = sheetSorts[tableKey];
+      const key = th.dataset.sort;
+
+      if(sortState.key === key){
+        sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+      }else{
+        sortState.key = key;
+        sortState.dir = 'asc';
+      }
+
+      render();
+    });
+  });
+
+  els.q.addEventListener('input', render);
+
+  els.modeFilterToggle.addEventListener('click', () => {
+    togglePanel(els.modeFilterToggle, els.modeFilterPanel);
+  });
+
+  els.statusFilterToggle.addEventListener('click', () => {
+    togglePanel(els.statusFilterToggle, els.statusFilterPanel);
+  });
+
+  document.querySelectorAll('[data-mode-value]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      els.mode.value = btn.dataset.modeValue;
+      closeFilterPanels();
+      render();
+    });
+  });
+
+  document.querySelectorAll('[data-status-value]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      els.status.value = btn.dataset.statusValue;
+      closeFilterPanels();
+      render();
+    });
+  });
+
+  document.querySelectorAll('.filtersClose').forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeFilterPanels();
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if(e.target.closest('.filterToggle') || e.target.closest('.filterPanel')) return;
+    closeFilterPanels();
+  });
+
+  document.addEventListener('keydown', e => {
+    if(e.key !== 'Escape') return;
+    closeFilterPanels();
+  });
+
+  updateNextRotationCountdown();
+  setInterval(updateNextRotationCountdown, 60000);
 
   render();
   revealOnLoad();
+
 })().catch(err=>{
   console.error(err);
   alert(err.message || String(err));

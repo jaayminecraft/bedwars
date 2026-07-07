@@ -44,3 +44,73 @@ function revealOnLoad(root = document){
   });
 }
 
+const CHANGELOG_SEEN_KEY = 'bedwars_changelog_seen_id';
+
+async function updateChangelogBadge({ clear = false } = {}){
+  const badge = document.querySelector('.navAlertBadge');
+  if(!badge) return;
+
+  let data;
+  try{
+    const res = await fetch('./data/changelog.json', { cache: 'no-store' });
+    if(!res.ok) return;
+    data = await res.json();
+  }catch{
+    return;
+  }
+
+  const entries = Array.isArray(data.entries) ? data.entries : [];
+  const groups = [];
+
+  function buildGroupTime(entry){
+    if(entry.timestamp) return String(entry.timestamp).slice(0, 16);
+    return entry.time || '';
+  }
+
+  for(const entry of entries){
+    const key = entry.type === 'build_limit'
+      ? [
+          entry.date || '',
+          buildGroupTime(entry),
+          entry.map || '',
+          entry.mode || '',
+          entry.event || '',
+          entry.type || ''
+        ].join('|')
+      : String(entry.id || entry.timestamp || '');
+
+    if(!groups.some(group => group.key === key)){
+      groups.push({
+        key,
+        newestId: entry.id
+      });
+    }
+  }
+
+  const newestId = groups[0]?.newestId;
+  if(!newestId) return;
+
+  if(clear){
+    localStorage.setItem(CHANGELOG_SEEN_KEY, newestId);
+    badge.hidden = true;
+    return;
+  }
+
+  const seenId = localStorage.getItem(CHANGELOG_SEEN_KEY);
+
+  if(!seenId){
+    localStorage.setItem(CHANGELOG_SEEN_KEY, newestId);
+    badge.hidden = true;
+    return;
+  }
+
+  const seenIndex = groups.findIndex(group => String(group.newestId) === String(seenId));
+
+  if(seenIndex <= 0){
+    badge.hidden = true;
+    return;
+  }
+
+  badge.textContent = seenIndex > 99 ? '99+' : String(seenIndex);
+  badge.hidden = false;
+}
