@@ -1370,51 +1370,53 @@
         const body = document.createElement('div');
         body.className = 'detailsBody';
 
-    if(!exportMode){
-      getMapGalleryImages(m).then(images => {
-        if(!images.length) return;
+    let galleryLoaded = false;
 
-        const setHeroImage = url => {
-          hero.style.backgroundImage = `url("${url}")`;
-          hero.dataset.fullImage = url;
-          delete hero.dataset.bg;
-        };
+    async function loadGallery(){
+      if(exportMode || galleryLoaded) return;
+      galleryLoaded = true;
 
-        hero.galleryImages = images;
-        hero.galleryIndex = 0;
+      const images = await getMapGalleryImages(m);
+      if(!images.length) return;
 
-        if(images.length <= 1) return;
+      hero.galleryImages = images;
+      hero.galleryIndex = 0;
 
-        const gallery = document.createElement('div');
-        gallery.className = 'mapGallery';
+      if(images.length <= 1) return;
 
-        images.forEach((url, index) => {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = 'mapGalleryThumb';
+      const gallery = document.createElement('div');
+      gallery.className = 'mapGallery';
 
-          btn.style.backgroundImage = `url("${url}")`;
-          btn.setAttribute('aria-label', `View image ${index + 1}`);
+      images.forEach((url, index) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'mapGalleryThumb';
 
-          btn.addEventListener('click', e => {
-            e.preventDefault();
-            e.stopPropagation();
+        btn.style.backgroundImage = `url("${url}")`;
+        btn.setAttribute('aria-label', `View image ${index + 1}`);
 
-            hero.galleryIndex = index;
-            openImageLightbox(
-              url,
-              m.name || 'Map image',
-              images,
-              index
-            );
-          });
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
 
-          gallery.appendChild(btn);
+          hero.galleryIndex = index;
+          openImageLightbox(
+            url,
+            m.name || 'Map image',
+            images,
+            index
+          );
         });
 
-        body.insertBefore(gallery, body.firstChild);
+        gallery.appendChild(btn);
       });
+
+      body.insertBefore(gallery, body.firstChild);
     }
+
+    d.addEventListener('toggle', () => {
+      if(d.open) loadGallery();
+    });
 
     const detailsGrid = document.createElement('div');
     detailsGrid.className = 'detailsGrid';
