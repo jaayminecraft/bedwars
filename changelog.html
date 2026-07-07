@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bed Wars Map List — Changelog</title>
+  <link rel="icon" href="/bedwars/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/bedwars/favicon.ico">
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <header class="wrap">
+    <div class="topDashboard">
+      <a class="topLogoLink" href="./index.html">
+        <img
+          src="assets/site-logo.webp"
+          alt="Bed Wars Map List"
+          class="topLogo"
+        />
+      </a>
+      <nav class="nav topNav">
+        <a class="pill" href="./index.html">Map List</a>
+        <a class="pill" href="./spreadsheet.html">Spreadsheet</a>
+        <a class="pill active navChangelogLink" href="./changelog.html">
+          Changelog
+          <span class="navAlertBadge" hidden>0</span>
+        </a>
+      </nav>
+
+      <div class="topInfoBox topInfoWide">
+        <span class="topInfoIcon">ℹ️</span>
+        <span>
+          Track rotations, build limit updates, and map data changes.
+        </span>
+      </div>
+
+      <div class="changelogStats changelogStats-top">
+        <div>
+          <span>Total Changes</span>
+          <strong id="changeTotal">—</strong>
+        </div>
+        <div>
+          <span>Changes Today</span>
+          <strong id="changeToday">—</strong>
+        </div>
+        <div>
+          <span>Map Rotations</span>
+          <strong id="changeRotation">—</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls card">
+      <div class="filterBar changelogFilters">
+        <div class="filterSearchWrap">
+          <span class="filterSearchIcon">⌕</span>
+          <input id="changeSearch" class="input filterSearch" placeholder="Search changes…" />
+        </div>
+
+        <select id="changeType" class="select">
+          <option value="all">All types</option>
+          <option value="rotation">Rotation</option>
+          <option value="build_limit">Build Limit</option>
+          <option value="generator">Gen Speed</option>
+          <option value="playstyle">Playstyle</option>
+          <option value="map_added">Map Added</option>
+          <option value="map_removed">Map Removed</option>
+          <option value="info">Info</option>
+          <option value="site_change">Site Change</option>
+        </select>
+
+        <select id="changeMode" class="select">
+          <option value="all">All modes</option>
+          <option value="Solos/Doubles">8 Teams</option>
+          <option value="3s/4s">4 Teams</option>
+          <option value="Seasonal">Seasonal</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="changelogList card" id="changelogList"></section>
+  </main>
+
+  <footer class="wrap footer">
+    <a class="footer-hypixel" href="https://hypixel.net/threads/tool-bed-wars-map-list-availability-data.5979939" target="_blank" rel="noopener">
+      Bed Wars Map List + Availability Data (Thread)
+    </a>
+    <span class="footer-divider">•</span>
+    <a class="footer-discord" href="https://discord.gg/3p3Vmv73Ju" target="_blank" rel="noopener">
+      Notice any issues? DM <strong>@jaaymc</strong> on Discord
+    </a>
+
+<a class="footerTopBtn" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="assets/utils.js"></script>
+  <script src="assets/changelog.js"></script>
+</body>
+</html>

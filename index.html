@@ -26,81 +26,301 @@
   <title>Bed Wars Map List</title>
   <link rel="stylesheet" href="assets/style.css"/>
 </head>
-<body>
+<body id="top">
   <header class="wrap">
-    <div class="site-header">
-      <img
-        src="https://i.imgur.com/OWWjQZi.png"
-        alt="Bed Wars Map Rotation"
-        class="site-logo"
-      />
+    <div class="topDashboard">
+      <a class="topLogoLink" href="./index.html">
+        <img
+          src="assets/site-logo.webp"
+          alt="Bed Wars Map List"
+          class="topLogo"
+        />
+      </a>
 
-      <div class="header-meta">
-        <nav class="nav">
-          <a class="pill active" href="./index.html">Map List</a>
-          <a class="pill" href="./spreadsheet.html">Spreadsheet</a>
-        </nav>
+      <nav class="nav topNav">
+        <a class="pill active" href="./index.html">Map List</a>
+        <a class="pill" href="./spreadsheet.html">Spreadsheet</a>
+        <a class="pill navChangelogLink" href="./changelog.html">
+          Changelog
+          <span class="navAlertBadge" hidden>0</span>
+        </a>
+      </nav>
 
-        <div class="meta-info">
-          <p class="site-disclaimer inline header-box">
-            This map list is player-maintained, updated every Monday.
-            Contact JaayMC on Discord if you notice any issues.
-          </p>
-
-          <div id="metaLine" class="site-rotation header-box"></div>
-        </div>
+      <div class="topInfoBox topInfoWide">
+        <span class="topInfoIcon">ℹ️</span>
+        <span>
+          This map list is player-maintained, updated every Monday.
+          Contact JaayMC on Discord if you notice any issues.
+        </span>
       </div>
 
+      <div class="topInfoBox">
+        <span class="topInfoIcon">🗓️</span>
+        <span id="metaLine" class="topInfoValue"></span>
+      </div>
 
+      <div class="topInfoBox">
+        <span class="topInfoIcon">♻️</span>
+        <span>
+          Next rotation:
+          <strong id="nextRotationCountdown">Calculating…</strong>
+        </span>
+      </div>
+    </div>
   </header>
 
   <main class="wrap">
-    <section class="controls card">
-      <div class="row">
-        <input id="q" class="input" placeholder="Search maps (name)…" />
-        <select id="mode" class="select">
-          <option value="all">Core modes</option>
-          <option value="Solos/Doubles">Solos/Doubles</option>
-          <option value="3s/4s">3s/4s</option>
-          <option value="Seasonal">Seasonal</option>
-        </select>
-        <select id="status" class="select">
-          <option value="all">In + Out</option>
-          <option value="in">In rotation</option>
-          <option value="out">Out of rotation</option>
-        </select>
+      <section id="rotation-overview" class="rotationOverview" style="display:none;">
+        <article id="mapSummaryPanel" class="rotationPanel mapSummaryPanel">
+          <div class="rotationPanelTop">
+            <div class="rotationPanelTitle">📊 Map Summary</div>
+          </div>
 
-        <select id="sort" class="select">
-          <option value="name_asc">Sort: Name (A→Z)</option>
-          <option value="name_desc">Sort: Name (Z→A)</option>
-          <option value="days_desc">Sort: Days (high→low)</option>
-          <option value="days_asc">Sort: Days (low→high)</option>
-        </select>
-        <select id="playstyle" class="select">
-          <option value="all">All playstyles</option>
-        </select>
-      </div>
-      <div class="row tiny muted">
-        Tip: Click a map to expand details (like a spoiler).
-      </div>
-    </section>
+          <div id="mapSummaryBody" class="mapSummaryBody"></div>
+        </article>
+        <article class="rotationPanel rotationPanel-main">
+          <div class="rotationPanelTop">
+            <div class="rotationPanelTitle">♻️ Latest Rotation</div>
+            <div id="latestRotationDate" class="rotationPanelDate"></div>
+          </div>
+
+          <div class="rotationColumns">
+            <div>
+              <div class="rotationStat rotationStat-in">
+                <strong id="latestEnteringCount">0</strong>
+                <span>Entering rotation</span>
+              </div>
+              <div id="latestEnteringList" class="rotationMiniList"></div>
+            </div>
+
+            <div>
+              <div class="rotationStat rotationStat-out">
+                <strong id="latestLeavingCount">0</strong>
+                <span>Leaving rotation</span>
+              </div>
+              <div id="latestLeavingList" class="rotationMiniList"></div>
+            </div>
+          </div>
+
+          <button id="viewLatestRotation" class="rotationButton" type="button">
+            View maps from this rotation →
+          </button>
+        </article>
+
+        <article id="eventPanel" class="rotationPanel rotationPanel-side" style="display:none;">
+          <div class="rotationPanelTop">
+            <div id="eventPanelTitle" class="rotationPanelTitle"></div>
+            <div id="eventPanelStatus" class="rotationPanelDate"></div>
+          </div>
+
+          <div id="eventPanelBody" class="rotationMiniList"></div>
+
+          <button id="viewEventMaps" class="rotationButton" type="button">
+            View maps →
+          </button>
+        </article>
+      </section>
+
+       <section class="controls card">
+
+        <div class="filterBar">
+          <div class="filterSearchWrap">
+            <span class="filterSearchIcon" aria-hidden="true">⌕</span>
+            <input id="q" class="input filterSearch" placeholder="Search maps…" />
+          </div>
+
+          <select id="sort" class="select filterSort">
+            <option value="name_asc">Sort: Name A→Z</option>
+            <option value="name_desc">Sort: Name Z→A</option>
+            <option value="days_desc">Sort: Days high→low</option>
+            <option value="days_asc">Sort: Days low→high</option>
+          </select>
+
+          <select id="mode" hidden>
+            <option value="all">All Modes</option>
+            <option value="Solos/Doubles">Solos/Doubles</option>
+            <option value="3s/4s">3s/4s</option>
+            <option value="seasonal">Seasonal</option>
+          </select>
+
+          <select id="status" hidden>
+            <option value="all">All Statuses</option>
+            <option value="in">In rotation</option>
+            <option value="out">Out of rotation</option>
+          </select>
+
+          <button id="modeFilterToggle" class="filterToggle filterToggle-mode" type="button" aria-expanded="false">
+            <span class="filterGroupIcon filterGroupIcon-mode" aria-hidden="true"></span>
+            <span id="modeFilterLabel">All Modes</span>
+          </button>
+
+          <button id="statusFilterToggle" class="filterToggle filterToggle-status" type="button" aria-expanded="false">
+            <span class="filterGroupIcon filterGroupIcon-status" aria-hidden="true"></span>
+            <span id="statusFilterLabel">In + Out</span>
+          </button>
+
+          <button id="playstyleFilterToggle" class="filterToggle filterToggle-playstyle" type="button" aria-expanded="false">
+            <span class="filterGroupIcon filterGroupIcon-playstyle" aria-hidden="true"></span>
+            <span id="playstyleFilterLabel">Playstyle</span>
+          </button>
+
+          <button id="genFilterToggle" class="filterToggle filterToggle-gen" type="button" aria-expanded="false">
+            <span class="filterGroupIcon filterGroupIcon-gen" aria-hidden="true"></span>
+            <span id="genFilterLabel">Gen Speed</span>
+          </button>
+
+          <button id="settingsFilterToggle" class="filterToggle filterToggle-settings" type="button" aria-expanded="false">
+            <span class="filterToggleIcon" aria-hidden="true"></span>
+            <span id="settingsFilterLabel">Settings</span>
+          </button>
+
+        </div>
+
+        <div id="modeFilterPanel" class="filterPanel compactFilterPanel" hidden>
+          <div class="filterPanelHeader">
+            <div class="filterPanelTitle">
+              <span class="filterGroupIcon filterGroupIcon-mode" aria-hidden="true"></span>
+              Mode
+            </div>
+            <button class="filtersClose" type="button" aria-label="Close filters">×</button>
+          </div>
+
+          <div class="quickFilterBody">
+            <button class="filterMenuChoice" type="button" data-mode-value="all">
+              <span>All Modes</span>
+              <span class="filterOptionCount" data-mode-count="all">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-mode-value="Solos/Doubles">
+              <span>Solos/Doubles</span>
+              <span class="filterOptionCount" data-mode-count="Solos/Doubles">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-mode-value="3s/4s">
+              <span>3s/4s</span>
+              <span class="filterOptionCount" data-mode-count="3s/4s">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-mode-value="seasonal">
+              <span>Seasonal</span>
+              <span class="filterOptionCount" data-mode-count="seasonal">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="statusFilterPanel" class="filterPanel compactFilterPanel" hidden>
+          <div class="filterPanelHeader">
+            <div class="filterPanelTitle">
+              <span class="filterGroupIcon filterGroupIcon-status" aria-hidden="true"></span>
+              Status
+            </div>
+            <button class="filtersClose" type="button" aria-label="Close filters">×</button>
+          </div>
+
+          <div class="quickFilterBody">
+            <button class="filterMenuChoice" type="button" data-status-value="all">
+              <span>In + Out</span>
+              <span class="filterOptionCount" data-status-count="all">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-status-value="in">
+              <span>In rotation</span>
+              <span class="filterOptionCount" data-status-count="in">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-status-value="out">
+              <span>Out of rotation</span>
+              <span class="filterOptionCount" data-status-count="out">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="playstyleFilterPanel" class="filterPanel compactFilterPanel" hidden>
+          <div class="filterPanelHeader">
+            <div class="filterPanelTitle">
+              <span class="filterGroupIcon filterGroupIcon-playstyle" aria-hidden="true"></span>
+              Playstyle
+            </div>
+            <button class="filtersClose" type="button" aria-label="Close filters">×</button>
+          </div>
+
+          <div class="quickFilterBody" id="playstyleFilters"></div>
+        </div>
+
+        <div id="genFilterPanel" class="filterPanel compactFilterPanel" hidden>
+          <div class="filterPanelHeader">
+            <div class="filterPanelTitle">
+              <span class="filterGroupIcon filterGroupIcon-gen" aria-hidden="true"></span>
+              Gen Speed
+            </div>
+            <button class="filtersClose" type="button" aria-label="Close filters">×</button>
+          </div>
+
+          <div class="quickFilterBody">
+            <button class="filterMenuChoice" type="button" data-gen-value="all">
+              <span>Gen Speed</span>
+              <span class="filterOptionCount" data-gen-count="all">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-gen-value="slow">
+              <span>Slow Iron</span>
+              <span class="filterOptionCount" data-gen-count="slow">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-gen-value="medium">
+              <span>Medium Iron</span>
+              <span class="filterOptionCount" data-gen-count="medium">0</span>
+            </button>
+
+            <button class="filterMenuChoice" type="button" data-gen-value="fast">
+              <span>Fast Iron</span>
+              <span class="filterOptionCount" data-gen-count="fast">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="settingsFilterPanel" class="filterPanel compactFilterPanel" hidden>
+          <div class="filterPanelHeader">
+            <div class="filterPanelTitle">
+              <span class="filterTitleIcon" aria-hidden="true"></span>
+              Settings
+            </div>
+            <button class="filtersClose" type="button" aria-label="Close filters">×</button>
+          </div>
+
+          <div class="quickFilterBody">
+            <input type="checkbox" data-filter-group="mapType" value="normal" checked hidden>
+
+            <label class="filterCheck filterCheck-seasonal">
+              <input type="checkbox" data-filter-group="mapType" value="seasonal">
+              <span class="filterCheckmark" aria-hidden="true"></span>
+              <span>Include active seasonal maps</span>
+            </label>
+            <label class="filterCheck filterCheck-seasonal">
+              <input id="hideSummariesToggle" type="checkbox" />
+              <span class="filterCheckmark"></span>
+              <span>Hide summaries</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filterHint tiny muted">
+          Click a map to expand details.
+        </div>
+      </section>
 
     <section class="grid2">
-      <section class="card" id="new-section" style="display:none;">
-        <h2>🆕 New maps</h2>
-        <div id="new-list" class="list"></div>
-      </section>
-
       <section class="card">
-        <h2>✅ In rotation</h2>
-        <div id="in-list" class="list"></div>
-      </section>
+        <div class="mapSectionHeader mapSectionHeader-all">
+          <span class="mapSectionIcon" aria-hidden="true"></span>
+          <h2 id="mapListTitle">Maps</h2>
+          <div id="mapCountLabel" class="mapSectionCount">0 Maps</div>
+        </div>
 
-      <section class="card">
-        <h2>❌ Out of rotation</h2>
-        <div id="out-list" class="list"></div>
-      </section>
+        <div id="activeFilters" class="activeFilters mapSectionFilters" hidden></div>
 
+        <div id="map-list" class="list"></div>
+      </section>
     </section>
   </main>
 
@@ -147,10 +367,18 @@
     Notice any issues? DM <strong>@jaaymc</strong> on Discord
   </a>
 
+<a class="footerTopBtn" href="#top" aria-label="Back to top">↑</a>
+
 </footer>
 
 
   <script src="assets/utils.js"></script>
+  <script>
+    updateChangelogBadge();
+  </script>
   <script src="assets/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </body>
+
+<div id="download-card" hidden></div>
 </html>
