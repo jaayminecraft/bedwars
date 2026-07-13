@@ -1,6 +1,6 @@
 {
   "meta": {
-    "latest_update": "July 06, 2026",
+    "latest_update": "July 12, 2026",
     "latest_rotation": "July 06, 2026",
     "rotation_link": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41791326",
     "rotation_sources": {
@@ -238,14 +238,77 @@
       "buildMaxY": 100,
       "buildRange": 39,
       "buildRadius": 150,
+      "rush": {
+        "primary": "Side",
+        "you": {
+          "x": 38.95,
+          "y": 82.2
+        },
+        "routes": [
+          {
+            "type": "Side",
+            "blocks": 43,
+            "points": [
+              {
+                "x": 36.71,
+                "y": 82.44
+              },
+              {
+                "x": 26.45,
+                "y": 82.67
+              }
+            ]
+          },
+          {
+            "type": "Mid",
+            "blocks": 50,
+            "points": [
+              {
+                "x": 39.21,
+                "y": 77.52
+              },
+              {
+                "x": 39.08,
+                "y": 22.72
+              }
+            ]
+          },
+          {
+            "type": "Long Side",
+            "blocks": 69,
+            "points": [
+              {
+                "x": 41.71,
+                "y": 83.14
+              },
+              {
+                "x": 59.08,
+                "y": 82.9
+              }
+            ]
+          }
+        ],
+        "crop": {
+          "left": 18,
+          "top": 0,
+          "right": 18,
+          "bottom": 0
+        },
+        "transparentBg": {
+          "enabled": true,
+          "source": "topLeftPixel",
+          "tolerance": 24
+        },
+        "image": "rush.webp"
+      },
+      "note": "",
       "effective_date": "June 22, 2026",
       "effective_date_kind": "date_status",
       "days": 14,
       "days_display": "14",
       "display_status_line": "In rotation since June 22, 2026",
       "image_url": "assets/map-images/acropolis/main.webp",
-      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>",
-      "note": ""
+      "gen_html": "<span style=\"color:rgb(61, 142, 185)\">Fast Iron</span>"
     },
     {
       "name": "Aetius",
@@ -298,6 +361,23 @@
       "_rotationSourceTitle": "Bed Wars Map Rotation Log",
       "_rotationSourceUrl": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41791326",
       "_rotationSourceDate": "July 06, 2026",
+      "rush": {
+        "primary": "Diamonds",
+        "you": null,
+        "routes": [],
+        "crop": {
+          "left": 25,
+          "top": 5,
+          "right": 25,
+          "bottom": 5
+        },
+        "transparentBg": {
+          "enabled": false,
+          "source": "topLeftPixel",
+          "tolerance": 15
+        },
+        "image": "rush.webp"
+      },
       "effective_date": "July 06, 2026",
       "effective_date_kind": "date_status",
       "days": 0,
@@ -996,7 +1076,7 @@
     {
       "name": "Hollow",
       "mode": "Solos/Doubles",
-      "playstyle": "Quick & Rushy",
+      "playstyle": "Long & Tactical",
       "released": "March 10, 2017",
       "inRotation": true,
       "dateStatus": "June 29, 2026",
@@ -1313,7 +1393,7 @@
     {
       "name": "Orbit",
       "mode": "Solos/Doubles",
-      "playstyle": "Quick & Rushy",
+      "playstyle": "Long & Tactical",
       "released": "July 31, 2020",
       "inRotation": true,
       "dateStatus": "June 22, 2026",
@@ -1484,7 +1564,7 @@
     {
       "name": "Rooftop",
       "mode": "Solos/Doubles",
-      "playstyle": "Long & Tactical",
+      "playstyle": "Quick & Rushy",
       "released": "March 17, 2017",
       "inRotation": true,
       "dateStatus": "June 29, 2026",

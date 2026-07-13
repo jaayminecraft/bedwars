@@ -6,11 +6,13 @@
   const seenIdAtPageLoad = localStorage.getItem(CHANGELOG_SEEN_KEY);
   const newestIdAtPageLoad = entries[0]?.id;
 
+  const entryIndexById = new Map(entries.map((item, i) => [String(item.id), i]));
+  const seenIndexAtPageLoad = seenIdAtPageLoad ? (entryIndexById.get(String(seenIdAtPageLoad)) ?? -1) : -1;
+
   function isUnreadEntry(entry){
     if(!seenIdAtPageLoad) return false;
-    const seenIndex = entries.findIndex(item => String(item.id) === String(seenIdAtPageLoad));
-    const entryIndex = entries.findIndex(item => String(item.id) === String(entry.id));
-    return seenIndex > 0 && entryIndex >= 0 && entryIndex < seenIndex;
+    const entryIndex = entryIndexById.get(String(entry.id));
+    return seenIndexAtPageLoad > 0 && entryIndex !== undefined && entryIndex < seenIndexAtPageLoad;
   }
 
   const els = {
@@ -597,7 +599,7 @@
     els.rotation.textContent = entries.filter(e => e.type === 'rotation').length;
   }
 
-  els.search.addEventListener('input', render);
+  els.search.addEventListener('input', debounce(render));
   els.type.addEventListener('change', render);
   els.mode.addEventListener('change', render);
 

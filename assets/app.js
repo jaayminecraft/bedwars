@@ -12,19 +12,6 @@
     document.body.classList.add('twitterExportMode');
   }
 
-  const SEASON_ORDER = [
-    'Lunar New Year',
-    'Easter',
-    'Summer',
-    'Halloween',
-    'Winter'
-  ];
-
-  function seasonOrderIndex(label){
-    const i = SEASON_ORDER.indexOf(label);
-    return (i === -1) ? 999 : i;
-  }
-
   function mapImageSlug(name){
     return String(name || '')
       .toLowerCase()
@@ -167,62 +154,6 @@
     return found;
   }
 
-  function stripLeadingEmoji(name){
-    if(!name) return '';
-    const s = String(name).trim();
-    try{
-      return s.replace(/^(\p{Extended_Pictographic})\s*/u, '');
-    }catch(_){
-      return s;
-    }
-  }
-
-  function detectSeasonLabel(m){
-    const direct =
-      m.season ||
-      m.seasonLabel ||
-      m.event ||
-      m.holiday;
-
-    if(direct) return String(direct).trim();
-
-    const n = String(m.name || '').trim();
-    if(n.startsWith('🐰')) return 'Easter';
-    if(n.startsWith('☀️')) return 'Summer';
-    if(n.startsWith('🎃')) return 'Halloween';
-    if(n.startsWith('❄️')) return 'Winter';
-    if(n.startsWith('🧧')) return 'Lunar New Year';
-
-    return 'Winter';
-  }
-
-  function seasonEmoji(label){
-    const s = String(label || '').toLowerCase();
-
-    if(s.includes('lunar')) return '🧧';
-    if(s.includes('easter')) return '🐰';
-    if(s.includes('summer')) return '☀️';
-    if(s.includes('halloween')) return '🎃';
-    if(s.includes('winter') || s.includes('holiday')) return '❄️';
-
-    return '🎉';
-  }
-
-
-  function genBBCodeToHTML(value){
-    const raw = String(value || '').trim();
-
-    if(!raw) return '';
-
-    const colorMatch = raw.match(/^\[COLOR=rgb\(([^)]+)\)\](.*?)\[\/COLOR\]$/i);
-
-    if(colorMatch){
-      return `<span style="color:rgb(${colorMatch[1]})">${colorMatch[2]}</span>`;
-    }
-
-    return raw;
-  }
-
   const seasonalSource = Array.isArray(seasonal)
     ? seasonal
     : (seasonal.maps || []);
@@ -270,66 +201,6 @@
       Latest update:<br>
       <span class="topInfoValueLarge">${meta.latest_update}</span>
     `;
-  }
-
-  const USE_REAL_TODAY = true;
-
-
-  function parseDateLoose(s){
-    if(!s) return null;
-    const t = String(s).trim();
-    if(!t || t.toLowerCase() === 'unknown') return null;
-
-    const dt = new Date(t);
-    if(Number.isNaN(dt.getTime())) return null;
-
-    // normalize to midnight local to avoid DST hour weirdness
-    dt.setHours(0,0,0,0);
-    return dt;
-  }
-
-  function getBaseDate(){
-    const now = new Date();
-    now.setHours(0,0,0,0);
-    return now;
-  }
-
-
-
-
-  function formatDaysLive(m){
-    const base = getBaseDate();
-    const eff = parseDateLoose(m.effective_date);
-
-    if(!eff) return '—';
-
-    const diffMs = base.getTime() - eff.getTime();
-    const diffDays = Math.floor(diffMs / 86400000);
-
-    // Guard against negative if dates are weird
-    return (diffDays >= 0) ? String(diffDays) : '0';
-  }
-
-  function shortDate(dateStr){
-    if(!dateStr) return '';
-
-    const months = {
-      January: 'Jan.',
-      February: 'Feb.',
-      August: 'Aug.',
-      September: 'Sept.',
-      October: 'Oct.',
-      November: 'Nov.',
-      December: 'Dec.'
-    };
-
-    for(const [longName, shortName] of Object.entries(months)){
-      if(dateStr.startsWith(longName)){
-        return dateStr.replace(longName, shortName);
-      }
-    }
-
-    return dateStr;
   }
 
   function normalizedPlaystyleValue(m){
@@ -416,6 +287,18 @@
     mapSummaryBody: document.getElementById('mapSummaryBody'),
 
     nextRotationCountdown: document.getElementById('nextRotationCountdown'),
+  };
+
+  const filterOptionEls = {
+    filterGroup: [...document.querySelectorAll('[data-filter-group]')],
+    modeValue: [...document.querySelectorAll('[data-mode-value]')],
+    statusValue: [...document.querySelectorAll('[data-status-value]')],
+    playstyleValue: [...document.querySelectorAll('[data-playstyle-value]')],
+    genValue: [...document.querySelectorAll('[data-gen-value]')],
+    modeCount: [...document.querySelectorAll('[data-mode-count]')],
+    statusCount: [...document.querySelectorAll('[data-status-count]')],
+    playstyleCount: [...document.querySelectorAll('[data-playstyle-count]')],
+    genCount: [...document.querySelectorAll('[data-gen-count]')],
   };
 
   function setSearchUrl(value){
@@ -670,7 +553,7 @@
   }
 
   function updateFilterCounts(){
-    document.querySelectorAll('[data-filter-group]').forEach(box => {
+    filterOptionEls.filterGroup.forEach(box => {
       const label = box.closest('.filterCheck');
       if(!label) return;
 
@@ -810,11 +693,11 @@
   }
 
   function updateMenuChoiceState(){
-    document.querySelectorAll('[data-mode-value]').forEach(btn => {
+    filterOptionEls.modeValue.forEach(btn => {
       btn.classList.toggle('active', btn.dataset.modeValue === els.mode.value);
     });
 
-    document.querySelectorAll('[data-status-value]').forEach(btn => {
+    filterOptionEls.statusValue.forEach(btn => {
       btn.classList.toggle('active', btn.dataset.statusValue === els.status.value);
     });
   }
@@ -823,23 +706,23 @@
     els.modeFilterLabel.textContent = filterLabel('mode', els.mode.value);
     els.statusFilterLabel.textContent = filterLabel('status', els.status.value);
 
-    document.querySelectorAll('[data-mode-count]').forEach(el => {
+    filterOptionEls.modeCount.forEach(el => {
       el.textContent = countWithMode(el.dataset.modeCount);
     });
 
-    document.querySelectorAll('[data-status-count]').forEach(el => {
+    filterOptionEls.statusCount.forEach(el => {
       el.textContent = countWithStatus(el.dataset.statusCount);
     });
 
-    document.querySelectorAll('[data-playstyle-count]').forEach(el => {
+    filterOptionEls.playstyleCount.forEach(el => {
       el.textContent = countWithPlaystyle(el.dataset.playstyleCount);
     });
 
-    document.querySelectorAll('[data-gen-count]').forEach(el => {
+    filterOptionEls.genCount.forEach(el => {
       el.textContent = countWithGen(el.dataset.genCount);
     });
 
-    document.querySelectorAll('[data-playstyle-value]').forEach(btn => {
+    filterOptionEls.playstyleValue.forEach(btn => {
       const value = btn.dataset.playstyleValue;
       const active = value === 'all'
         ? !isGroupFiltered('playstyle')
@@ -848,7 +731,7 @@
       btn.classList.toggle('active', active);
     });
 
-    document.querySelectorAll('[data-gen-value]').forEach(btn => {
+    filterOptionEls.genValue.forEach(btn => {
       const value = btn.dataset.genValue;
       const active = value === 'all'
         ? !isGroupFiltered('generator')
@@ -1242,6 +1125,299 @@
     return tags.length ? tags.join('/') + ' Iron' : raw;
   }
 
+  function buildRushGuide(m, detailsGrid){
+    if(!m.rush || exportMode) return;
+
+    const rushRoutes = Array.isArray(m.rush.routes)
+      ? m.rush.routes.filter(r => Array.isArray(r.points) && r.points.length >= 2)
+      : [];
+
+    if(!rushRoutes.length) return;
+
+    const primaryType = m.rush.primary || 'Side';
+
+    const sortedRushRoutes = [...rushRoutes].sort((a, b) => {
+      if(a.type === primaryType) return -1;
+      if(b.type === primaryType) return 1;
+
+      const ab = Number.isFinite(Number(a.blocks)) ? Number(a.blocks) : 9999;
+      const bb = Number.isFinite(Number(b.blocks)) ? Number(b.blocks) : 9999;
+      return ab - bb;
+    });
+
+    const primaryRoute = sortedRushRoutes.find(r => r.type === primaryType) || sortedRushRoutes[0];
+    const otherRoutes = sortedRushRoutes.filter(r => r !== primaryRoute);
+
+    function routeLabel(type){
+      if(type === 'Diamonds') return 'Through Diamonds';
+      if(type === 'Mid') return 'Through Mid';
+      return type || 'Route';
+    }
+
+    function routeColor(type){
+      if(type === 'Side') return '#ff4b4b';
+      if(type === 'Long Side') return '#ff8a3d';
+      if(type === 'Diagonal') return '#d946ef';
+      if(type === 'Diamonds') return '#4aa3ff';
+      if(type === 'Mid') return '#7bd957';
+      return '#ffffff';
+    }
+
+    const rushWrap = document.createElement('div');
+    rushWrap.className = 'rushGuideWrap rushGuideWrap-compact';
+
+    const rushPanel = document.createElement('div');
+    rushPanel.className = 'rushGuidePanel rushGuidePanel-compact';
+
+    const crop = m.rush.crop || {};
+    const cropLeft = Math.max(0, Math.min(45, Number(crop.left) || 0));
+    const cropTop = Math.max(0, Math.min(45, Number(crop.top) || 0));
+    const cropRight = Math.max(0, Math.min(45, Number(crop.right) || 0));
+    const cropBottom = Math.max(0, Math.min(45, Number(crop.bottom) || 0));
+    const cropW = Math.max(1, 100 - cropLeft - cropRight);
+    const cropH = Math.max(1, 100 - cropTop - cropBottom);
+
+    function croppedPct(pt){
+      return {
+        x: ((Number(pt.x) - cropLeft) / cropW) * 100,
+        y: ((Number(pt.y) - cropTop) / cropH) * 100
+      };
+    }
+    const rushMap = document.createElement('div');
+    rushMap.className = 'rushMiniMap rushMiniMap-compact';
+
+    const rushImg = document.createElement('img');
+    rushImg.className = 'rushMiniMapImg';
+    rushImg.src = `assets/map-images/${mapImageSlug(m.name)}/${m.rush.image || '1.webp'}`;
+    rushImg.alt = `${m.name || 'Map'} rush diagram`;
+    rushImg.style.width = `${10000 / cropW}%`;
+    rushImg.style.height = `${10000 / cropH}%`;
+    rushImg.style.left = `${-(cropLeft / cropW) * 100}%`;
+    rushImg.style.top = `${-(cropTop / cropH) * 100}%`;
+    rushImg.style.objectFit = 'fill';
+
+    rushMap.style.aspectRatio = `${cropW * 16} / ${cropH * 9}`;
+
+    const rushSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    rushSvg.setAttribute('viewBox', `${cropLeft} ${cropTop} ${cropW} ${cropH}`);
+    rushSvg.setAttribute('preserveAspectRatio', 'none');
+    rushSvg.classList.add('rushMiniSvg');
+
+    sortedRushRoutes.forEach((route, index) => {
+      const points = (route.points || [])
+        .map(p => ({ x:Number(p.x), y:Number(p.y) }))
+        .filter(p => Number.isFinite(p.x) && Number.isFinite(p.y));
+
+      if(points.length < 2) return;
+
+      const color = routeColor(route.type);
+      const end = points[points.length - 1];
+      const beforeEnd = points[points.length - 2];
+
+      const xScale = 16 / 9;
+      const yScale = 1;
+
+      const dxScreen = (end.x - beforeEnd.x) * xScale;
+      const dyScreen = (end.y - beforeEnd.y) * yScale;
+      const lenScreen = Math.hypot(dxScreen, dyScreen) || 1;
+
+      const uxScreen = dxScreen / lenScreen;
+      const uyScreen = dyScreen / lenScreen;
+
+      const arrowLength = 4.2;
+      const arrowHalfWidth = 1.6;
+
+      const endScreen = {
+        x:end.x * xScale,
+        y:end.y * yScale
+      };
+
+      const lineEndScreen = {
+        x:endScreen.x - uxScreen * arrowLength,
+        y:endScreen.y - uyScreen * arrowLength
+      };
+
+      const lineEnd = {
+        x:lineEndScreen.x / xScale,
+        y:lineEndScreen.y / yScale
+      };
+
+      const visiblePoints = [
+        ...points.slice(0, -1),
+        lineEnd
+      ];
+
+      const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+      polyline.setAttribute('points', visiblePoints.map(p => `${p.x},${p.y}`).join(' '));
+      polyline.setAttribute('fill', 'none');
+      polyline.setAttribute('stroke', color);
+      polyline.setAttribute('stroke-width', index === 0 ? '2' : '1.5');
+      polyline.setAttribute('stroke-linecap', 'round');
+      polyline.setAttribute('stroke-linejoin', 'round');
+      polyline.classList.add(index === 0 ? 'rushPrimaryLine' : 'rushAltLine');
+      rushSvg.appendChild(polyline);
+
+      const leftBaseScreen = {
+        x:lineEndScreen.x + (-uyScreen * arrowHalfWidth),
+        y:lineEndScreen.y + (uxScreen * arrowHalfWidth)
+      };
+
+      const rightBaseScreen = {
+        x:lineEndScreen.x - (-uyScreen * arrowHalfWidth),
+        y:lineEndScreen.y - (uxScreen * arrowHalfWidth)
+      };
+
+      const leftBase = {
+        x:leftBaseScreen.x / xScale,
+        y:leftBaseScreen.y / yScale
+      };
+
+      const rightBase = {
+        x:rightBaseScreen.x / xScale,
+        y:rightBaseScreen.y / yScale
+      };
+
+      const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      arrow.setAttribute(
+        'points',
+        `${end.x},${end.y} ${leftBase.x},${leftBase.y} ${rightBase.x},${rightBase.y}`
+      );
+      arrow.setAttribute('fill', color);
+      arrow.classList.add(index === 0 ? 'rushPrimaryArrow' : 'rushAltArrow');
+      rushSvg.appendChild(arrow);
+    });
+
+    rushMap.appendChild(rushSvg);
+    rushMap.appendChild(rushImg);
+
+    if(m.rush.you){
+      const youPos = croppedPct(m.rush.you);
+
+      const youDot = document.createElement('div');
+      youDot.className = 'rushYouDotHtml';
+      youDot.style.left = `${youPos.x}%`;
+      youDot.style.top = `${youPos.y}%`;
+      rushMap.appendChild(youDot);
+
+      const youLabel = document.createElement('div');
+      youLabel.className = 'rushYouLabel';
+      youLabel.textContent = 'YOU';
+      youLabel.style.left = `${youPos.x}%`;
+      youLabel.style.top = `${youPos.y}%`;
+      rushMap.appendChild(youLabel);
+    }
+
+    rushMap.tabIndex = 0;
+    rushMap.setAttribute('role', 'button');
+    rushMap.setAttribute('aria-label', `Open ${m.name || 'map'} rush diagram`);
+
+    rushMap.addEventListener('click', e => {
+      e.stopPropagation();
+
+      let modal = document.querySelector('.rushDiagramModal');
+
+      if(!modal){
+        modal = document.createElement('div');
+        modal.className = 'rushDiagramModal';
+        modal.innerHTML = `
+          <div class="rushDiagramModalPanel">
+            <button class="rushDiagramModalClose" type="button" aria-label="Close diagram">×</button>
+            <div class="rushDiagramModalTitle"></div>
+            <div class="rushDiagramModalStage"></div>
+          </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        modal.addEventListener('click', ev => {
+          if(ev.target === modal || ev.target.classList.contains('rushDiagramModalClose')){
+            modal.classList.remove('open');
+          }
+        });
+
+        document.addEventListener('keydown', ev => {
+          if(ev.key !== 'Escape') return;
+          if(!modal.classList.contains('open')) return;
+
+          ev.preventDefault();
+          ev.stopPropagation();
+          ev.stopImmediatePropagation();
+
+          modal.classList.remove('open');
+        }, true);
+      }
+
+      modal.querySelector('.rushDiagramModalTitle').textContent = `${m.name || 'Map'} Rush Guide`;
+
+      const stage = modal.querySelector('.rushDiagramModalStage');
+      stage.innerHTML = '';
+
+      const clone = rushMap.cloneNode(true);
+      clone.classList.add('rushDiagramModalMap');
+      clone.classList.remove('rushMiniMap-compact');
+      clone.removeAttribute('tabindex');
+      clone.removeAttribute('role');
+      clone.removeAttribute('aria-label');
+      clone.style.cursor = 'default';
+
+      clone.addEventListener('click', ev => {
+        ev.stopPropagation();
+      });
+
+      stage.appendChild(clone);
+      modal.classList.add('open');
+
+      const ratio = (cropW * 16) / (cropH * 9);
+      const stageW = stage.clientWidth;
+      const stageH = stage.clientHeight;
+      let fitW = stageW;
+      let fitH = fitW / ratio;
+      if(fitH > stageH){
+        fitH = stageH;
+        fitW = fitH * ratio;
+      }
+      clone.style.width = `${fitW}px`;
+      clone.style.height = `${fitH}px`;
+    });
+
+    const rushInfo = document.createElement('div');
+    rushInfo.className = 'rushInfo rushInfo-compact';
+
+    rushInfo.innerHTML = `
+      <div class="rushRecommendedTitle">
+        <span class="sectionIcon sectionIcon-rush"></span>
+        <span>Recommended Rush</span>
+      </div>
+
+      <div class="rushRecommendedLine">
+        <span class="rushRouteDot" style="--route-color:${routeColor(primaryRoute.type)}"></span>
+        <strong>${routeLabel(primaryRoute.type)}</strong>
+        <span>${primaryRoute.blocks ? `${primaryRoute.blocks} blocks` : '—'}</span>
+      </div>
+
+      ${
+        otherRoutes.length
+          ? `<div class="rushOtherLabel">Other options</div>
+            <div class="rushOtherRows">
+              ${otherRoutes.map(r => `
+                <div class="rushRecommendedLine rushOtherLine">
+                  <span class="rushRouteDot" style="--route-color:${routeColor(r.type)}"></span>
+                  <strong>${routeLabel(r.type)}</strong>
+                  <span>${r.blocks ? `${r.blocks} blocks` : '—'}</span>
+                </div>
+              `).join('')}
+            </div>`
+          : ''
+      }
+    `;
+
+    rushPanel.appendChild(rushMap);
+    rushPanel.appendChild(rushInfo);
+    rushWrap.appendChild(rushPanel);
+    detailsGrid.appendChild(rushWrap);
+    return rushWrap;
+  }
+
   function mapCard(m){
     const d = document.createElement('details');
     d.classList.add('mapcard');
@@ -1419,128 +1595,100 @@
     });
 
     const detailsGrid = document.createElement('div');
-    detailsGrid.className = 'detailsGrid';
+    detailsGrid.className = 'detailsGrid detailsGrid-compact';
     body.appendChild(detailsGrid);
 
-    const mapInfoWrap = document.createElement('div');
-    mapInfoWrap.className = 'detailsColumn';
-    detailsGrid.appendChild(mapInfoWrap);
-
-    const mapInfoTitle = document.createElement('div');
-    mapInfoTitle.className = 'detailsSectionTitle';
-    mapInfoTitle.innerHTML = `
-      <span class="sectionIcon sectionIcon-map"></span>
-      <span>Map Info</span>
-    `;
-    mapInfoWrap.appendChild(mapInfoTitle);
-
-    function kv(k, v, isHtml=false, icon=''){
+    function infoCell(label, value, isHtml=false, icon='', extraClass=''){
       const row = document.createElement('div');
-      row.className = 'kv';
-
-      if(k === 'Note'){
-        row.classList.add('kv-note');
-      }
+      row.className = `infoCell ${extraClass}`;
 
       const ii = document.createElement('div');
       ii.className = `kvIcon kvIcon-${icon}`;
 
-      const kk = document.createElement('div');
-      kk.className = 'k';
-      kk.textContent = k;
+      const text = document.createElement('div');
+      text.className = 'infoCellText';
 
-      const vv = document.createElement('div');
-      vv.className = 'v';
+      const l = document.createElement('div');
+      l.className = 'infoCellLabel';
+      l.textContent = label;
 
-      if(isHtml) vv.innerHTML = v || '';
-      else vv.textContent = v || '';
+      const v = document.createElement('div');
+      v.className = 'infoCellValue';
 
-      if(k === 'Mode'){
-        if(v === 'Solos/Doubles') vv.classList.add('mode-sd');
-        if(v === '3s/4s') vv.classList.add('mode-34');
+      if(isHtml) v.innerHTML = value || '';
+      else v.textContent = value || '';
+
+      if(label === 'Mode'){
+        if(value === 'Solos/Doubles') v.classList.add('mode-sd');
+        if(value === '3s/4s') v.classList.add('mode-34');
       }
 
-      if(k === 'Playstyle'){
-        if(v === 'Quick & Rushy') vv.classList.add('ps-quick');
-        if(v === 'Long & Tactical') vv.classList.add('ps-long');
+      if(label === 'Playstyle'){
+        if(value === 'Quick & Rushy') v.classList.add('ps-quick');
+        if(value === 'Long & Tactical') v.classList.add('ps-long');
       }
 
+      text.appendChild(l);
+      text.appendChild(v);
       row.appendChild(ii);
-      row.appendChild(kk);
-      row.appendChild(vv);
+      row.appendChild(text);
+
       return row;
     }
 
-    const mapInfoPanel = document.createElement('div');
-    mapInfoPanel.className = 'detailsPanel';
-    mapInfoWrap.appendChild(mapInfoPanel);
-
-    mapInfoPanel.appendChild(kv('Mode', m.mode || '', false, 'mode'));
     const displayPlaystyle =
       normalizedPlaystyleValue(m) !== 'Unknown'
         ? playstyleText
         : '—';
 
-    mapInfoPanel.appendChild(kv('Playstyle', displayPlaystyle, false, 'playstyle'));
+    const compactPanel = document.createElement('div');
+    compactPanel.className = 'compactInfoPanel';
 
-    mapInfoPanel.appendChild(
-      kv('Gen Speed', m.gen_html || '—', true, 'generator')
-    );
+    const infoColA = document.createElement('div');
+    infoColA.className = 'compactInfoCol';
 
-    mapInfoPanel.appendChild(
-        kv('Released', shortDate(m.released), false, 'released')
-    );
+    infoColA.appendChild(infoCell('Mode', m.mode || '', false, 'mode'));
+    infoColA.appendChild(infoCell('Playstyle', displayPlaystyle, false, 'playstyle'));
+    infoColA.appendChild(infoCell('Gen Speed', m.gen_html || '—', true, 'generator'));
+
+    const infoColB = document.createElement('div');
+    infoColB.className = 'compactInfoCol';
+
+    infoColB.appendChild(infoCell('Released', shortDate(m.released), false, 'released'));
 
     if(m.note){
-        mapInfoPanel.appendChild(kv('Note', m.note, true, 'note'));
+      infoColB.appendChild(infoCell('Note', m.note, true, 'note'));
     }
 
     if(!exportMode){
-      const links = document.createElement('div');
-      links.className = 'kv';
-
-      const k = document.createElement('div');
-      k.className = 'k';
-      k.textContent = 'Links';
-
-      const v = document.createElement('div');
-      v.innerHTML = (m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : '')
+      const linkHtml = (m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : '')
         + (m.image_url ? ` • <a href="${m.image_url}" target="_blank" rel="noopener">Image</a>` : '');
 
-      const icon = document.createElement('div');
-      icon.className = 'kvIcon kvIcon-links';
-
-      links.appendChild(icon);
-      links.appendChild(k);
-      links.appendChild(v);
-      mapInfoPanel.appendChild(links);
+      infoColB.appendChild(infoCell('Links', linkHtml || '—', true, 'links', 'infoCell-links'));
     }
 
-    const buildInfoWrap = document.createElement('div');
-    buildInfoWrap.className = 'detailsColumn';
-    detailsGrid.appendChild(buildInfoWrap);
+    const infoColC = document.createElement('div');
+    infoColC.className = 'compactInfoCol compactInfoCol-build';
 
-    const buildInfoTitle = document.createElement('div');
-    buildInfoTitle.className = 'detailsSectionTitle detailsSectionTitle-build';
-    buildInfoTitle.innerHTML = `
-      <span class="sectionIcon sectionIcon-build"></span>
-      <span>Build Info</span>
-      ${exportMode ? '' : `
-        <span class="buildInfoHelp" tabindex="0">?
-          <span class="buildInfoTooltip">Build Limits are currently being recalculated based on recent changes from Hypixel staff</span>
-        </span>
-      `}
-    `;
-    buildInfoWrap.appendChild(buildInfoTitle);
+    if(!exportMode){
+      const help = document.createElement('span');
+      help.className = 'buildInfoHelp compactBuildHelp';
+      help.tabIndex = 0;
+      help.innerHTML = `?<span class="buildInfoTooltip">Build Limits are currently being recalculated based on recent changes from Hypixel staff</span>`;
+      infoColC.appendChild(help);
+    }
 
-    const buildInfoPanel = document.createElement('div');
-    buildInfoPanel.className = 'detailsPanel buildInfoPanel';
-    buildInfoWrap.appendChild(buildInfoPanel);
+    infoColC.appendChild(infoCell('Max Y', m.buildMaxY ?? '—', false, 'maxy'));
+    infoColC.appendChild(infoCell('Min Y', m.buildMinY ?? '—', false, 'miny'));
+    infoColC.appendChild(infoCell('Y Layers', m.buildRange ?? '—', false, 'range'));
+    infoColC.appendChild(infoCell('Build Radius', m.buildRadius ?? '—', false, 'radius'));
 
-    buildInfoPanel.appendChild(kv('Maximum Y', m.buildMaxY ?? '—', false, 'maxy'));
-    buildInfoPanel.appendChild(kv('Minimum Y', m.buildMinY ?? '—', false, 'miny'));
-    buildInfoPanel.appendChild(kv('Y Layers', m.buildRange ?? '—', false, 'range'));
-    buildInfoPanel.appendChild(kv('Build Radius', m.buildRadius ?? '—', false, 'radius'));
+    compactPanel.appendChild(infoColA);
+    compactPanel.appendChild(infoColB);
+    compactPanel.appendChild(infoColC);
+    detailsGrid.appendChild(compactPanel);
+
+    const rushWrapEl = buildRushGuide(m, detailsGrid);
 
     if(exportMode){
       const exportFooter = document.createElement('div');
@@ -1560,12 +1708,12 @@
 
     if(!exportMode){
       const shareRow = document.createElement('div');
-      shareRow.className = 'mapShareRow';
+      shareRow.className = rushWrapEl ? 'mapShareRow mapShareRow-overlay' : 'mapShareRow';
 
       const shareBtn = document.createElement('button');
       shareBtn.type = 'button';
       shareBtn.className = 'mapShareBtn';
-      shareBtn.innerHTML = '🔗 Share';
+      shareBtn.innerHTML = '<span class="shareIcon-share" aria-hidden="true"></span><span class="mapShareBtnLabel">Share</span>';
 
       const shareMenu = document.createElement('div');
       shareMenu.className = 'mapShareMenu';
@@ -1654,7 +1802,12 @@
       });
 
       shareRow.append(shareMenu, shareBtn);
-      body.appendChild(shareRow);
+
+      if(rushWrapEl){
+        rushWrapEl.appendChild(shareRow);
+      }else{
+        body.appendChild(shareRow);
+      }
     }
 
     d.appendChild(summary);
@@ -1687,7 +1840,7 @@
     return mode || '';
   }
 
-  function modeClass(mode){
+  function rotationSummaryModeClass(mode){
     if(mode === 'Solos/Doubles') return 'rotationModeSD';
     if(mode === '3s/4s') return 'rotationMode34';
     return '';
@@ -1727,7 +1880,7 @@
 
         return `
           <div class="rotationModeLine">
-            <span class="${modeClass(mode)}">[${modeLabel(mode)}]</span>
+            <span class="${rotationSummaryModeClass(mode)}">[${modeLabel(mode)}]</span>
             ${names}
           </div>
         `;
@@ -2053,34 +2206,6 @@
     applySummaryVisibility();
   }
 
-  function updateNextRotationCountdown(){
-    if(!els.nextRotationCountdown) return;
-
-    const now = new Date();
-    const today = new Date(now);
-    today.setHours(0, 0, 0, 0);
-
-    const latestRotation = parseDateLoose(meta.latest_rotation || meta.latest_update);
-    const siteUpdatedToday = latestRotation && latestRotation.getTime() === today.getTime();
-
-    const day = today.getDay();
-
-    if(day === 1 && !siteUpdatedToday){
-      els.nextRotationCountdown.textContent = 'Today';
-      return;
-    }
-
-    if(day === 0){
-      els.nextRotationCountdown.textContent = 'Tomorrow';
-      return;
-    }
-
-    let daysUntilMonday = (8 - day) % 7;
-    if(daysUntilMonday === 0) daysUntilMonday = 7;
-
-    els.nextRotationCountdown.textContent =
-      `${daysUntilMonday} day${daysUntilMonday === 1 ? '' : 's'}`;
-  }
 
   function hasActiveResultsFilter(){
     const hasSearch =
@@ -2291,7 +2416,7 @@
     scheduleRender();
   });
 
-  document.querySelectorAll('[data-filter-group]').forEach(box => {
+  filterOptionEls.filterGroup.forEach(box => {
     box.addEventListener('change', () => {
       focusNames = null;
       readFiltersFromUI();
@@ -2343,12 +2468,18 @@
     const controlsRect = controls.getBoundingClientRect();
     const buttonRect = button.getBoundingClientRect();
 
-    panel.style.left = `${buttonRect.left - controlsRect.left}px`;
     panel.style.right = 'auto';
     panel.style.top = `${buttonRect.bottom - controlsRect.top + 8}px`;
+    panel.style.left = `${buttonRect.left - controlsRect.left}px`;
 
     panel.hidden = false;
     button.setAttribute('aria-expanded', 'true');
+
+    // Clamp so the panel never overflows the controls container's right edge
+    const panelWidth = panel.getBoundingClientRect().width;
+    const desiredLeft = buttonRect.left - controlsRect.left;
+    const maxLeft = Math.max(4, controlsRect.width - panelWidth - 4);
+    panel.style.left = `${Math.min(desiredLeft, maxLeft)}px`;
   }
 
   els.modeFilterToggle.addEventListener('click', e => {
@@ -2383,7 +2514,7 @@
     });
   });
 
-  document.querySelectorAll('[data-mode-value]').forEach(btn => {
+  filterOptionEls.modeValue.forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
 
@@ -2406,7 +2537,7 @@
     });
   });
 
-  document.querySelectorAll('[data-status-value]').forEach(btn => {
+  filterOptionEls.statusValue.forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
 
@@ -2419,7 +2550,7 @@
     });
   });
 
-  document.querySelectorAll('[data-playstyle-value]').forEach(btn => {
+  filterOptionEls.playstyleValue.forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
 
@@ -2436,7 +2567,7 @@
     });
   });
 
-  document.querySelectorAll('[data-gen-value]').forEach(btn => {
+  filterOptionEls.genValue.forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
 
@@ -2523,6 +2654,9 @@
   document.addEventListener('keydown', e => {
     if(e.key !== 'Escape') return;
 
+    const rushModal = document.querySelector('.rushDiagramModal.open');
+    if(rushModal) return;
+
     const lightbox = document.querySelector('.imageLightbox.open');
     if(lightbox) return;
 
@@ -2546,8 +2680,8 @@
 
   loadSearchFromUrl();
   loadSummaryVisibility();
-  updateNextRotationCountdown();
-  setInterval(updateNextRotationCountdown, 60000);
+  updateNextRotationCountdown(meta);
+  setInterval(() => updateNextRotationCountdown(meta), 60000);
   readFiltersFromUI();
   updateFilterUI();
   render();

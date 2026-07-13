@@ -1,6 +1,62 @@
 {
   "entries": [
     {
+      "id": "7465276520329501",
+      "date": "July 13, 2026",
+      "timestamp": "2026-07-13T10:07:28.397959",
+      "type": "site_change",
+      "map": "Website",
+      "mode": "",
+      "event": "",
+      "field": "site",
+      "label": "Site Change",
+      "old": "",
+      "new": "Updated the mobile layout to make text less cramped and made the UI easier to navigate, tweaked certain icons to look better. Work in progress: New Rush section, see the recommended rush and learn how many blocks it takes to rush your opponents.",
+      "source": "Added manually"
+    },
+    {
+      "id": "818260c0b6ecc31a",
+      "date": "July 06, 2026",
+      "timestamp": "2026-07-13T00:43:06+00:00",
+      "type": "playstyle",
+      "map": "Rooftop",
+      "mode": "Solos/Doubles",
+      "event": "",
+      "field": "playstyle",
+      "label": "Playstyle",
+      "old": "Long & Tactical",
+      "new": "Quick & Rushy",
+      "source": "Detected during site build"
+    },
+    {
+      "id": "86ebe4041fea3fc7",
+      "date": "July 06, 2026",
+      "timestamp": "2026-07-13T00:41:33+00:00",
+      "type": "playstyle",
+      "map": "Orbit",
+      "mode": "Solos/Doubles",
+      "event": "",
+      "field": "playstyle",
+      "label": "Playstyle",
+      "old": "Quick & Rushy",
+      "new": "Long & Tactical",
+      "source": "Detected during site build"
+    },
+    {
+      "id": "173887535ac70b84",
+      "date": "July 06, 2026",
+      "timestamp": "2026-07-13T00:26:23+00:00",
+      "type": "playstyle",
+      "map": "Hollow",
+      "mode": "Solos/Doubles",
+      "event": "",
+      "field": "playstyle",
+      "label": "Playstyle",
+      "old": "Quick & Rushy",
+      "new": "Long & Tactical",
+      "source": "Detected during site build"
+    },
+    {
       "id": "3be4b22c657fd026",
       "date": "July 06, 2026",
       "timestamp": "2026-07-07T02:02:57+00:00",
