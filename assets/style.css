@@ -1352,7 +1352,8 @@ details.mapcard.is-out .mapDaysValue{
 }
 
 details.mapcard .detailsBody{
-  padding:12px 12px;
+  position:relative;
+  padding:4px 12px 4px;
   border-top:1px solid var(--border);
 }
 
@@ -1367,9 +1368,41 @@ details.mapcard .detailsBody{
   overflow-x:auto;
 }
 
+.mapBottomBar{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+}
+
+/* No gallery to sit left of the share button (e.g. no rush images) -
+   push the lone button to the right instead of leaving it stranded left. */
+.mapBottomBar:not(:has(.mapGallery-bottom)){
+  justify-content:flex-end;
+}
+
+.mapGallery-bottom{
+  position:relative;
+  order:1;
+  flex:1;
+  min-width:0;
+  margin:0;
+}
+
+.mapGalleryFade{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  width:36px;
+  pointer-events:none;
+  background:linear-gradient(to right, transparent, #0f141b);
+  border-radius:0 14px 14px 0;
+}
+
 .mapGalleryThumb{
   width:72px;
-  height:42px;
+  height:34px;
   flex:0 0 auto;
   border:1px solid rgba(255,255,255,.14);
   border-radius:10px;
@@ -1658,7 +1691,7 @@ details.mapcard .detailsBody{
 }
 
 .kvIcon-radius{
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23c084fc' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='7'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3Cpath d='M12 12h7'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23c084fc' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='7'/%3E%3Ccircle cx='12' cy='12' r='2' fill='%23c084fc' stroke='none'/%3E%3C/svg%3E");
 }
 
 .buildInfoPanel .kvIcon{
@@ -2633,7 +2666,7 @@ tr.row-out{
 .mapShareRow{
   display:flex;
   justify-content:flex-end;
-  margin-top:14px;
+  margin-top:0;
 }
 
 .mapShareBtn{
@@ -2664,34 +2697,26 @@ tr.row-out{
   position:relative;
 }
 
-@media (max-width:560px){
-  .mapShareRow-overlay{
-    position:absolute;
-    bottom:10px;
-    right:10px;
-    margin-top:0;
-  }
+.mapShareRow-compact{
+  order:2;
+  flex:none;
+}
 
-  .mapShareRow-overlay .mapShareBtn{
-    padding:0;
-    width:34px;
-    height:34px;
-    min-height:34px;
-    justify-content:center;
-    gap:0;
-  }
+.mapShareRow-compact .mapShareBtn{
+  padding:0;
+  width:34px;
+  height:34px;
+  min-height:34px;
+  justify-content:center;
+  gap:0;
+}
 
-  .mapShareRow-overlay .mapShareBtnLabel{
-    display:none;
-  }
+.mapShareRow-compact .mapShareBtnLabel{
+  display:none;
+}
 
-  .mapShareRow-overlay .mapShareMenu{
-    bottom:40px;
-  }
-
-  .rushGuideWrap-compact:has(.mapShareRow-overlay){
-    padding-bottom:52px !important;
-  }
+.mapShareRow-compact .mapShareMenu{
+  bottom:40px;
 }
 
 .mapShareMenu{
@@ -2767,11 +2792,11 @@ tr.row-out{
   flex:0 0 15px;
   display:inline-block;
   background:currentColor;
-  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 14 20 9 15 4'/%3E%3Cpath d='M4 20v-7a4 4 0 0 1 4-4h12'/%3E%3C/svg%3E");
   mask-repeat:no-repeat;
   mask-position:center;
   mask-size:contain;
-  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 14 20 9 15 4'/%3E%3Cpath d='M4 20v-7a4 4 0 0 1 4-4h12'/%3E%3C/svg%3E");
   -webkit-mask-repeat:no-repeat;
   -webkit-mask-position:center;
   -webkit-mask-size:contain;
@@ -3084,6 +3109,7 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 .buildInfoHelp{
   margin-left:auto;
   position:relative;
+  z-index:2;
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -3096,6 +3122,11 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
   font-weight:900;
   cursor:help;
   text-transform:none;
+}
+
+.buildInfoHelp:hover,
+.buildInfoHelp:focus{
+  z-index:60;
 }
 
 .buildInfoTooltip{
@@ -3127,6 +3158,196 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 .buildInfoHelp:focus .buildInfoTooltip{
   opacity:1;
   transform:translateY(0);
+}
+
+.buildInfoHelp-green{
+  border-color:rgba(74,222,128,.55);
+  color:#bbf7d0;
+}
+
+.buildInfoHelp-green .buildInfoTooltip{
+  border-color:rgba(74,222,128,.45);
+}
+
+.kvIconHelp{
+  position:relative;
+  z-index:2;
+  cursor:help;
+}
+
+/* Sibling icons in other rows share the same base z-index, so whichever
+   is later in the DOM would otherwise win - bump whichever one is
+   actually active well above every sibling while it's shown. */
+.kvIconHelp:hover,
+.kvIconHelp:focus{
+  z-index:60;
+}
+
+.kvIconTooltip{
+  position:absolute;
+  left:0;
+  top:100%;
+  margin-top:8px;
+  z-index:50;
+  width:220px;
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid rgba(125,211,252,.45);
+  background:rgba(11,13,16,.96);
+  color:#e7edf7;
+  font-size:11px;
+  font-weight:600;
+  line-height:1.35;
+  text-align:left;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(-4px);
+  transition:opacity .15s ease, transform .15s ease;
+  box-shadow:0 12px 28px rgba(0,0,0,.45);
+}
+
+.kvIconHelp:hover .kvIconTooltip,
+.kvIconHelp:focus .kvIconTooltip{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Build-limit column sits at the card's right edge - open its tooltips
+   leftward instead of rightward so they don't get clipped by the card's
+   overflow:hidden border. */
+.compactInfoCol-build .kvIconTooltip{
+  left:auto;
+  right:0;
+}
+
+.kvIconTooltip.tooltipFlip{
+  left:auto;
+  right:0;
+}
+
+/* Last row in a column has no room below it before the panel's own
+   overflow:hidden clips the tooltip - open upward instead. */
+.kvIconTooltip.tooltipFlipUp{
+  top:auto;
+  bottom:100%;
+  margin-top:0;
+  margin-bottom:8px;
+  transform:translateY(4px);
+}
+
+.kvIconHelp:hover .kvIconTooltip.tooltipFlipUp,
+.kvIconHelp:focus .kvIconTooltip.tooltipFlipUp{
+  transform:translateY(0);
+}
+
+.seasonalTitleEmoji{
+  position:relative;
+  z-index:2;
+  display:inline-block;
+  margin-right:5px;
+  cursor:help;
+}
+
+.seasonalTitleEmoji:hover,
+.seasonalTitleEmoji:focus{
+  z-index:60;
+}
+
+.seasonalTitleTooltip{
+  position:absolute;
+  left:0;
+  bottom:100%;
+  margin-bottom:8px;
+  z-index:50;
+  width:max-content;
+  max-width:220px;
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid rgba(125,211,252,.45);
+  background:rgba(11,13,16,.96);
+  color:#e7edf7;
+  font-size:11px;
+  font-weight:600;
+  line-height:1.35;
+  text-align:left;
+  text-transform:none;
+  letter-spacing:normal;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(4px);
+  transition:opacity .15s ease, transform .15s ease;
+  box-shadow:0 12px 28px rgba(0,0,0,.45);
+}
+
+.seasonalTitleEmoji:hover .seasonalTitleTooltip,
+.seasonalTitleEmoji:focus .seasonalTitleTooltip{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.reskinEmojiChip{
+  position:relative;
+  z-index:2;
+  display:inline-block;
+  cursor:pointer;
+  padding:0 3px;
+  border-radius:4px;
+}
+
+.reskinEmojiChip:hover,
+.reskinEmojiChip:focus{
+  z-index:60;
+}
+
+.reskinEmojiChip:hover,
+.reskinEmojiChip:focus{
+  background:rgba(125,211,252,.18);
+  outline:none;
+}
+
+.reskinEmojiTooltip{
+  position:absolute;
+  left:50%;
+  bottom:100%;
+  transform:translate(-50%, -6px);
+  z-index:50;
+  width:max-content;
+  max-width:220px;
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid rgba(125,211,252,.45);
+  background:rgba(11,13,16,.96);
+  color:#e7edf7;
+  font-size:11px;
+  font-weight:600;
+  line-height:1.35;
+  text-align:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .15s ease, transform .15s ease;
+  box-shadow:0 12px 28px rgba(0,0,0,.45);
+}
+
+.reskinEmojiChip:hover .reskinEmojiTooltip,
+.reskinEmojiChip:focus .reskinEmojiTooltip{
+  opacity:1;
+  transform:translate(-50%, -10px);
+}
+
+.reskinEmojiTooltip.tooltipFlip{
+  left:auto;
+  right:0;
+  transform:translateY(-6px);
+}
+
+.reskinEmojiChip:hover .reskinEmojiTooltip.tooltipFlip,
+.reskinEmojiChip:focus .reskinEmojiTooltip.tooltipFlip{
+  transform:translateY(-10px);
+}
+
+.seasonalTitleTooltip.tooltipFlip{
+  left:auto;
+  right:0;
 }
 
 .sheetFilterBar{
@@ -4099,7 +4320,7 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 .compactInfoPanel{
   position:relative;
   display:grid !important;
-  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  grid-template-columns:1fr 1.28fr 0.87fr !important;
   width:100%;
   gap:0;
   padding:12px;
@@ -4186,32 +4407,58 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 .rushGuideWrap-compact{
   position:relative;
   grid-column:1/-1;
-  padding:18px 20px 20px;
-  border:1px solid rgba(34,197,94,.35);
-  border-radius:18px;
-  background:rgba(11,13,16,.42);
-}
-
-.sectionIcon-rush{
-  width:22px;
-  height:22px;
-  display:inline-block;
-  background:#4ade80;
+  padding:10px 12px 0;
 }
 
 .rushGuidePanel-compact{
   display:grid;
-  grid-template-columns:.45fr .45fr;
+  grid-template-columns:.53fr .47fr;
   gap:12px;
-  align-items:center;
+  align-items:stretch;
+}
+
+.rushGuidePanel-exportOnly{
+  display:grid;
+  grid-template-columns:1fr;
 }
 
 .rushMiniMap-compact{
   position:relative;
   aspect-ratio:16 / 9;
+  height:100%;
+  width:auto;
+  max-height:240px;
+  max-width:100%;
+  justify-self:center;
   border-radius:13px;
   overflow:hidden;
   cursor:zoom-in;
+}
+
+.rushMiniMapContent{
+  position:absolute;
+  inset:0;
+  transition:transform .25s ease;
+}
+
+.rushMiniMap-compact:hover .rushMiniMapContent{
+  transform:scale(1.06);
+}
+
+.rushFadeRight,
+.rushFadeTop{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+}
+
+.rushFadeRight{
+  background:linear-gradient(to right, transparent 78%, #0f141b 100%);
+}
+
+.rushFadeTop{
+  background:linear-gradient(to bottom, #0f141b 0%, transparent 10%, transparent 100%);
 }
 
 .rushMiniMapImg{
@@ -4263,7 +4510,7 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 
 .rushInfo-compact{
   display:grid;
-  gap:8px;
+  gap:6px;
   min-width:0;
 }
 
@@ -4277,8 +4524,14 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
   grid-template-columns:auto minmax(0,1fr) auto;
   gap:8px;
   align-items:center;
-  padding:6px 0 10px;
+  padding:4px 0 6px;
   border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+/* Distance rows (To Diamonds, To Middle) are reference info, not
+   separate rush routes - no divider needed between them. */
+.rushDistanceLine{
+  border-bottom:0 !important;
 }
 
 .rushRecommendedLine strong{
@@ -4303,9 +4556,47 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
   background:var(--route-color);
 }
 
+.rushDistanceTitle{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#8b93a7;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin-top:4px;
+}
+
+.sectionIcon-distance{
+  width:16px;
+  height:16px;
+  min-width:16px;
+  min-height:16px;
+  display:inline-block;
+  background:#8b93a7;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z' fill='%230F0F0F'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z' fill='%230F0F0F'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.rushDistanceIcon{
+  width:12px;
+  height:12px;
+  border-radius:999px;
+  background:var(--route-color, #8b93a7);
+}
+
+.rushDistanceLine strong{
+  color:#aab2c2;
+}
+
+.rushDistanceLine span:last-child{
+  color:#9aa3b5;
+}
+
 @media (max-width:560px){
   .compactInfoPanel{
-    grid-template-columns:1.05fr 1.1fr 0.78fr !important;
+    grid-template-columns:0.95fr 1.3fr 0.75fr !important;
     padding:8px;
   }
 
@@ -4351,11 +4642,11 @@ details.mapcard[open] .rushGuideWrap-compact{
 }
 
 .infoCellLabel{
-  font-size:11px !important;
+  font-size:13px !important;
 }
 
 .infoCellValue{
-  font-size:13px !important;
+  font-size:15px !important;
   line-height:1.25 !important;
 }
 
@@ -4445,17 +4736,6 @@ details.mapcard[open] .rushGuideWrap-compact{
   cursor:default;
 }
 
-.rushPrimaryArrow,
-.rushAltArrow{
-  transform-box:fill-box;
-  transform-origin:center;
-}
-
-.rushDiagramModalMap .rushPrimaryArrow,
-.rushDiagramModalMap .rushAltArrow{
-  transform:scale(1.25);
-}
-
 .rushMiniSvg{
   z-index:1;
 }
@@ -4494,10 +4774,10 @@ details.mapcard[open] .rushGuideWrap-compact{
 .rushYouDotHtml{
   position:absolute;
   z-index:5;
-  width:9px;
-  height:9px;
+  width:11px;
+  height:11px;
   border-radius:999px;
-  background:#ef4444;
+  background:var(--route-color, #ef4444);
   border:2px solid #fff;
   transform:translate(-50%, -50%);
   box-shadow:0 2px 7px rgba(0,0,0,.85);
@@ -4505,13 +4785,28 @@ details.mapcard[open] .rushGuideWrap-compact{
 }
 
 .rushDiagramModalMap .rushYouDotHtml{
-  width:14px;
-  height:14px;
+  width:17px;
+  height:17px;
   border-width:3px;
 }
 
+.rushLandmarkIcon{
+  position:absolute;
+  z-index:4;
+  width:18px;
+  height:18px;
+  transform:translate(-50%, -50%);
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.85));
+  pointer-events:none;
+}
+
+.rushDiagramModalMap .rushLandmarkIcon{
+  width:28px;
+  height:28px;
+}
+
 .rushGuideWrap-compact{
-  padding:12px 14px 14px !important;
+  padding:8px 12px 0 !important;
 }
 
 .rushGuidePanel-compact{
@@ -4519,13 +4814,14 @@ details.mapcard[open] .rushGuideWrap-compact{
 }
 
 .rushInfo-compact{
-  gap:6px !important;
+  gap:4px !important;
 }
 
 .rushRecommendedTitle{
   display:flex;
   align-items:center;
   gap:8px;
+  min-width:0;
   color:#4ade80;
   font-size:13px;
   font-weight:950;
@@ -4534,8 +4830,20 @@ details.mapcard[open] .rushGuideWrap-compact{
   margin-bottom:2px;
 }
 
+.rushRecommendedTitleText{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  min-width:0;
+}
+
+.rushRecommendedTitle .buildInfoHelp,
+.rushRecommendedTitle .sectionIcon{
+  flex:0 0 auto;
+}
+
 .rushRecommendedLine{
-  padding:5px 0 7px !important;
+  padding:3px 0 5px !important;
 }
 
 .rushOtherLabel{
@@ -4557,12 +4865,14 @@ details.mapcard[open] .rushGuideWrap-compact{
 }
 
 @media (max-width:560px){
-  .rushRecommendedTitle{
+  .rushRecommendedTitle,
+  .rushDistanceTitle{
     gap:5px;
     font-size:10px;
   }
 
-  .rushRecommendedTitle .sectionIcon{
+  .rushRecommendedTitle .sectionIcon,
+  .sectionIcon-distance{
     width:14px;
     height:14px;
     min-width:14px;
@@ -4575,10 +4885,11 @@ details.mapcard[open] .rushGuideWrap-compact{
     grid-template-rows:auto auto;
     column-gap:6px;
     row-gap:0;
-    padding:5px 0 6px !important;
+    padding:3px 0 4px !important;
   }
 
-  .rushRouteDot{
+  .rushRouteDot,
+  .rushDistanceIcon{
     grid-row:1 / 3;
     grid-column:1;
     width:9px;
@@ -4596,11 +4907,4 @@ details.mapcard[open] .rushGuideWrap-compact{
     grid-row:2;
     font-size:9.5px;
   }
-}
-
-.rushPrimaryArrow,
-.rushAltArrow,
-.rushDiagramModalMap .rushPrimaryArrow,
-.rushDiagramModalMap .rushAltArrow{
-  scale:1;
 }

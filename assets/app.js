@@ -29,6 +29,66 @@
     });
   }
 
+  // Tooltips default to opening rightward/downward. Ancestors like
+  // .compactInfoPanel clip overflow (for rounded corners / to stop the
+  // panel growing), which is a tighter boundary than the card itself -
+  // a tooltip that would cross that boundary needs to flip to the
+  // opposite side instead of getting cut off.
+  const TOOLTIP_TRIGGER_SELECTOR =
+    '.buildInfoHelp, .kvIconHelp, .reskinEmojiChip, .seasonalTitleEmoji';
+  const TOOLTIP_SELECTOR =
+    '.buildInfoTooltip, .kvIconTooltip, .reskinEmojiTooltip, .seasonalTitleTooltip';
+
+  function nearestClippingAncestor(el){
+    let cur = el.parentElement;
+
+    while(cur && cur !== document.body){
+      const cs = getComputedStyle(cur);
+      if(cs.overflow === 'hidden' || cs.overflowX === 'hidden' || cs.overflowY === 'hidden'){
+        return cur;
+      }
+      cur = cur.parentElement;
+    }
+
+    return document.body;
+  }
+
+  function flipTooltipIfNeeded(trigger){
+    const tip = trigger.querySelector(TOOLTIP_SELECTOR);
+    if(!tip) return;
+
+    tip.classList.remove('tooltipFlip', 'tooltipFlipUp');
+
+    const bounds = nearestClippingAncestor(trigger).getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+
+    if(tipRect.right > bounds.right){
+      tip.classList.add('tooltipFlip');
+    }
+
+    if(tipRect.bottom > bounds.bottom){
+      tip.classList.add('tooltipFlipUp');
+    }
+  }
+
+  document.addEventListener('mouseover', e => {
+    const trigger = e.target.closest(TOOLTIP_TRIGGER_SELECTOR);
+    if(trigger) flipTooltipIfNeeded(trigger);
+  });
+
+  document.addEventListener('focusin', e => {
+    const trigger = e.target.closest(TOOLTIP_TRIGGER_SELECTOR);
+    if(trigger) flipTooltipIfNeeded(trigger);
+  });
+
+  // A click gives these focusable triggers keyboard focus, which keeps
+  // the tooltip open (via :focus) until something else takes focus -
+  // drop it immediately so a click doesn't leave the tooltip stuck open.
+  document.addEventListener('click', e => {
+    const trigger = e.target.closest(TOOLTIP_TRIGGER_SELECTOR);
+    if(trigger) trigger.blur();
+  });
+
   function openImageLightbox(url, title, images=[url], startIndex=0){
     let currentIndex = Math.max(0, startIndex);
 
@@ -985,32 +1045,60 @@
     clone.open = true;
     clone.classList.add('shareExportCard');
 
-    clone.querySelectorAll('.mapShareRow').forEach(el => el.remove());
+    clone.querySelectorAll('.mapBottomBar').forEach(el => el.remove());
+
+    // "?" hover-help icons only make sense as an interactive hint - strip
+    // them (and their tooltip bubbles) from the static exported image.
+    clone.querySelectorAll('.buildInfoHelp').forEach(el => el.remove());
+    clone.querySelectorAll('.kvIconTooltip').forEach(el => el.remove());
+    clone.querySelectorAll('.kvIconHelp').forEach(el => el.classList.remove('kvIconHelp'));
 
     const exportIconSVG = {
-      'kvIcon-mode': `<svg viewBox="0 0 100 100" width="22" height="22"><path fill="#38bdf8" d="M84.267,73.664l-37.61-37.611c13.616-12.724,23.23-17.65,23.23-17.65c-4.153-1.428-8.604-2.213-13.242-2.213c-8.467,0-16.33,2.585-22.845,7.006l-4.686-4.686c-0.839-0.838-1.954-1.299-3.139-1.299c-1.186,0-2.3,0.461-3.14,1.3l-4.605,4.605c-1.729,1.731-1.729,4.547,0.001,6.278l4.685,4.685c0.001-0.001,0.002-0.002,0.003-0.004c-4.423,6.516-7.009,14.38-7.009,22.849c0,4.638,0.786,9.089,2.213,13.242c0,0,6.024-10.222,17.736-23.144l37.525,37.525c0.839,0.838,1.954,1.299,3.139,1.299c1.186,0,2.3-0.461,3.14-1.3l4.605-4.605C85.998,78.211,85.998,75.396,84.267,73.664z M25.975,23.856l3.094,3.094c-0.833,0.766-1.632,1.566-2.398,2.398l-3.094-3.093L25.975,23.856z M53.416,22.339c-4.407,3.452-9.654,7.972-15.413,13.73c-6.638,6.638-11.972,12.932-15.985,18.097C23.344,37.364,36.677,23.889,53.416,22.339z M76.523,79.202L39.961,42.64c0.745-0.771,1.502-1.546,2.284-2.328c0.031-0.031,0.062-0.061,0.093-0.092l36.583,36.583L76.523,79.202z"/></svg>`,
-      'kvIcon-generator': `<svg viewBox="10 10 70 70" width="22" height="22" fill="none"><polygon stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" points="37.434,71.468 18.607,61.999 18.607,46.971 37.434,56.44 72.107,38.001 72.107,53.029"/><polygon stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" points="37.434,56.44 18.607,46.971 53.607,28.532 72.107,38.001"/><line stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" x1="37.434" y1="71.468" x2="37.434" y2="56.44"/></svg>`,
-      'sectionIcon-map': `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#4ade80" stroke-width="2.4"/><path d="M12 10.5v6" stroke="#4ade80" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.5" r="1.35" fill="#4ade80"/></svg>`,
-      'sectionIcon-build': `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#c084fc" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.5 8 4.5v8l-8 4.5-8-4.5v-8l8-4.5Z"/><path d="M12 12 4 8"/><path d="m12 12 8-4"/><path d="M12 12v8.5"/></svg>`
+      'kvIcon-mode': { size: 22, svg: `<svg viewBox="0 0 100 100" width="22" height="22"><path fill="#38bdf8" d="M84.267,73.664l-37.61-37.611c13.616-12.724,23.23-17.65,23.23-17.65c-4.153-1.428-8.604-2.213-13.242-2.213c-8.467,0-16.33,2.585-22.845,7.006l-4.686-4.686c-0.839-0.838-1.954-1.299-3.139-1.299c-1.186,0-2.3,0.461-3.14,1.3l-4.605,4.605c-1.729,1.731-1.729,4.547,0.001,6.278l4.685,4.685c0.001-0.001,0.002-0.002,0.003-0.004c-4.423,6.516-7.009,14.38-7.009,22.849c0,4.638,0.786,9.089,2.213,13.242c0,0,6.024-10.222,17.736-23.144l37.525,37.525c0.839,0.838,1.954,1.299,3.139,1.299c1.186,0,2.3-0.461,3.14-1.3l4.605-4.605C85.998,78.211,85.998,75.396,84.267,73.664z M25.975,23.856l3.094,3.094c-0.833,0.766-1.632,1.566-2.398,2.398l-3.094-3.093L25.975,23.856z M53.416,22.339c-4.407,3.452-9.654,7.972-15.413,13.73c-6.638,6.638-11.972,12.932-15.985,18.097C23.344,37.364,36.677,23.889,53.416,22.339z M76.523,79.202L39.961,42.64c0.745-0.771,1.502-1.546,2.284-2.328c0.031-0.031,0.062-0.061,0.093-0.092l36.583,36.583L76.523,79.202z"/></svg>` },
+      'kvIcon-generator': { size: 22, svg: `<svg viewBox="10 10 70 70" width="22" height="22" fill="none"><polygon stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" points="37.434,71.468 18.607,61.999 18.607,46.971 37.434,56.44 72.107,38.001 72.107,53.029"/><polygon stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" points="37.434,56.44 18.607,46.971 53.607,28.532 72.107,38.001"/><line stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" x1="37.434" y1="71.468" x2="37.434" y2="56.44"/></svg>` },
+      'sectionIcon-map': { size: 22, svg: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#4ade80" stroke-width="2.4"/><path d="M12 10.5v6" stroke="#4ade80" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.5" r="1.35" fill="#4ade80"/></svg>` },
+      'sectionIcon-build': { size: 22, svg: `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#c084fc" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.5 8 4.5v8l-8 4.5-8-4.5v-8l8-4.5Z"/><path d="M12 12 4 8"/><path d="m12 12 8-4"/><path d="M12 12v8.5"/></svg>` },
+      'sectionIcon-rush': { size: 22, svg: `<svg viewBox="0 0 24 24" width="22" height="22"><path fill="#4ade80" d="M18.5 6C19.8807 6 21 4.88071 21 3.5C21 2.11929 19.8807 1 18.5 1C17.1193 1 16 2.11929 16 3.5C16 4.88071 17.1193 6 18.5 6Z"/><path fill="#4ade80" d="M9.49967 3.9377L7.47 5.20625C7.11268 5.42957 7 5.79894 7 6.19575C7 6.98119 7.86395 7.46003 8.53 7.04375L10.4185 5.86341C10.7689 5.64441 11.218 5.66348 11.5485 5.91141L13 7L9.29261 10.7074C9.09787 10.9021 8.91955 11.1126 8.75947 11.3367L6.94614 13.8754C6.683 14.2438 6.20519 14.3894 5.78129 14.2305L3.21008 13.2663C2.7942 13.1103 2.3257 13.2614 2.07933 13.631C1.76802 14.098 1.92419 14.7314 2.41688 15.0001L4.88909 16.3486C6.12269 17.0215 7.65806 16.7479 8.58338 15.6904L10.5 13.5L12.3001 16.0201C12.7307 16.623 12.7928 17.4144 12.4615 18.077L10.7236 21.5528C10.3912 22.2177 10.8746 23 11.618 23C12.0887 23 12.5417 22.9167 12.7764 22.4472L14.7476 18.5049C15.2149 17.5701 15.1622 16.4595 14.6083 15.5732L13 13L16 10L17.3722 10.9148C18.6066 11.7378 19.9731 11.6756 21.3162 11.2279C21.7813 11.0729 22 10.6447 22 10.1805C22 9.56252 21.4451 9.09248 20.8356 9.19407C20.1453 9.30911 19.1462 9.69488 18.6352 9.01366C16.9655 6.78731 14.9948 5.21933 12.5466 3.85922C11.5923 3.32907 10.4254 3.35913 9.49967 3.9377Z"/></svg>` },
+      'sectionIcon-distance': { size: 16, svg: `<svg viewBox="0 0 24 24" width="16" height="16"><path fill="#8b93a7" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>` }
     };
 
-    clone.querySelectorAll('.kvIcon-mode, .kvIcon-generator, .sectionIcon-map, .sectionIcon-build').forEach(icon => {
+    clone.querySelectorAll('.kvIcon-mode, .kvIcon-generator, .sectionIcon-map, .sectionIcon-build, .sectionIcon-rush, .sectionIcon-distance').forEach(icon => {
+      const iconClass = Object.keys(exportIconSVG).find(cls => icon.classList.contains(cls));
+      const entry = exportIconSVG[iconClass];
+      if(!entry) return;
+
       const replacement = document.createElement('span');
       replacement.className = icon.className;
       replacement.style.display = 'inline-flex';
       replacement.style.alignItems = 'center';
       replacement.style.justifyContent = 'center';
-      replacement.style.width = '22px';
-      replacement.style.height = '22px';
-      replacement.style.minWidth = '22px';
-      replacement.style.minHeight = '22px';
+      replacement.style.width = `${entry.size}px`;
+      replacement.style.height = `${entry.size}px`;
+      replacement.style.minWidth = `${entry.size}px`;
+      replacement.style.minHeight = `${entry.size}px`;
       replacement.style.background = 'none';
       replacement.style.filter = 'drop-shadow(0 2px 6px rgba(0,0,0,.45))';
-
-      const iconClass = Object.keys(exportIconSVG).find(cls => icon.classList.contains(cls));
-      replacement.innerHTML = exportIconSVG[iconClass];
+      replacement.innerHTML = entry.svg;
 
       icon.replaceWith(replacement);
+    });
+
+    // html2canvas renders filter:drop-shadow() incorrectly (shows up as a
+    // bright halo instead of a soft dark shadow) - strip it from the rush
+    // map's SVG lines and landmark icons for the export only.
+    clone.querySelectorAll('.rushMiniSvg, .rushLandmarkIcon').forEach(el => {
+      el.style.filter = 'none';
+    });
+
+    // html2canvas doesn't vertically center inline-flex text the way real
+    // browsers do (the pill labels render a few px off-center) - drop the
+    // flex centering entirely for the export and fall back to plain
+    // symmetric padding + line-height:1, which html2canvas renders as
+    // ordinary centered text with no special layout math involved.
+    clone.querySelectorAll('.mapChip').forEach(chip => {
+      chip.style.display = 'inline-block';
+      chip.style.padding = '4px 8px';
+      chip.style.lineHeight = '1';
     });
 
     clone.querySelectorAll('.kv').forEach(row => {
@@ -1122,11 +1210,13 @@
     if(/medium/i.test(raw)) tags.push('Medium');
     if(/fast/i.test(raw)) tags.push('Fast');
 
-    return tags.length ? tags.join('/') + ' Iron' : raw;
+    if(tags.length === 1) return `${tags[0]} Iron`;
+    if(tags.length > 1) return tags.join('/');
+    return raw;
   }
 
   function buildRushGuide(m, detailsGrid){
-    if(!m.rush || exportMode) return;
+    if(!m.rush) return;
 
     const rushRoutes = Array.isArray(m.rush.routes)
       ? m.rush.routes.filter(r => Array.isArray(r.points) && r.points.length >= 2)
@@ -1134,24 +1224,76 @@
 
     if(!rushRoutes.length) return;
 
-    const primaryType = m.rush.primary || 'Side';
+    const primaryTypes = (Array.isArray(m.rush.primaryTypes) && m.rush.primaryTypes.length)
+      ? m.rush.primaryTypes
+      : [m.rush.primary || 'Side'];
 
     const sortedRushRoutes = [...rushRoutes].sort((a, b) => {
-      if(a.type === primaryType) return -1;
-      if(b.type === primaryType) return 1;
+      const aPrimary = primaryTypes.includes(a.type);
+      const bPrimary = primaryTypes.includes(b.type);
+      if(aPrimary && !bPrimary) return -1;
+      if(bPrimary && !aPrimary) return 1;
+
+      // "Ends here" routes (To Diamonds/Mid/Crane) are a landmark distance,
+      // not a rush to a base - a small number there isn't "a better rush",
+      // so they always sort after real rush routes regardless of blocks.
+      const aEnds = !!a.endsHere;
+      const bEnds = !!b.endsHere;
+      if(aEnds !== bEnds) return aEnds ? 1 : -1;
 
       const ab = Number.isFinite(Number(a.blocks)) ? Number(a.blocks) : 9999;
       const bb = Number.isFinite(Number(b.blocks)) ? Number(b.blocks) : 9999;
       return ab - bb;
     });
 
-    const primaryRoute = sortedRushRoutes.find(r => r.type === primaryType) || sortedRushRoutes[0];
-    const otherRoutes = sortedRushRoutes.filter(r => r !== primaryRoute);
+    let primaryRoutes = sortedRushRoutes.filter(r => primaryTypes.includes(r.type));
+    if(!primaryRoutes.length) primaryRoutes = [sortedRushRoutes[0]];
+    const remainingRoutes = sortedRushRoutes.filter(r => !primaryRoutes.includes(r));
+    const otherRoutes = remainingRoutes.filter(r => !r.endsHere);
+    const distanceRoutes = remainingRoutes.filter(r => r.endsHere);
 
-    function routeLabel(type){
-      if(type === 'Diamonds') return 'Through Diamonds';
-      if(type === 'Mid') return 'Through Mid';
+    function routeLabel(type, endsHere, customLabel){
+      if(customLabel) return customLabel;
+      if(endsHere){
+        if(type === 'Diamonds') return 'To Diamonds';
+        if(type === 'Mid') return 'To Middle';
+        return `To ${type || 'Route'}`;
+      }
+      if(type === 'Diamonds') return 'Diamonds';
+      if(type === 'Mid') return 'Middle';
+      if(type === 'Crane') return 'Crane';
       return type || 'Route';
+    }
+
+    function blocksText(route){
+      if(route.blocksTo != null && route.blocksFrom != null){
+        const total = route.blocks != null ? route.blocks : (Number(route.blocksTo) + Number(route.blocksFrom));
+        return `${route.blocksTo} + ${route.blocksFrom} (${total} total)`;
+      }
+      return route.blocks ? `${route.blocks} blocks` : '—';
+    }
+
+    function routeRow(route, extraClass){
+      const cls = extraClass ? ` ${extraClass}` : '';
+      const label = routeLabel(route.type, route.endsHere, route.label);
+
+      if(route.endsHere){
+        return `
+          <div class="rushRecommendedLine rushDistanceLine${cls}">
+            <span class="rushDistanceIcon" aria-hidden="true" style="--route-color:${routeColor(route.type)}"></span>
+            <strong>${label}</strong>
+            <span>${blocksText(route)}</span>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="rushRecommendedLine${cls}">
+          <span class="rushRouteDot" style="--route-color:${routeColor(route.type)}"></span>
+          <strong>${label}</strong>
+          <span>${blocksText(route)}</span>
+        </div>
+      `;
     }
 
     function routeColor(type){
@@ -1160,6 +1302,8 @@
       if(type === 'Diagonal') return '#d946ef';
       if(type === 'Diamonds') return '#4aa3ff';
       if(type === 'Mid') return '#7bd957';
+      if(type === 'Crane') return '#facc15';
+      if(type === 'Forward') return '#ff4b4b';
       return '#ffffff';
     }
 
@@ -1167,7 +1311,9 @@
     rushWrap.className = 'rushGuideWrap rushGuideWrap-compact';
 
     const rushPanel = document.createElement('div');
-    rushPanel.className = 'rushGuidePanel rushGuidePanel-compact';
+    rushPanel.className = exportMode
+      ? 'rushGuidePanel rushGuidePanel-exportOnly'
+      : 'rushGuidePanel rushGuidePanel-compact';
 
     const crop = m.rush.crop || {};
     const cropLeft = Math.max(0, Math.min(45, Number(crop.left) || 0));
@@ -1176,209 +1322,209 @@
     const cropBottom = Math.max(0, Math.min(45, Number(crop.bottom) || 0));
     const cropW = Math.max(1, 100 - cropLeft - cropRight);
     const cropH = Math.max(1, 100 - cropTop - cropBottom);
+    const borderBounds = { left:cropLeft, top:cropTop, w:cropW, h:cropH };
 
-    function croppedPct(pt){
-      return {
-        x: ((Number(pt.x) - cropLeft) / cropW) * 100,
-        y: ((Number(pt.y) - cropTop) / cropH) * 100
-      };
-    }
-    const rushMap = document.createElement('div');
-    rushMap.className = 'rushMiniMap rushMiniMap-compact';
+    // Card crop is an *additional* zoom for the small card preview only,
+    // expressed as a percentage of the already border-cropped region -
+    // the full modal view always ignores it and shows the border crop.
+    const cardCrop = m.rush.cardCrop || {};
+    const ccLeft = Math.max(0, Math.min(90, Number(cardCrop.left) || 0));
+    const ccTop = Math.max(0, Math.min(90, Number(cardCrop.top) || 0));
+    const ccRight = Math.max(0, Math.min(90, Number(cardCrop.right) || 0));
+    const ccBottom = Math.max(0, Math.min(90, Number(cardCrop.bottom) || 0));
+    const hasCardCrop = (ccLeft + ccTop + ccRight + ccBottom) > 0;
 
-    const rushImg = document.createElement('img');
-    rushImg.className = 'rushMiniMapImg';
-    rushImg.src = `assets/map-images/${mapImageSlug(m.name)}/${m.rush.image || '1.webp'}`;
-    rushImg.alt = `${m.name || 'Map'} rush diagram`;
-    rushImg.style.width = `${10000 / cropW}%`;
-    rushImg.style.height = `${10000 / cropH}%`;
-    rushImg.style.left = `${-(cropLeft / cropW) * 100}%`;
-    rushImg.style.top = `${-(cropTop / cropH) * 100}%`;
-    rushImg.style.objectFit = 'fill';
+    const cardLeft = cropLeft + (ccLeft / 100) * cropW;
+    const cardTop = cropTop + (ccTop / 100) * cropH;
+    const cardW = Math.max(1, cropW - (ccLeft / 100) * cropW - (ccRight / 100) * cropW);
+    const cardH = Math.max(1, cropH - (ccTop / 100) * cropH - (ccBottom / 100) * cropH);
+    const cardBounds = hasCardCrop ? { left:cardLeft, top:cardTop, w:cardW, h:cardH } : borderBounds;
 
-    rushMap.style.aspectRatio = `${cropW * 16} / ${cropH * 9}`;
+    function buildRushStage(bounds, variantClass, fade){
+      const { left, top, w, h } = bounds;
 
-    const rushSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    rushSvg.setAttribute('viewBox', `${cropLeft} ${cropTop} ${cropW} ${cropH}`);
-    rushSvg.setAttribute('preserveAspectRatio', 'none');
-    rushSvg.classList.add('rushMiniSvg');
-
-    sortedRushRoutes.forEach((route, index) => {
-      const points = (route.points || [])
-        .map(p => ({ x:Number(p.x), y:Number(p.y) }))
-        .filter(p => Number.isFinite(p.x) && Number.isFinite(p.y));
-
-      if(points.length < 2) return;
-
-      const color = routeColor(route.type);
-      const end = points[points.length - 1];
-      const beforeEnd = points[points.length - 2];
-
-      const xScale = 16 / 9;
-      const yScale = 1;
-
-      const dxScreen = (end.x - beforeEnd.x) * xScale;
-      const dyScreen = (end.y - beforeEnd.y) * yScale;
-      const lenScreen = Math.hypot(dxScreen, dyScreen) || 1;
-
-      const uxScreen = dxScreen / lenScreen;
-      const uyScreen = dyScreen / lenScreen;
-
-      const arrowLength = 4.2;
-      const arrowHalfWidth = 1.6;
-
-      const endScreen = {
-        x:end.x * xScale,
-        y:end.y * yScale
-      };
-
-      const lineEndScreen = {
-        x:endScreen.x - uxScreen * arrowLength,
-        y:endScreen.y - uyScreen * arrowLength
-      };
-
-      const lineEnd = {
-        x:lineEndScreen.x / xScale,
-        y:lineEndScreen.y / yScale
-      };
-
-      const visiblePoints = [
-        ...points.slice(0, -1),
-        lineEnd
-      ];
-
-      const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-      polyline.setAttribute('points', visiblePoints.map(p => `${p.x},${p.y}`).join(' '));
-      polyline.setAttribute('fill', 'none');
-      polyline.setAttribute('stroke', color);
-      polyline.setAttribute('stroke-width', index === 0 ? '2' : '1.5');
-      polyline.setAttribute('stroke-linecap', 'round');
-      polyline.setAttribute('stroke-linejoin', 'round');
-      polyline.classList.add(index === 0 ? 'rushPrimaryLine' : 'rushAltLine');
-      rushSvg.appendChild(polyline);
-
-      const leftBaseScreen = {
-        x:lineEndScreen.x + (-uyScreen * arrowHalfWidth),
-        y:lineEndScreen.y + (uxScreen * arrowHalfWidth)
-      };
-
-      const rightBaseScreen = {
-        x:lineEndScreen.x - (-uyScreen * arrowHalfWidth),
-        y:lineEndScreen.y - (uxScreen * arrowHalfWidth)
-      };
-
-      const leftBase = {
-        x:leftBaseScreen.x / xScale,
-        y:leftBaseScreen.y / yScale
-      };
-
-      const rightBase = {
-        x:rightBaseScreen.x / xScale,
-        y:rightBaseScreen.y / yScale
-      };
-
-      const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-      arrow.setAttribute(
-        'points',
-        `${end.x},${end.y} ${leftBase.x},${leftBase.y} ${rightBase.x},${rightBase.y}`
-      );
-      arrow.setAttribute('fill', color);
-      arrow.classList.add(index === 0 ? 'rushPrimaryArrow' : 'rushAltArrow');
-      rushSvg.appendChild(arrow);
-    });
-
-    rushMap.appendChild(rushSvg);
-    rushMap.appendChild(rushImg);
-
-    if(m.rush.you){
-      const youPos = croppedPct(m.rush.you);
-
-      const youDot = document.createElement('div');
-      youDot.className = 'rushYouDotHtml';
-      youDot.style.left = `${youPos.x}%`;
-      youDot.style.top = `${youPos.y}%`;
-      rushMap.appendChild(youDot);
-
-      const youLabel = document.createElement('div');
-      youLabel.className = 'rushYouLabel';
-      youLabel.textContent = 'YOU';
-      youLabel.style.left = `${youPos.x}%`;
-      youLabel.style.top = `${youPos.y}%`;
-      rushMap.appendChild(youLabel);
-    }
-
-    rushMap.tabIndex = 0;
-    rushMap.setAttribute('role', 'button');
-    rushMap.setAttribute('aria-label', `Open ${m.name || 'map'} rush diagram`);
-
-    rushMap.addEventListener('click', e => {
-      e.stopPropagation();
-
-      let modal = document.querySelector('.rushDiagramModal');
-
-      if(!modal){
-        modal = document.createElement('div');
-        modal.className = 'rushDiagramModal';
-        modal.innerHTML = `
-          <div class="rushDiagramModalPanel">
-            <button class="rushDiagramModalClose" type="button" aria-label="Close diagram">×</button>
-            <div class="rushDiagramModalTitle"></div>
-            <div class="rushDiagramModalStage"></div>
-          </div>
-        `;
-
-        document.body.appendChild(modal);
-
-        modal.addEventListener('click', ev => {
-          if(ev.target === modal || ev.target.classList.contains('rushDiagramModalClose')){
-            modal.classList.remove('open');
-          }
-        });
-
-        document.addEventListener('keydown', ev => {
-          if(ev.key !== 'Escape') return;
-          if(!modal.classList.contains('open')) return;
-
-          ev.preventDefault();
-          ev.stopPropagation();
-          ev.stopImmediatePropagation();
-
-          modal.classList.remove('open');
-        }, true);
+      function boundedPct(pt){
+        return {
+          x: ((Number(pt.x) - left) / w) * 100,
+          y: ((Number(pt.y) - top) / h) * 100
+        };
       }
 
-      modal.querySelector('.rushDiagramModalTitle').textContent = `${m.name || 'Map'} Rush Guide`;
+      const stage = document.createElement('div');
+      stage.className = `rushMiniMap ${variantClass}`;
 
-      const stage = modal.querySelector('.rushDiagramModalStage');
-      stage.innerHTML = '';
+      const img = document.createElement('img');
+      img.className = 'rushMiniMapImg';
+      img.src = `assets/map-images/${mapImageSlug(m.name)}/${m.rush.image || '1.webp'}`;
+      img.alt = `${m.name || 'Map'} rush diagram`;
+      img.style.width = `${10000 / w}%`;
+      img.style.height = `${10000 / h}%`;
+      img.style.left = `${-(left / w) * 100}%`;
+      img.style.top = `${-(top / h) * 100}%`;
+      img.style.objectFit = 'fill';
 
-      const clone = rushMap.cloneNode(true);
-      clone.classList.add('rushDiagramModalMap');
-      clone.classList.remove('rushMiniMap-compact');
-      clone.removeAttribute('tabindex');
-      clone.removeAttribute('role');
-      clone.removeAttribute('aria-label');
-      clone.style.cursor = 'default';
+      stage.style.aspectRatio = `${w * 16} / ${h * 9}`;
 
-      clone.addEventListener('click', ev => {
-        ev.stopPropagation();
+      // Everything that represents a position on the map (image, routes,
+      // You marker, landmark icons) lives in this wrapper so the hover-zoom
+      // scales them all together and nothing drifts out of place relative
+      // to the map underneath it. The fade vignettes stay outside it, on
+      // the stage itself, so they don't zoom with the content.
+      const content = document.createElement('div');
+      content.className = 'rushMiniMapContent';
+      stage.appendChild(content);
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', `${left} ${top} ${w} ${h}`);
+      svg.setAttribute('preserveAspectRatio', 'none');
+      svg.classList.add('rushMiniSvg');
+
+      sortedRushRoutes.forEach(route => {
+        const points = (route.points || [])
+          .map(p => ({ x:Number(p.x), y:Number(p.y) }))
+          .filter(p => Number.isFinite(p.x) && Number.isFinite(p.y));
+
+        if(points.length < 2) return;
+
+        const color = routeColor(route.type);
+        const isPrimary = primaryRoutes.includes(route);
+
+        const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        polyline.setAttribute('points', points.map(p => `${p.x},${p.y}`).join(' '));
+        polyline.setAttribute('fill', 'none');
+        polyline.setAttribute('stroke', color);
+        polyline.setAttribute('stroke-width', isPrimary ? '2' : '1.5');
+        polyline.setAttribute('stroke-linecap', 'round');
+        polyline.setAttribute('stroke-linejoin', 'round');
+        polyline.classList.add(isPrimary ? 'rushPrimaryLine' : 'rushAltLine');
+        svg.appendChild(polyline);
       });
 
-      stage.appendChild(clone);
-      modal.classList.add('open');
+      content.appendChild(svg);
+      content.appendChild(img);
 
-      const ratio = (cropW * 16) / (cropH * 9);
-      const stageW = stage.clientWidth;
-      const stageH = stage.clientHeight;
-      let fitW = stageW;
-      let fitH = fitW / ratio;
-      if(fitH > stageH){
-        fitH = stageH;
-        fitW = fitH * ratio;
+      if(m.rush.you){
+        const youPos = boundedPct(m.rush.you);
+
+        const youDot = document.createElement('div');
+        youDot.className = 'rushYouDotHtml';
+        youDot.style.left = `${youPos.x}%`;
+        youDot.style.top = `${youPos.y}%`;
+        youDot.style.setProperty('--route-color', routeColor(primaryRoutes[0].type));
+        content.appendChild(youDot);
+
+        const youLabel = document.createElement('div');
+        youLabel.className = 'rushYouLabel';
+        youLabel.textContent = 'YOU';
+        youLabel.style.left = `${youPos.x}%`;
+        youLabel.style.top = `${youPos.y}%`;
+        content.appendChild(youLabel);
       }
-      clone.style.width = `${fitW}px`;
-      clone.style.height = `${fitH}px`;
-    });
+
+      const rushIcons = Array.isArray(m.rush.icons) ? m.rush.icons : [];
+      rushIcons.forEach(icon => {
+        if(!icon || !icon.type) return;
+
+        const pos = boundedPct(icon);
+        const iconImg = document.createElement('img');
+        iconImg.className = 'rushLandmarkIcon';
+        iconImg.src = `assets/rush-icons/${icon.type}.png`;
+        iconImg.alt = icon.type;
+        iconImg.style.left = `${pos.x}%`;
+        iconImg.style.top = `${pos.y}%`;
+        content.appendChild(iconImg);
+      });
+
+      // Real gradient overlays instead of a CSS mask - masks aren't
+      // supported by html2canvas (used for the "Download Card" export), so
+      // this way the fade actually shows up there too, not just live.
+      if(fade){
+        const fadeRight = document.createElement('div');
+        fadeRight.className = 'rushFadeRight';
+        stage.appendChild(fadeRight);
+
+        const fadeTop = document.createElement('div');
+        fadeTop.className = 'rushFadeTop';
+        stage.appendChild(fadeTop);
+      }
+
+      return stage;
+    }
+
+    // The interactive map (clickable image/SVG/modal) makes no sense in a
+    // static export - share cards only get the text info panel below.
+    let rushMap = null;
+
+    if(!exportMode){
+      rushMap = buildRushStage(cardBounds, 'rushMiniMap-compact', hasCardCrop);
+      rushMap.tabIndex = 0;
+      rushMap.setAttribute('role', 'button');
+      rushMap.setAttribute('aria-label', `Open ${m.name || 'map'} rush diagram`);
+
+      rushMap.addEventListener('click', e => {
+        e.stopPropagation();
+
+        let modal = document.querySelector('.rushDiagramModal');
+
+        if(!modal){
+          modal = document.createElement('div');
+          modal.className = 'rushDiagramModal';
+          modal.innerHTML = `
+            <div class="rushDiagramModalPanel">
+              <button class="rushDiagramModalClose" type="button" aria-label="Close diagram">×</button>
+              <div class="rushDiagramModalTitle"></div>
+              <div class="rushDiagramModalStage"></div>
+            </div>
+          `;
+
+          document.body.appendChild(modal);
+
+          modal.addEventListener('click', ev => {
+            if(ev.target === modal || ev.target.classList.contains('rushDiagramModalClose')){
+              modal.classList.remove('open');
+            }
+          });
+
+          document.addEventListener('keydown', ev => {
+            if(ev.key !== 'Escape') return;
+            if(!modal.classList.contains('open')) return;
+
+            ev.preventDefault();
+            ev.stopPropagation();
+            ev.stopImmediatePropagation();
+
+            modal.classList.remove('open');
+          }, true);
+        }
+
+        modal.querySelector('.rushDiagramModalTitle').textContent = `${m.name || 'Map'} Rush Guide`;
+
+        const stage = modal.querySelector('.rushDiagramModalStage');
+        stage.innerHTML = '';
+
+        // Full view always shows the whole border-cropped image, never the
+        // card crop's zoomed-in peek - built fresh rather than cloned so it
+        // doesn't inherit the compact view's tighter bounds/fade.
+        const full = buildRushStage(borderBounds, 'rushDiagramModalMap', false);
+        full.style.cursor = 'default';
+        full.addEventListener('click', ev => ev.stopPropagation());
+
+        stage.appendChild(full);
+        modal.classList.add('open');
+
+        const ratio = (cropW * 16) / (cropH * 9);
+        const stageW = stage.clientWidth;
+        const stageH = stage.clientHeight;
+        let fitW = stageW;
+        let fitH = fitW / ratio;
+        if(fitH > stageH){
+          fitH = stageH;
+          fitW = fitH * ratio;
+        }
+        full.style.width = `${fitW}px`;
+        full.style.height = `${fitH}px`;
+      });
+    }
 
     const rushInfo = document.createElement('div');
     rushInfo.className = 'rushInfo rushInfo-compact';
@@ -1386,32 +1532,34 @@
     rushInfo.innerHTML = `
       <div class="rushRecommendedTitle">
         <span class="sectionIcon sectionIcon-rush"></span>
-        <span>Recommended Rush</span>
+        <span class="rushRecommendedTitleText">${primaryRoutes.length > 1 ? 'Recommended Rushes' : 'Recommended Rush'}</span>
+        ${exportMode ? '' : `<span class="buildInfoHelp buildInfoHelp-green" tabindex="0">?<span class="buildInfoTooltip">The block amounts aren't exact to your playstyle. We recommend you bring a bit extra if you plan on staircasing.</span></span>`}
       </div>
 
-      <div class="rushRecommendedLine">
-        <span class="rushRouteDot" style="--route-color:${routeColor(primaryRoute.type)}"></span>
-        <strong>${routeLabel(primaryRoute.type)}</strong>
-        <span>${primaryRoute.blocks ? `${primaryRoute.blocks} blocks` : '—'}</span>
-      </div>
+      ${primaryRoutes.map(r => routeRow(r)).join('')}
 
       ${
         otherRoutes.length
-          ? `<div class="rushOtherLabel">Other options</div>
+          ? `<div class="rushOtherRows">
+              ${otherRoutes.map(r => routeRow(r, 'rushOtherLine')).join('')}
+            </div>`
+          : ''
+      }
+
+      ${
+        distanceRoutes.length
+          ? `<div class="rushDistanceTitle">
+              <span class="sectionIcon sectionIcon-distance"></span>
+              <span>Distances</span>
+            </div>
             <div class="rushOtherRows">
-              ${otherRoutes.map(r => `
-                <div class="rushRecommendedLine rushOtherLine">
-                  <span class="rushRouteDot" style="--route-color:${routeColor(r.type)}"></span>
-                  <strong>${routeLabel(r.type)}</strong>
-                  <span>${r.blocks ? `${r.blocks} blocks` : '—'}</span>
-                </div>
-              `).join('')}
+              ${distanceRoutes.map(r => routeRow(r, 'rushOtherLine')).join('')}
             </div>`
           : ''
       }
     `;
 
-    rushPanel.appendChild(rushMap);
+    if(rushMap) rushPanel.appendChild(rushMap);
     rushPanel.appendChild(rushInfo);
     rushWrap.appendChild(rushPanel);
     detailsGrid.appendChild(rushWrap);
@@ -1465,7 +1613,24 @@
 
     const title = document.createElement('div');
     title.className = 'mapTitle';
-    title.textContent = m.name || '';
+
+    if(m.isSeasonal && !exportMode){
+      const emojiChip = document.createElement('span');
+      emojiChip.className = 'seasonalTitleEmoji';
+      emojiChip.textContent = m.seasonEmoji || '🎉';
+      emojiChip.tabIndex = 0;
+      emojiChip.setAttribute('role', 'img');
+      emojiChip.setAttribute('aria-label', `${m.seasonLabel || 'Seasonal'} exclusive map`);
+
+      const tip = document.createElement('span');
+      tip.className = 'seasonalTitleTooltip';
+      tip.textContent = `This map is a ${m.seasonLabel || 'Seasonal'} Exclusive`;
+      emojiChip.appendChild(tip);
+
+      title.appendChild(emojiChip);
+    }
+
+    title.appendChild(document.createTextNode(m.name || ''));
 
     if(m.is_new){
       const inlineNew = document.createElement('span');
@@ -1524,14 +1689,19 @@
       );
     }
 
-    sinceDate.textContent = m.effective_date || 'Unknown';
+    // Export/downloaded cards are static snapshots - "Today at 3:45pm"
+    // only makes sense while it's actually still that day for the viewer,
+    // so exports always show the plain date instead.
+    sinceDate.textContent = exportMode
+      ? (m.effective_date || 'Unknown')
+      : mapEffectiveDateDisplayText(m);
 
     daysWrap.appendChild(statusLabel);
 
     if(!exportMode){
       const days = document.createElement('div');
       days.className = 'mapDaysValue';
-      days.textContent = `${formatDaysLive(m)} days`;
+      days.textContent = mapDaysDisplayText(m);
       daysWrap.appendChild(days);
     }
 
@@ -1547,6 +1717,7 @@
         body.className = 'detailsBody';
 
     let galleryLoaded = false;
+    let bottomBar = null;
 
     async function loadGallery(){
       if(exportMode || galleryLoaded) return;
@@ -1561,7 +1732,7 @@
       if(images.length <= 1) return;
 
       const gallery = document.createElement('div');
-      gallery.className = 'mapGallery';
+      gallery.className = 'mapGallery mapGallery-bottom';
 
       images.forEach((url, index) => {
         const btn = document.createElement('button');
@@ -1587,16 +1758,46 @@
         gallery.appendChild(btn);
       });
 
-      body.insertBefore(gallery, body.firstChild);
+      const galleryFade = document.createElement('div');
+      galleryFade.className = 'mapGalleryFade';
+      gallery.appendChild(galleryFade);
+
+      if(bottomBar) bottomBar.appendChild(gallery);
     }
 
     d.addEventListener('toggle', () => {
-      if(d.open) loadGallery();
+      if(d.open){
+        loadGallery();
+
+        // Runs after the document-level accordion listener (capture phase
+        // fires before this target-phase one) has already closed whatever
+        // was previously open, so the layout already accounts for that
+        // card collapsing back down by the time this fires. A short
+        // timeout (rather than requestAnimationFrame, which browsers can
+        // throttle or skip entirely in a backgrounded/unfocused tab) gives
+        // that reflow a moment to settle before measuring where to scroll.
+        // behavior:'instant' rather than 'smooth' - confirmed some browsers
+        // silently drop a smooth scrollIntoView triggered off a details
+        // toggle, which would make this feature quietly do nothing.
+        setTimeout(() => {
+          d.scrollIntoView({ behavior: 'instant', block: 'nearest' });
+        }, 30);
+      }
     });
 
     const detailsGrid = document.createElement('div');
     detailsGrid.className = 'detailsGrid detailsGrid-compact';
     body.appendChild(detailsGrid);
+
+    function infoCellTooltipHtml(label){
+      if(label === 'Max Y') return "Highest buildable Y - you cannot build <u>above</u> this level.";
+      if(label === 'Min Y') return "Lowest buildable Y - you cannot build <u>below</u> this level.";
+      if(label === 'Y Layers') return 'Total Y layers you can build on (blocks).';
+      if(label === 'Build Radius') return 'Calculated from Z=0 or X=0, highest buildable X or Z.';
+      if(label === 'Playstyle') return 'Official playstyle specified by Hypixel - based on in-game player feedback.';
+      if(label === 'Gen Speed' && m.mode === '3s/4s') return 'All 3s/4s maps have Fast Iron.';
+      return null;
+    }
 
     function infoCell(label, value, isHtml=false, icon='', extraClass=''){
       const row = document.createElement('div');
@@ -1604,6 +1805,17 @@
 
       const ii = document.createElement('div');
       ii.className = `kvIcon kvIcon-${icon}`;
+
+      const tooltipHtml = infoCellTooltipHtml(label);
+      if(!exportMode && tooltipHtml){
+        ii.classList.add('kvIconHelp');
+        ii.tabIndex = 0;
+
+        const tip = document.createElement('span');
+        tip.className = 'kvIconTooltip';
+        tip.innerHTML = tooltipHtml;
+        ii.appendChild(tip);
+      }
 
       const text = document.createElement('div');
       text.className = 'infoCellText';
@@ -1636,6 +1848,84 @@
       return row;
     }
 
+    function noteCell(note){
+      const reskinIdx = exportMode ? -1 : note.indexOf('Reskin:');
+
+      if(reskinIdx === -1){
+        return infoCell('Note', note, true, 'note');
+      }
+
+      const row = infoCell('Note', '', false, 'note');
+      const valueEl = row.querySelector('.infoCellValue');
+
+      const prefix = note.slice(0, reskinIdx).replace(/,\s*$/, '').trim();
+      let reskinPart = note.slice(reskinIdx + 'Reskin:'.length).trim();
+
+      let retiredSuffix = '';
+      const retiredMatch = reskinPart.match(/\s*\(retired\)\s*$/i);
+      if(retiredMatch){
+        retiredSuffix = ' (retired)';
+        reskinPart = reskinPart.slice(0, retiredMatch.index).trim();
+      }
+
+      const entries = reskinPart.split(',').map(s => s.trim()).filter(Boolean);
+
+      if(prefix) valueEl.appendChild(document.createTextNode(`${prefix}, `));
+      valueEl.appendChild(document.createTextNode('Reskin: '));
+
+      entries.forEach((entry, i) => {
+        const parsed = entry.match(/^(\S+)\s+(.+)$/);
+
+        if(!parsed){
+          valueEl.appendChild(document.createTextNode(entry));
+        }else{
+          const [, emoji, name] = parsed;
+
+          const chip = document.createElement('span');
+          chip.className = 'reskinEmojiChip';
+          chip.textContent = emoji;
+          chip.tabIndex = 0;
+          chip.setAttribute('role', 'button');
+
+          const wikiUrl = RESKIN_WIKI_LINKS[name];
+
+          const tip = document.createElement('span');
+          tip.className = 'reskinEmojiTooltip';
+          tip.textContent = wikiUrl ? `${name} — view on wiki` : `${name} — click to view`;
+          chip.appendChild(tip);
+
+          chip.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if(wikiUrl){
+              window.open(wikiUrl, '_blank', 'noopener');
+
+              // Opening a new tab doesn't fire a real mouseleave, so the
+              // :hover-driven tooltip can get stuck open on return - force
+              // it closed and drop focus.
+              chip.blur();
+              tip.style.transition = 'none';
+              tip.style.opacity = '0';
+
+              requestAnimationFrame(() => {
+                tip.style.opacity = '';
+                tip.style.transition = '';
+              });
+            }else{
+              focusReskinMap(name);
+            }
+          });
+
+          valueEl.appendChild(chip);
+        }
+      });
+
+      if(retiredSuffix) valueEl.appendChild(document.createTextNode(retiredSuffix));
+
+      return row;
+    }
+
     const displayPlaystyle =
       normalizedPlaystyleValue(m) !== 'Unknown'
         ? playstyleText
@@ -1647,24 +1937,28 @@
     const infoColA = document.createElement('div');
     infoColA.className = 'compactInfoCol';
 
+    // Website display only - the underlying data/desktop app still say
+    // "Doubles" everywhere, this just relabels it for site visitors.
+    const genHtmlDisplay = (m.gen_html || '').replace(/\(Doubles\)/gi, '(Duos)');
+
     infoColA.appendChild(infoCell('Mode', m.mode || '', false, 'mode'));
     infoColA.appendChild(infoCell('Playstyle', displayPlaystyle, false, 'playstyle'));
-    infoColA.appendChild(infoCell('Gen Speed', m.gen_html || '—', true, 'generator'));
+    infoColA.appendChild(infoCell('Gen Speed', genHtmlDisplay || '—', true, 'generator'));
 
     const infoColB = document.createElement('div');
     infoColB.className = 'compactInfoCol';
 
     infoColB.appendChild(infoCell('Released', shortDate(m.released), false, 'released'));
 
-    if(m.note){
-      infoColB.appendChild(infoCell('Note', m.note, true, 'note'));
-    }
-
     if(!exportMode){
       const linkHtml = (m.wiki ? `<a href="${m.wiki}" target="_blank" rel="noopener">Wiki</a>` : '')
         + (m.image_url ? ` • <a href="${m.image_url}" target="_blank" rel="noopener">Image</a>` : '');
 
       infoColB.appendChild(infoCell('Links', linkHtml || '—', true, 'links', 'infoCell-links'));
+    }
+
+    if(m.note){
+      infoColB.appendChild(noteCell(m.note));
     }
 
     const infoColC = document.createElement('div');
@@ -1707,8 +2001,12 @@
     }
 
     if(!exportMode){
+      bottomBar = document.createElement('div');
+      bottomBar.className = 'mapBottomBar';
+      body.appendChild(bottomBar);
+
       const shareRow = document.createElement('div');
-      shareRow.className = rushWrapEl ? 'mapShareRow mapShareRow-overlay' : 'mapShareRow';
+      shareRow.className = 'mapShareRow mapShareRow-compact';
 
       const shareBtn = document.createElement('button');
       shareBtn.type = 'button';
@@ -1803,11 +2101,7 @@
 
       shareRow.append(shareMenu, shareBtn);
 
-      if(rushWrapEl){
-        rushWrapEl.appendChild(shareRow);
-      }else{
-        body.appendChild(shareRow);
-      }
+      bottomBar.appendChild(shareRow);
     }
 
     d.appendChild(summary);
@@ -1917,6 +2211,29 @@
           block: 'start'
       });
   }
+
+  // Reskins only exist as seasonal entries, so jumping to one needs the
+  // mode filter flipped to Seasonal too or the matching card stays hidden.
+  function focusReskinMap(name){
+      focusNames = null;
+
+      els.q.value = name;
+      setSearchUrl(name);
+      resetFilters();
+      els.mode.value = 'seasonal';
+
+      render();
+
+      document.querySelector('.controls')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+      });
+  }
+
+  const RESKIN_WIKI_LINKS = {
+    'Orientwood': 'https://hypixel.fandom.com/wiki/Orientwood_(Bed_Wars)',
+    'Lunarhouse': 'https://hypixel.fandom.com/wiki/Lunarhouse_(Bed_Wars)'
+  };
 
   function mapTypeLabel(scope){
     if(scope === '8') return '8 teams';

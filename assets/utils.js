@@ -98,6 +98,60 @@ function formatDaysLive(m){
   return (n == null) ? '—' : String(n);
 }
 
+// Live "hours since" - only meaningful the same calendar day the status
+// changed, computed against the viewer's own clock (not baked in at build
+// time) so it stays accurate no matter how long after the build someone
+// actually loads the page.
+function hoursLiveFromTimestamp(m){
+  if(!m.effective_timestamp) return null;
+
+  const ts = new Date(m.effective_timestamp);
+  if(Number.isNaN(ts.getTime())) return null;
+
+  const diffMs = Date.now() - ts.getTime();
+  if(diffMs < 0) return null;
+
+  return { hours: Math.floor(diffMs / 3600000), date: ts };
+}
+
+function formatLocalTime(date){
+  let h = date.getHours();
+  const mins = String(date.getMinutes()).padStart(2, '0');
+  const ampm = h >= 12 ? 'pm' : 'am';
+  h = h % 12;
+  if(h === 0) h = 12;
+  return `${h}:${mins}${ampm}`;
+}
+
+// Card display text: "X hours" for a same-day change (using the real
+// timestamp when available), otherwise "1 day" / "N days" with correct
+// pluralization.
+function mapDaysDisplayText(m){
+  const n = daysLiveFromEffective(m);
+  if(n == null) return '—';
+
+  if(n === 0){
+    const live = hoursLiveFromTimestamp(m);
+    if(live){
+      if(live.hours < 1) return 'Just now';
+      return `${live.hours} hour${live.hours === 1 ? '' : 's'}`;
+    }
+  }
+
+  return `${n} day${n === 1 ? '' : 's'}`;
+}
+
+// The date line under the days/hours stat: "Today at 3:45pm" for a
+// same-day change with a real timestamp, otherwise the plain date.
+function mapEffectiveDateDisplayText(m){
+  const n = daysLiveFromEffective(m);
+  if(n === 0){
+    const live = hoursLiveFromTimestamp(m);
+    if(live) return `Today at ${formatLocalTime(live.date)}`;
+  }
+  return m.effective_date || 'Unknown';
+}
+
 function shortDate(dateStr){
   if(!dateStr) return '';
 
