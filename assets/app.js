@@ -1155,6 +1155,12 @@
     holder.appendChild(clone);
     document.body.appendChild(holder);
 
+    // The clone carried over the live card's rush-image size (sized for
+    // whatever grid column width the live page happened to have) - re-run
+    // the same fit against the clone now that it's laid out in the
+    // export's fixed-width holder, or it'll be wrong for this context.
+    sizeRushStage(clone.querySelector('.rushGuideWrap-compact'));
+
     await new Promise(resolve => setTimeout(resolve, 120));
 
     const canvas = await html2canvas(clone, {
@@ -1303,7 +1309,7 @@
       if(type === 'Diamonds') return '#4aa3ff';
       if(type === 'Mid') return '#7bd957';
       if(type === 'Crane') return '#facc15';
-      if(type === 'Forward') return '#ff4b4b';
+      if(type === 'Forward') return '#ff8a3d';
       return '#ffffff';
     }
 
@@ -1566,6 +1572,64 @@
     return rushWrap;
   }
 
+  // Sizes the rush diagram image to fit within both its grid column's
+  // width and the info column's height while preserving its true aspect
+  // ratio (CSS alone can't reliably do this once max-width actually
+  // clamps it - see the .rushMiniMap-compact history). Shared between the
+  // live card (via fitRushStage) and the Download Card export, which
+  // clones the live DOM - a clone carries over the live page's sizing,
+  // which is wrong once it's placed in the export's fixed-width holder,
+  // so this needs to re-run against the clone's own layout too.
+  function sizeRushStage(rushWrap){
+    if(!rushWrap) return;
+
+    const stage = rushWrap.querySelector('.rushMiniMap-compact');
+    const info = rushWrap.querySelector('.rushInfo-compact');
+    const panel = rushWrap.querySelector('.rushGuidePanel-compact');
+    if(!stage || !info || !panel) return;
+
+    const ratioParts = (stage.style.aspectRatio || '').split('/').map(Number);
+    const ratio = (ratioParts.length === 2 && ratioParts[1])
+      ? ratioParts[0] / ratioParts[1]
+      : 16 / 9;
+
+    // Clear any pixel size a previous run left behind before measuring -
+    // the grid track itself is now clamped via minmax(0,.53fr)/(.47fr) in
+    // CSS (see .rushGuidePanel-compact), which is immune to the old
+    // Firefox bug where an aspect-ratio grid item's intrinsic size could
+    // inflate its track even with min-width:0 set on the item. That means
+    // the stage's own rendered width at width:100% is now trustworthy in
+    // every browser, so there's no need to re-derive it from a hardcoded
+    // fr ratio.
+    stage.style.width = '';
+    stage.style.height = '';
+    const availableWidth = stage.getBoundingClientRect().width;
+    if(!availableWidth) return;
+
+    const infoHeight = info.getBoundingClientRect().height;
+    const targetHeight = Math.max(110, Math.min(240, infoHeight || 110));
+
+    let width = availableWidth;
+    let height = width / ratio;
+
+    if(height > targetHeight){
+      // Taller than the text column needs - shrink to match its height.
+      height = targetHeight;
+      width = height * ratio;
+    }else if(height < 110){
+      // Shorter than feels legible (e.g. one short route) - grow toward
+      // 110px, but never past the column's width. A wide crop ratio
+      // (like Lotus's ~2:1) may only reach e.g. 84px at full column
+      // width - that's just what the ratio allows, so leave it rather
+      // than distort or overflow the column to force 110.
+      height = Math.min(110, availableWidth / ratio);
+      width = height * ratio;
+    }
+
+    stage.style.width = `${width}px`;
+    stage.style.height = `${height}px`;
+  }
+
   function mapCard(m){
     const d = document.createElement('details');
     d.classList.add('mapcard');
@@ -1765,6 +1829,18 @@
       if(bottomBar) bottomBar.appendChild(gallery);
     }
 
+    // CSS alone (height:100% to match the info column, capped by
+    // max-width:100%) can't reliably preserve the rush image's aspect
+    // ratio once max-width actually clamps it - confirmed on Lotus, whose
+    // card-crop is unusually wide (~2.07:1): the box rendered nearly
+    // square instead, stretching the image and every route/icon on it.
+    // Measuring and setting an explicit pixel size guarantees the true
+    // ratio is always kept, fitting within both the column's width and
+    // the info column's height like object-fit:contain would.
+    function fitRushStage(){
+      sizeRushStage(rushWrapEl);
+    }
+
     d.addEventListener('toggle', () => {
       if(d.open){
         loadGallery();
@@ -1780,6 +1856,7 @@
         // silently drop a smooth scrollIntoView triggered off a details
         // toggle, which would make this feature quietly do nothing.
         setTimeout(() => {
+          fitRushStage();
           d.scrollIntoView({ behavior: 'instant', block: 'nearest' });
         }, 30);
       }

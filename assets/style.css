@@ -4078,6 +4078,28 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
   border:1px solid rgba(255,255,255,.14);
 }
 
+.changePendingMap{
+  flex-direction:row !important;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px !important;
+}
+
+.changePendingThumb{
+  width:42px;
+  height:28px;
+  flex:0 0 42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:7px;
+  background:rgba(255,255,255,.04);
+  border:1px dashed rgba(255,255,255,.22);
+  color:var(--muted);
+  font-size:13px;
+  font-weight:900;
+}
+
 .changeRotationIn > strong{
   color:#2fff74;
 }
@@ -4412,7 +4434,15 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 
 .rushGuidePanel-compact{
   display:grid;
-  grid-template-columns:.53fr .47fr;
+  /* minmax(0,Nfr) instead of a bare Nfr - Firefox doesn't fully honor
+     min-width:0 on a grid item that has aspect-ratio set, letting the
+     image column's intrinsic size inflate its track at the text
+     column's expense. Capping the track itself (not the item) fixes
+     that regardless of item styling, and also regardless of whether
+     any sizing JS has run yet - a <details> that Firefox restores as
+     already-open on reload never fires a 'toggle' event, so relying on
+     JS alone to fix this leaves that path broken. */
+  grid-template-columns:minmax(0,.53fr) minmax(0,.47fr);
   gap:12px;
   align-items:stretch;
 }
@@ -4425,10 +4455,9 @@ body.twitterExportMode .mapcard.exportMode.twitterExportCard .shareExportWaterma
 .rushMiniMap-compact{
   position:relative;
   aspect-ratio:16 / 9;
-  height:100%;
-  width:auto;
-  max-height:240px;
+  width:100%;
   max-width:100%;
+  min-width:0;
   justify-self:center;
   border-radius:13px;
   overflow:hidden;
@@ -4831,10 +4860,10 @@ details.mapcard[open] .rushGuideWrap-compact{
 }
 
 .rushRecommendedTitleText{
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  /* A short, fixed known string ("Recommended Rush(es)") - wrapping it
+     always reads fine, unlike truncating it to "REC..." at narrow widths. */
   min-width:0;
+  overflow-wrap:break-word;
 }
 
 .rushRecommendedTitle .buildInfoHelp,

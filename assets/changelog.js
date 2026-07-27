@@ -75,6 +75,7 @@
       rename:'Rename',
       map_added:'Map Added',
       map_removed:'Map Removed',
+      map_pending:'New Map',
       date:'Date',
       info:'Info Change',
       site_change:'Site Change',
@@ -90,6 +91,7 @@
       playstyle:'changeTypeIcon-playstyle',
       map_added:'changeTypeIcon-added',
       map_removed:'changeTypeIcon-removed',
+      map_pending:'changeTypeIcon-added',
       date:'changeTypeIcon-date',
       info:'changeTypeIcon-info',
       site_change:'changeTypeIcon-info'
@@ -179,18 +181,21 @@
   function displayOld(entry){
     if(entry.type === 'map_added') return 'None';
     if(entry.type === 'map_removed') return cleanValue(entry.old || entry.map);
+    if(entry.type === 'map_pending') return 'Unknown';
     return cleanValue(entry.old);
   }
 
   function displayNew(entry){
     if(entry.type === 'map_added') return cleanValue(entry.new || entry.map);
     if(entry.type === 'map_removed') return 'None';
+    if(entry.type === 'map_pending') return cleanValue(entry.new || entry.map);
     return cleanValue(entry.new);
   }
 
   function subtitle(entry){
     if(entry.type === 'map_added') return 'Added to tracker';
     if(entry.type === 'map_removed') return 'Removed from tracker';
+    if(entry.type === 'map_pending') return 'Detected, not yet configured';
     if(entry.type === 'rotation') return entry.label === 'Rotated In' ? 'Now in rotation' : 'No longer in rotation';
     return '';
   }
@@ -363,6 +368,20 @@
       return `
         <div class="changeCompareEmpty">
           Removed from tracker
+        </div>
+      `;
+    }
+
+    if(entry.type === 'map_pending'){
+      return `
+        <div class="changeCompareEmpty changePendingMap">
+          <span class="inlineNewPill">NEW</span>
+          Detected in rotation post — not yet configured
+          ${entry.source_url || entry.source ? `
+            <a class="changeRotationSource" href="${escapeHtml(entry.source_url || entry.source)}" target="_blank" rel="noopener">
+              Source
+            </a>
+          ` : ''}
         </div>
       `;
     }
@@ -562,16 +581,36 @@
                 ${typeLabel(entry.type)}
               </div>
 
-              ${entry.type === 'rotation' && entry.field === 'rotation_summary' || entry.type === 'site_change' ? '' : `
-                <a class="changeMap" href="${escapeHtml(mapUrl(entry))}">
-                  <span class="changeThumb" style="background-image:url('assets/map-images/${slugify(entry.map)}/main.webp')"></span>
+              ${(() => {
+                if(entry.type === 'rotation' && entry.field === 'rotation_summary' || entry.type === 'site_change') return '';
 
-                  <div>
-                    <strong>${escapeHtml(`${eventIcon(entry)} ${entry.map || '—'}`.trim())}</strong>
-                    <small>${escapeHtml(entry.event || entry.mode === 'Seasonal' ? 'Seasonal' : entry.mode || '')}</small>
-                  </div>
-                </a>
-              `}
+                // No map page exists yet for a pending/unconfigured map, so
+                // no thumbnail and no link - just the name, same as it'll
+                // show once it's actually configured and gets a real one.
+                if(entry.type === 'map_pending'){
+                  return `
+                    <div class="changeMap changeMap-pending">
+                      <span class="changePendingThumb" aria-hidden="true">?</span>
+
+                      <div>
+                        <strong>${escapeHtml(entry.map || '—')}</strong>
+                        <small>${escapeHtml(entry.mode || '')}</small>
+                      </div>
+                    </div>
+                  `;
+                }
+
+                return `
+                  <a class="changeMap" href="${escapeHtml(mapUrl(entry))}">
+                    <span class="changeThumb" style="background-image:url('assets/map-images/${slugify(entry.map)}/main.webp')"></span>
+
+                    <div>
+                      <strong>${escapeHtml(`${eventIcon(entry)} ${entry.map || '—'}`.trim())}</strong>
+                      <small>${escapeHtml(entry.event || entry.mode === 'Seasonal' ? 'Seasonal' : entry.mode || '')}</small>
+                    </div>
+                  </a>
+                `;
+              })()}
 
               <div class="changeCompare">
                 ${compareBlock(entry)}
