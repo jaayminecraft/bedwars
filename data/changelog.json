@@ -1,6 +1,282 @@
 {
   "entries": [
     {
+      "id": "84fe8f506b2722b3",
+      "date": "August 31, 2026",
+      "timestamp": "2026-09-05T13:59:37+00:00",
+      "type": "rotation",
+      "map": "Rotation Update",
+      "mode": "",
+      "event": "",
+      "field": "rotation_summary",
+      "label": "Rotation Update",
+      "old": "",
+      "new": "",
+      "entered": [
+        {
+          "name": "Aetius",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Apollo",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Arid",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Deadwood",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Harvest",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Meso",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Silver Birch",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Enchanted",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Graveship",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Horizon",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Lost Temple",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Mystery",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Seraph",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Stonekeep",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        }
+      ],
+      "left": [
+        {
+          "name": "Acropolis",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Ashfire",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Babylon",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Cascade",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Casita",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Dragon Light",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Keep",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Vigilante",
+          "mode": "Solos/Doubles",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Artemis",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Boletum",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Invasion",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Pharaoh",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Planet 98",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Sky Festival",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Unturned",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        },
+        {
+          "name": "Usagi",
+          "mode": "3s/4s",
+          "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/",
+          "source_date": "August 31, 2026"
+        }
+      ],
+      "source": "Detected during site build",
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/"
+    },
+    {
       "id": "d103c2e08c7f776a",
       "date": "August 24, 2026",
       "timestamp": "2026-08-24T16:11:30+00:00",
@@ -9135,5 +9411,5 @@
       "source": "Detected during site build"
     }
   ],
-  "last_updated": "August 24, 2026"
+  "last_updated": "August 31, 2026"
 }
