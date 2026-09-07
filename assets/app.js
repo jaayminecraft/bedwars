@@ -254,12 +254,22 @@
 
   let focusNames = null;
 
+  const MONTH_ABBREVIATIONS = {
+    January: 'Jan', February: 'Feb', March: 'Mar', April: 'Apr',
+    May: 'May', June: 'Jun', July: 'Jul', August: 'Aug',
+    September: 'Sep', October: 'Oct', November: 'Nov', December: 'Dec'
+  };
+
+  function abbreviateMonth(dateStr){
+    return String(dateStr || '').replace(/^[A-Za-z]+/, full => MONTH_ABBREVIATIONS[full] || full);
+  }
+
   const meta = data.meta || {};
   const metaLine = document.getElementById('metaLine');
   if(metaLine){
     metaLine.innerHTML = `
       Latest update:<br>
-      <span class="topInfoValueLarge">${meta.latest_update}</span>
+      <span class="topInfoValueLarge">${abbreviateMonth(meta.latest_update)}</span>
     `;
   }
 
