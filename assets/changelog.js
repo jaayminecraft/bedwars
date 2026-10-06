@@ -32,7 +32,7 @@
     ['generator', 'Gen Speed'],
     ['playstyle', 'Playstyle'],
     ['rename', 'Map Rename'],
-    ['map_added', 'Map Added'],
+    ['map_added', 'New Map'],
     ['map_removed', 'Map Removed'],
     ['info', 'Info Change'],
     ['site_change', 'Site Change'],
@@ -66,6 +66,24 @@
       .replace(/^-+|-+$/g, '');
   }
 
+  // A rotation card that brings in a new map (entered item flagged is_new)
+  // counts as a New Map change while keeping its rotation formatting.
+  function isNewMapRotation(entry){
+    return entry.type === 'rotation'
+      && Array.isArray(entry.entered)
+      && entry.entered.some(m => m && m.is_new);
+  }
+
+  function pillType(entry){
+    return isNewMapRotation(entry) ? 'map_added' : entry.type;
+  }
+
+  function matchesType(entry, type){
+    if(type === 'all') return true;
+    if(type === 'map_added') return entry.type === 'map_added' || isNewMapRotation(entry);
+    return entry.type === type;
+  }
+
   function typeLabel(type){
     return {
       rotation:'Rotation',
@@ -73,7 +91,7 @@
       generator:'Gen Speed',
       playstyle:'Playstyle',
       rename:'Rename',
-      map_added:'Map Added',
+      map_added:'New Map',
       map_removed:'Map Removed',
       map_pending:'New Map',
       date:'Date',
@@ -269,7 +287,7 @@
                    event: map.event || ''
                  }))}">
                     <span class="changeRotationThumb" style="background-image:url('${rotationThumb(map.name || '')}')"></span>
-                    <span>${escapeHtml(map.name || '—')}</span>
+                    <span>${escapeHtml(map.name || '—')}${map.is_new ? '<span class="inlineNewPill">NEW</span>' : ''}</span>
                   </a>
                 `).join('')}
               </div>
@@ -538,7 +556,7 @@
       ].join(' ').toLowerCase();
 
       if(q && !text.includes(q)) return false;
-      if(type !== 'all' && entry.type !== type) return false;
+      if(!matchesType(entry, type)) return false;
       if(mode !== 'all'){
         const isSeasonal = entry.mode === 'Seasonal' || !!entry.event;
         if(mode === 'Seasonal' && !isSeasonal) return false;
@@ -585,9 +603,9 @@
             <article class="changeRow ${entry.type === 'rotation' && entry.field === 'rotation_summary' ? 'changeRow-rotationGroup' : ''} ${entry.type === 'site_change' ? 'changeRow-siteChange' : ''} ${isUnreadEntry(entry) ? 'changeRow-unread' : ''}">
               <div class="changeTime">${escapeHtml(formatLocalTime(entry))}</div>
 
-              <div class="changePill changeType-${escapeHtml(String(entry.type || 'info').replace(/_/g, '-'))}">
-                <span class="changeTypeIcon ${typeIconClass(entry.type)}" aria-hidden="true"></span>
-                ${typeLabel(entry.type)}
+              <div class="changePill changeType-${escapeHtml(String(pillType(entry) || 'info').replace(/_/g, '-'))}">
+                <span class="changeTypeIcon ${typeIconClass(pillType(entry))}" aria-hidden="true"></span>
+                ${typeLabel(pillType(entry))}
               </div>
 
               ${(() => {

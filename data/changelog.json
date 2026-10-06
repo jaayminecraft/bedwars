@@ -19,7 +19,8 @@
           "event": "Halloween",
           "source_title": "Halloween Event Thread",
           "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/",
-          "source_date": "October 05, 2026"
+          "source_date": "October 05, 2026",
+          "is_new": true
         },
         {
           "name": "Witch's Bog",
@@ -27,7 +28,8 @@
           "event": "Halloween",
           "source_title": "Halloween Event Thread",
           "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/",
-          "source_date": "October 05, 2026"
+          "source_date": "October 05, 2026",
+          "is_new": true
         }
       ],
       "left": [],
@@ -157,38 +159,6 @@
       "source": "Detected during site build",
       "source_title": "In-game Map Selector",
       "source_url": ""
-    },
-    {
-      "id": "d47cee54631b0fab",
-      "date": "October 05, 2026",
-      "timestamp": "2026-10-05T20:12:00+00:00",
-      "type": "map_added",
-      "map": "Beldam",
-      "mode": "Solos/Doubles",
-      "event": "Halloween",
-      "field": "map",
-      "label": "Map Added",
-      "old": "",
-      "new": "Beldam",
-      "source": "Added to tracker",
-      "source_title": "Halloween Event Thread",
-      "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/"
-    },
-    {
-      "id": "254c5e5f2e536647",
-      "date": "October 05, 2026",
-      "timestamp": "2026-10-05T20:12:00+00:00",
-      "type": "map_added",
-      "map": "Witch's Bog",
-      "mode": "3s/4s",
-      "event": "Halloween",
-      "field": "map",
-      "label": "Map Added",
-      "old": "",
-      "new": "Witch's Bog",
-      "source": "Added to tracker",
-      "source_title": "Halloween Event Thread",
-      "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/"
     },
     {
       "id": "a9b8bdaf07fff89e",
