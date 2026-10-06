@@ -1159,5 +1159,41 @@
     "season": "Holidays",
     "emoji": "❄️",
     "base": ""
+  },
+  {
+    "name": "Beldam",
+    "mode": "Solos/Doubles",
+    "playstyle": "",
+    "released": "October 05, 2026",
+    "inRotation": true,
+    "dateStatus": "October 05, 2026",
+    "imageId": 3620673,
+    "wiki": "https://hypixel.fandom.com/wiki/Beldam_(Bed_Wars)",
+    "release_date": "October 05, 2026",
+    "rotation_date": "October 05, 2026",
+    "status": "in",
+    "season": "Halloween",
+    "emoji": "🎃",
+    "is_new": true,
+    "image_id": 3620673,
+    "rotationImage": "https://hypixel.net/attachments/beldam-png.3620673/"
+  },
+  {
+    "name": "Witch's Bog",
+    "mode": "3s/4s",
+    "playstyle": "",
+    "released": "October 05, 2026",
+    "inRotation": true,
+    "dateStatus": "October 05, 2026",
+    "imageId": 3620538,
+    "wiki": "https://hypixel.fandom.com/wiki/Witch's_Bog_(Bed_Wars)",
+    "release_date": "October 05, 2026",
+    "rotation_date": "October 05, 2026",
+    "status": "in",
+    "season": "Halloween",
+    "emoji": "🎃",
+    "is_new": true,
+    "image_id": 3620538,
+    "rotationImage": "https://hypixel.net/attachments/bw-witchesbog3-png.3620538/"
   }
 ]
