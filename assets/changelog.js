@@ -337,6 +337,10 @@
               <a class="changeRotationSource" href="${escapeHtml(entry.source_url)}" target="_blank" rel="noopener">
                 Source › ${escapeHtml(entry.source_title || 'Rotation Post')}
               </a>
+            ` : entry.source_title ? `
+              <span class="changeRotationSource">
+                Source › ${escapeHtml(entry.source_title)}
+              </span>
             ` : ''}
           </div>
 
@@ -358,8 +362,13 @@
 
     if(entry.type === 'map_added'){
       return `
-        <div class="changeCompareEmpty">
+        <div class="changeCompareEmpty${entry.source_url ? ' changePendingMap' : ''}">
           Added to tracker
+          ${entry.source_url ? `
+            <a class="changeRotationSource" href="${escapeHtml(entry.source_url)}" target="_blank" rel="noopener">
+              Source › ${escapeHtml(entry.source_title || 'Source')}
+            </a>
+          ` : ''}
         </div>
       `;
     }

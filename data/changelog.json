@@ -1,9 +1,167 @@
 {
   "entries": [
     {
+      "id": "d348642606747dd7",
+      "date": "October 05, 2026",
+      "timestamp": "2026-10-05T20:12:00+00:00",
+      "type": "rotation",
+      "map": "Halloween Rotation Update",
+      "mode": "Seasonal",
+      "event": "Halloween",
+      "field": "rotation_summary",
+      "label": "Halloween Rotation Update",
+      "old": "",
+      "new": "",
+      "entered": [
+        {
+          "name": "Beldam",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Halloween Event Thread",
+          "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Witch's Bog",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Halloween Event Thread",
+          "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/",
+          "source_date": "October 05, 2026"
+        }
+      ],
+      "left": [],
+      "source": "Detected during site build",
+      "source_title": "Halloween Event Thread",
+      "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/"
+    },
+    {
+      "id": "2634d7c1e5820bcd",
+      "date": "October 05, 2026",
+      "timestamp": "2026-10-05T20:12:00+00:00",
+      "type": "rotation",
+      "map": "Halloween Rotation Update",
+      "mode": "Seasonal",
+      "event": "Halloween",
+      "field": "rotation_summary",
+      "label": "Halloween Rotation Update",
+      "old": "",
+      "new": "",
+      "entered": [
+        {
+          "name": "Darkened",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Ghoulish",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Hollow Hills",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Ominosity (Crogorm)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Scareshow (Airshow)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Screamway (Speedway)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Trick or Yeet",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Alaric (Catalyst)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Hell Temple (Obelisk)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Mortuus (Lectus)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Pumpkin Bay (Swashbuckle)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Sanctuary",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        },
+        {
+          "name": "Unchained (Chained)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "In-game Map Selector",
+          "source_url": "",
+          "source_date": "October 05, 2026"
+        }
+      ],
+      "left": [],
+      "source": "Detected during site build",
+      "source_title": "In-game Map Selector",
+      "source_url": ""
+    },
+    {
       "id": "d47cee54631b0fab",
-      "date": "September 28, 2026",
-      "timestamp": "2026-10-06T02:13:46+00:00",
+      "date": "October 05, 2026",
+      "timestamp": "2026-10-05T20:12:00+00:00",
       "type": "map_added",
       "map": "Beldam",
       "mode": "Solos/Doubles",
@@ -12,12 +170,14 @@
       "label": "Map Added",
       "old": "",
       "new": "Beldam",
-      "source": "Added to tracker"
+      "source": "Added to tracker",
+      "source_title": "Halloween Event Thread",
+      "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/"
     },
     {
       "id": "254c5e5f2e536647",
-      "date": "September 28, 2026",
-      "timestamp": "2026-10-06T02:13:46+00:00",
+      "date": "October 05, 2026",
+      "timestamp": "2026-10-05T20:12:00+00:00",
       "type": "map_added",
       "map": "Witch's Bog",
       "mode": "3s/4s",
@@ -26,7 +186,9 @@
       "label": "Map Added",
       "old": "",
       "new": "Witch's Bog",
-      "source": "Added to tracker"
+      "source": "Added to tracker",
+      "source_title": "Halloween Event Thread",
+      "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/"
     },
     {
       "id": "a9b8bdaf07fff89e",
@@ -10682,5 +10844,5 @@
       "source": "Detected during site build"
     }
   ],
-  "last_updated": "September 28, 2026"
+  "last_updated": "October 05, 2026"
 }
