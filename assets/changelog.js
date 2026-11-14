@@ -66,21 +66,32 @@
       .replace(/^-+|-+$/g, '');
   }
 
-  // A rotation card that brings in a new map (entered item flagged is_new)
-  // counts as a New Map change while keeping its rotation formatting.
-  function isNewMapRotation(entry){
+  // Entered items only carry is_new when the map is actually new (flagged and
+  // released within a month of that rotation - see build_site.py).
+  // A rotation card made up entirely of new maps counts as a New Map change
+  // (pill) while keeping its rotation formatting; a regular rotation that
+  // merely includes one still reads as a Rotation, but turns up when
+  // filtering by New Map.
+  function hasNewMap(entry){
     return entry.type === 'rotation'
       && Array.isArray(entry.entered)
       && entry.entered.some(m => m && m.is_new);
   }
 
+  function isNewMapOnlyRotation(entry){
+    return entry.type === 'rotation'
+      && Array.isArray(entry.entered)
+      && entry.entered.length > 0
+      && entry.entered.every(m => m && m.is_new);
+  }
+
   function pillType(entry){
-    return isNewMapRotation(entry) ? 'map_added' : entry.type;
+    return isNewMapOnlyRotation(entry) ? 'map_added' : entry.type;
   }
 
   function matchesType(entry, type){
     if(type === 'all') return true;
-    if(type === 'map_added') return entry.type === 'map_added' || isNewMapRotation(entry);
+    if(type === 'map_added') return entry.type === 'map_added' || hasNewMap(entry);
     return entry.type === type;
   }
 

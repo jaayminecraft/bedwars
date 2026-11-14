@@ -454,7 +454,7 @@
       return maps.filter(m => m.is_new);
     }
 
-    if(q === 'likely next week'){
+    if(q === 'likely coming back next rotation'){
       return likelyNextRotationMaps();
     }
 
@@ -517,7 +517,7 @@
 
     return [
       'latest rotation',
-      'likely next week',
+      'likely coming back next rotation',
       'new maps',
       'easter maps',
       'summer maps',
@@ -2631,7 +2631,7 @@
       els.eventPanel.style.display = '';
       els.eventPanelTitle.textContent = showingSeasonal
         ? `${activeSeasonEmoji} ${activeSeasonLabel} Event`
-        : (showingLikely ? '🔮 Likely Next Week' : '🆕 New Maps');
+        : (showingLikely ? '🔮 Likely Coming Back Next Rotation' : '🆕 New Maps');
       els.eventPanelStatus.textContent = showingSeasonal
         ? 'Active'
         : (showingLikely
@@ -2665,7 +2665,7 @@
           sideMaps,
           showingSeasonal
             ? `${activeSeasonLabel} maps`
-            : (showingLikely ? 'Likely next week' : 'New maps')
+            : (showingLikely ? 'Likely coming back next rotation' : 'New maps')
         );
       };
     }else{
@@ -2698,7 +2698,7 @@
     if(isSearchAlias(q)){
       if(q.toLowerCase() === 'latest rotation') return 'Latest rotation';
       if(q.toLowerCase() === 'new maps') return 'New maps';
-      if(q.toLowerCase() === 'likely next week') return 'Likely next week';
+      if(q.toLowerCase() === 'likely coming back next rotation') return 'Likely coming back next rotation';
       if(q.toLowerCase().endsWith(' maps')) return q;
     }
 
