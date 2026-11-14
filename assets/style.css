@@ -2451,6 +2451,16 @@ tr.row-out{
   --event-color: #7dd3fc;
 }
 
+.eventPanel-likely {
+  --event-color: #c4b5fd;
+}
+
+.rotationModeNote {
+  color: var(--muted);
+  font-size: .9em;
+  white-space: nowrap;
+}
+
 .eventPanel-easter {
   --event-color: #f8e58c;
 }

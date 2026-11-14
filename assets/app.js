@@ -454,6 +454,10 @@
       return maps.filter(m => m.is_new);
     }
 
+    if(q === 'likely next week'){
+      return likelyNextRotationMaps();
+    }
+
     const seasonAliases = {
       'lunar maps': 'lunar',
       'easter maps': 'easter',
@@ -473,11 +477,47 @@
     return null;
   }
 
+  // A map flagged new only counts for the "New Maps" panel for a month after
+  // it released - the flag is set by hand and tends to outlive the news.
+  const NEW_MAP_MAX_AGE_DAYS = 30;
+
+  function isFreshNewMap(m){
+    if(!m.is_new) return false;
+
+    const released = parseDateLoose(m.released);
+    if(!released) return true; // no usable release date: trust the flag
+
+    const ageDays = Math.floor((getBaseDate().getTime() - released.getTime()) / 86400000);
+    return ageDays <= NEW_MAP_MAX_AGE_DAYS;
+  }
+
+  // Same rule as the "Longest time out of rotation" lines in the thread
+  // posts: per mode, the normal map(s) that have been out longest (ties
+  // included) are the likeliest to come back next.
+  function likelyNextRotationMaps(){
+    const picks = [];
+
+    for(const mode of ['Solos/Doubles', '3s/4s']){
+      const candidates = maps
+        .filter(m => !m.isSeasonal && m.status === 'out' && m.mode === mode)
+        .map(m => ({ m, days: daysLiveFromEffective(m) }))
+        .filter(x => x.days != null);
+
+      if(!candidates.length) continue;
+
+      const longest = Math.max(...candidates.map(x => x.days));
+      picks.push(...candidates.filter(x => x.days === longest).map(x => x.m));
+    }
+
+    return picks;
+  }
+
   function isSearchAlias(value){
     const q = String(value || '').trim().toLowerCase();
 
     return [
       'latest rotation',
+      'likely next week',
       'new maps',
       'easter maps',
       'summer maps',
@@ -2241,7 +2281,7 @@
     return maps.filter(m => validDateValue(m) === dateValue);
   }
 
-  function groupedMiniList(maps){
+  function groupedMiniList(maps, { showNewPill = true, note = null } = {}){
     const groups = [
       ['Solos/Doubles', maps.filter(m => m.mode === 'Solos/Doubles')],
       ['3s/4s', maps.filter(m => m.mode === '3s/4s')]
@@ -2256,13 +2296,15 @@
             if(!!a.is_new !== !!b.is_new) return a.is_new ? -1 : 1;
             return String(a.name || '').localeCompare(String(b.name || ''));
           })
-          .map(m => `<span class="rotationMapLink" data-map="${m.name}">${m.name}${m.is_new ? ' <span class="rotationNewPill">NEW</span>' : ''}</span>`)
+          .map(m => `<span class="rotationMapLink" data-map="${m.name}">${m.name}${showNewPill && m.is_new ? ' <span class="rotationNewPill">NEW</span>' : ''}</span>`)
           .join(', ');
+
+        const noteText = note ? note(mode, items) : '';
 
         return `
           <div class="rotationModeLine">
             <span class="${rotationSummaryModeClass(mode)}">[${modeLabel(mode)}]</span>
-            ${names}
+            ${names}${noteText ? ` <span class="rotationModeNote">${noteText}</span>` : ''}
           </div>
         `;
       })
@@ -2530,7 +2572,7 @@
       setFiltersForMaps(latestMaps, 'Latest rotation');
     };
 
-    const newMaps = maps.filter(m => m.is_new);
+    const newMaps = maps.filter(isFreshNewMap);
     const activeSeasonalMaps = maps.filter(m =>
       m.isSeasonal &&
       m.status === 'in'
@@ -2544,12 +2586,21 @@
       ? activeSeasonalMaps[0].seasonEmoji || '🎉'
       : '';
 
-    const sideMaps = activeSeasonalMaps.length ? activeSeasonalMaps : newMaps;
+    // Event maps win, then genuinely new maps, then - when neither applies -
+    // a prediction of what rotates in next so the panel is never just stale.
+    const likelyMaps = (!activeSeasonalMaps.length && !newMaps.length)
+      ? likelyNextRotationMaps()
+      : [];
+    const sideMaps = activeSeasonalMaps.length
+      ? activeSeasonalMaps
+      : (newMaps.length ? newMaps : likelyMaps);
     const showingSeasonal = activeSeasonalMaps.length > 0;
+    const showingLikely = !showingSeasonal && !newMaps.length && likelyMaps.length > 0;
 
     if(sideMaps.length){
       els.eventPanel.classList.remove(
         'eventPanel-new',
+        'eventPanel-likely',
         'eventPanel-easter',
         'eventPanel-summer',
         'eventPanel-halloween',
@@ -2571,6 +2622,8 @@
         }else if(seasonKey.includes('lunar')){
           els.eventPanel.classList.add('eventPanel-lunar');
         }
+      }else if(showingLikely){
+        els.eventPanel.classList.add('eventPanel-likely');
       }else{
         els.eventPanel.classList.add('eventPanel-new');
       }
@@ -2578,10 +2631,12 @@
       els.eventPanel.style.display = '';
       els.eventPanelTitle.textContent = showingSeasonal
         ? `${activeSeasonEmoji} ${activeSeasonLabel} Event`
-        : '🆕 New Maps';
+        : (showingLikely ? '🔮 Likely Next Week' : '🆕 New Maps');
       els.eventPanelStatus.textContent = showingSeasonal
         ? 'Active'
-        : `${sideMaps.length} map${sideMaps.length === 1 ? '' : 's'}`;
+        : (showingLikely
+            ? 'Based on trends'
+            : `${sideMaps.length} map${sideMaps.length === 1 ? '' : 's'}`);
       els.eventPanelBody.innerHTML = showingSeasonal
         ? `
           <div class="eventCountBlock">
@@ -2590,17 +2645,27 @@
           </div>
           ${groupedMiniList(sideMaps)}
         `
-        : groupedMiniList(sideMaps);
+        : (showingLikely
+            ? groupedMiniList(sideMaps, {
+                showNewPill: false,
+                note: (mode, items) => {
+                  const days = daysLiveFromEffective(items[0]);
+                  return days == null ? '' : `(${days} days out)`;
+                }
+              })
+            : groupedMiniList(sideMaps));
       document.querySelectorAll('.rotationMapLink').forEach(btn => {
           btn.onclick = () => focusMap(btn.dataset.map);
       });
       els.viewEventMaps.textContent = showingSeasonal
         ? `View ${activeSeasonLabel.toLowerCase()} maps →`
-        : 'View new maps →';
+        : (showingLikely ? 'View these maps →' : 'View new maps →');
       els.viewEventMaps.onclick = () => {
         setFiltersForMaps(
           sideMaps,
-          showingSeasonal ? `${activeSeasonLabel} maps` : 'New maps'
+          showingSeasonal
+            ? `${activeSeasonLabel} maps`
+            : (showingLikely ? 'Likely next week' : 'New maps')
         );
       };
     }else{
@@ -2633,6 +2698,7 @@
     if(isSearchAlias(q)){
       if(q.toLowerCase() === 'latest rotation') return 'Latest rotation';
       if(q.toLowerCase() === 'new maps') return 'New maps';
+      if(q.toLowerCase() === 'likely next week') return 'Likely next week';
       if(q.toLowerCase().endsWith(' maps')) return q;
     }
 
