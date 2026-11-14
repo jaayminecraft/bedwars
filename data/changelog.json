@@ -1,145 +1,6 @@
 {
   "entries": [
     {
-      "id": "1b8d80dc291258a0",
-      "date": "November 09, 2026",
-      "timestamp": "2026-11-09T20:38:44+00:00",
-      "type": "rotation",
-      "map": "Halloween Rotation Update",
-      "mode": "Seasonal",
-      "event": "Halloween",
-      "field": "rotation_summary",
-      "label": "Halloween Rotation Update",
-      "old": "",
-      "new": "",
-      "entered": [],
-      "left": [
-        {
-          "name": "Darkened",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Hollow Hills",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Ominosity (Crogorm)",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Scareshow (Airshow)",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Screamway (Speedway)",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Steampumpkin (Steampunk)",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Trick or Yeet",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Alaric (Catalyst)",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Hell Temple (Obelisk)",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Mortuus (Lectus)",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Pumpkin Bay (Swashbuckle)",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Sanctuary",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Unchained (Chained)",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Beldam",
-          "mode": "Solos/Doubles",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        },
-        {
-          "name": "Witch's Bog",
-          "mode": "3s/4s",
-          "event": "Halloween",
-          "source_title": "Bed Wars Map Rotation Log",
-          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
-          "source_date": "November 09, 2026"
-        }
-      ],
-      "source": "Detected during site build",
-      "source_title": "Bed Wars Map Rotation Log",
-      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725"
-    },
-    {
       "id": "3735f4c77f4caa0d",
       "date": "November 09, 2026",
       "timestamp": "2026-11-09T20:38:44+00:00",
@@ -418,6 +279,145 @@
           "name": "Whiskers",
           "mode": "3s/4s",
           "event": "",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        }
+      ],
+      "source": "Detected during site build",
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725"
+    },
+    {
+      "id": "1b8d80dc291258a0",
+      "date": "November 09, 2026",
+      "timestamp": "2026-11-09T20:38:44+00:00",
+      "type": "rotation",
+      "map": "Halloween Rotation Update",
+      "mode": "Seasonal",
+      "event": "Halloween",
+      "field": "rotation_summary",
+      "label": "Halloween Rotation Update",
+      "old": "",
+      "new": "",
+      "entered": [],
+      "left": [
+        {
+          "name": "Darkened",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Hollow Hills",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Ominosity (Crogorm)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Scareshow (Airshow)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Screamway (Speedway)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Steampumpkin (Steampunk)",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Trick or Yeet",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Alaric (Catalyst)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Hell Temple (Obelisk)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Mortuus (Lectus)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Pumpkin Bay (Swashbuckle)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Sanctuary",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Unchained (Chained)",
+          "mode": "3s/4s",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Beldam",
+          "mode": "Solos/Doubles",
+          "event": "Halloween",
+          "source_title": "Bed Wars Map Rotation Log",
+          "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
+          "source_date": "November 09, 2026"
+        },
+        {
+          "name": "Witch's Bog",
+          "mode": "3s/4s",
+          "event": "Halloween",
           "source_title": "Bed Wars Map Rotation Log",
           "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725",
           "source_date": "November 09, 2026"
