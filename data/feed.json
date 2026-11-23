@@ -1,0 +1,6839 @@
+{
+  "version": 1,
+  "latest_rotation": "November 16, 2026",
+  "events": [
+    {
+      "id": "a76fe8d6fe09dc58",
+      "kind": "rotation",
+      "timestamp": "2026-11-16T16:46:28+00:00",
+      "date": "November 16, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Casita",
+          "mode": "Solos/Doubles",
+          "slug": "casita"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "slug": "mirage"
+        },
+        {
+          "name": "Pavilion",
+          "mode": "Solos/Doubles",
+          "slug": "pavilion"
+        },
+        {
+          "name": "Steampunk",
+          "mode": "Solos/Doubles",
+          "slug": "steampunk"
+        },
+        {
+          "name": "Toro",
+          "mode": "Solos/Doubles",
+          "slug": "toro"
+        },
+        {
+          "name": "Tuzi",
+          "mode": "Solos/Doubles",
+          "slug": "tuzi"
+        },
+        {
+          "name": "Vigilante",
+          "mode": "Solos/Doubles",
+          "slug": "vigilante"
+        },
+        {
+          "name": "Zarzul",
+          "mode": "Solos/Doubles",
+          "slug": "zarzul"
+        },
+        {
+          "name": "Antenna",
+          "mode": "3s/4s",
+          "slug": "antenna"
+        },
+        {
+          "name": "Ashore",
+          "mode": "3s/4s",
+          "slug": "ashore"
+        },
+        {
+          "name": "Dreamgrove",
+          "mode": "3s/4s",
+          "slug": "dreamgrove"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "slug": "kubo"
+        },
+        {
+          "name": "Obelisk",
+          "mode": "3s/4s",
+          "slug": "obelisk"
+        },
+        {
+          "name": "Orchid",
+          "mode": "3s/4s",
+          "slug": "orchid"
+        },
+        {
+          "name": "Pool Party",
+          "mode": "3s/4s",
+          "slug": "pool-party"
+        },
+        {
+          "name": "Rigged",
+          "mode": "3s/4s",
+          "slug": "rigged"
+        }
+      ],
+      "left": [
+        {
+          "name": "Ambush",
+          "mode": "Solos/Doubles",
+          "slug": "ambush"
+        },
+        {
+          "name": "Babylon",
+          "mode": "Solos/Doubles",
+          "slug": "babylon"
+        },
+        {
+          "name": "Crogorm",
+          "mode": "Solos/Doubles",
+          "slug": "crogorm"
+        },
+        {
+          "name": "Glacier",
+          "mode": "Solos/Doubles",
+          "slug": "glacier"
+        },
+        {
+          "name": "Ironclad",
+          "mode": "Solos/Doubles",
+          "slug": "ironclad"
+        },
+        {
+          "name": "Sanctum",
+          "mode": "Solos/Doubles",
+          "slug": "sanctum"
+        },
+        {
+          "name": "Scorched Sands",
+          "mode": "Solos/Doubles",
+          "slug": "scorched-sands"
+        },
+        {
+          "name": "Solace",
+          "mode": "Solos/Doubles",
+          "slug": "solace"
+        },
+        {
+          "name": "Aquarium",
+          "mode": "3s/4s",
+          "slug": "aquarium"
+        },
+        {
+          "name": "Archway",
+          "mode": "3s/4s",
+          "slug": "archway"
+        },
+        {
+          "name": "Catalyst",
+          "mode": "3s/4s",
+          "slug": "catalyst"
+        },
+        {
+          "name": "Fort Doon",
+          "mode": "3s/4s",
+          "slug": "fort-doon"
+        },
+        {
+          "name": "Holmgang",
+          "mode": "3s/4s",
+          "slug": "holmgang"
+        },
+        {
+          "name": "Infinite",
+          "mode": "3s/4s",
+          "slug": "infinite"
+        },
+        {
+          "name": "Invasion",
+          "mode": "3s/4s",
+          "slug": "invasion"
+        },
+        {
+          "name": "Lectus",
+          "mode": "3s/4s",
+          "slug": "lectus"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/42002183/",
+      "rotation_number": 217
+    },
+    {
+      "id": "3735f4c77f4caa0d",
+      "kind": "rotation",
+      "timestamp": "2026-11-09T20:38:44+00:00",
+      "date": "November 09, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Atlas Prime",
+          "mode": "Solos/Doubles",
+          "slug": "atlas-prime"
+        },
+        {
+          "name": "Pantheon",
+          "mode": "Solos/Doubles",
+          "slug": "pantheon"
+        },
+        {
+          "name": "Manor Royale",
+          "mode": "3s/4s",
+          "slug": "manor-royale"
+        },
+        {
+          "name": "Shipwreck",
+          "mode": "3s/4s",
+          "slug": "shipwreck"
+        },
+        {
+          "name": "Blossom",
+          "mode": "Solos/Doubles",
+          "slug": "blossom"
+        },
+        {
+          "name": "Cliffside",
+          "mode": "Solos/Doubles",
+          "slug": "cliffside"
+        },
+        {
+          "name": "Crypt",
+          "mode": "Solos/Doubles",
+          "slug": "crypt"
+        },
+        {
+          "name": "Hollow",
+          "mode": "Solos/Doubles",
+          "slug": "hollow"
+        },
+        {
+          "name": "Lotus",
+          "mode": "Solos/Doubles",
+          "slug": "lotus"
+        },
+        {
+          "name": "Siege",
+          "mode": "Solos/Doubles",
+          "slug": "siege"
+        },
+        {
+          "name": "Chalk Cliffs",
+          "mode": "3s/4s",
+          "slug": "chalk-cliffs"
+        },
+        {
+          "name": "Deposit",
+          "mode": "3s/4s",
+          "slug": "deposit"
+        },
+        {
+          "name": "Paradox",
+          "mode": "3s/4s",
+          "slug": "paradox"
+        },
+        {
+          "name": "Pharaoh",
+          "mode": "3s/4s",
+          "slug": "pharaoh"
+        },
+        {
+          "name": "Planet 98",
+          "mode": "3s/4s",
+          "slug": "planet-98"
+        },
+        {
+          "name": "Raze",
+          "mode": "3s/4s",
+          "slug": "raze"
+        }
+      ],
+      "left": [
+        {
+          "name": "Bio-Hazard",
+          "mode": "Solos/Doubles",
+          "slug": "bio-hazard"
+        },
+        {
+          "name": "Dockyard",
+          "mode": "Solos/Doubles",
+          "slug": "dockyard"
+        },
+        {
+          "name": "Dragonstar",
+          "mode": "Solos/Doubles",
+          "slug": "dragonstar"
+        },
+        {
+          "name": "Impere",
+          "mode": "Solos/Doubles",
+          "slug": "impere"
+        },
+        {
+          "name": "Lightstone",
+          "mode": "Solos/Doubles",
+          "slug": "lightstone"
+        },
+        {
+          "name": "Orchestra",
+          "mode": "Solos/Doubles",
+          "slug": "orchestra"
+        },
+        {
+          "name": "Rooftop",
+          "mode": "Solos/Doubles",
+          "slug": "rooftop"
+        },
+        {
+          "name": "Sky Rise",
+          "mode": "Solos/Doubles",
+          "slug": "sky-rise"
+        },
+        {
+          "name": "Build Site",
+          "mode": "3s/4s",
+          "slug": "build-site"
+        },
+        {
+          "name": "Carapace",
+          "mode": "3s/4s",
+          "slug": "carapace"
+        },
+        {
+          "name": "Eastwood",
+          "mode": "3s/4s",
+          "slug": "eastwood"
+        },
+        {
+          "name": "Jurassic",
+          "mode": "3s/4s",
+          "slug": "jurassic"
+        },
+        {
+          "name": "Katsu",
+          "mode": "3s/4s",
+          "slug": "katsu"
+        },
+        {
+          "name": "Relic",
+          "mode": "3s/4s",
+          "slug": "relic"
+        },
+        {
+          "name": "Temple",
+          "mode": "3s/4s",
+          "slug": "temple"
+        },
+        {
+          "name": "Terminal",
+          "mode": "3s/4s",
+          "slug": "terminal"
+        },
+        {
+          "name": "Whiskers",
+          "mode": "3s/4s",
+          "slug": "whiskers"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725"
+    },
+    {
+      "id": "1b8d80dc291258a0",
+      "kind": "rotation",
+      "timestamp": "2026-11-09T20:38:44+00:00",
+      "date": "November 09, 2026",
+      "event": "Halloween",
+      "entered": [],
+      "left": [
+        {
+          "name": "Darkened",
+          "mode": "Solos/Doubles",
+          "slug": "darkened",
+          "event": "Halloween"
+        },
+        {
+          "name": "Hollow Hills",
+          "mode": "Solos/Doubles",
+          "slug": "hollow-hills",
+          "event": "Halloween"
+        },
+        {
+          "name": "Ominosity (Crogorm)",
+          "mode": "Solos/Doubles",
+          "slug": "ominosity-crogorm",
+          "event": "Halloween"
+        },
+        {
+          "name": "Scareshow (Airshow)",
+          "mode": "Solos/Doubles",
+          "slug": "scareshow-airshow",
+          "event": "Halloween"
+        },
+        {
+          "name": "Screamway (Speedway)",
+          "mode": "Solos/Doubles",
+          "slug": "screamway-speedway",
+          "event": "Halloween"
+        },
+        {
+          "name": "Steampumpkin (Steampunk)",
+          "mode": "Solos/Doubles",
+          "slug": "steampumpkin-steampunk",
+          "event": "Halloween"
+        },
+        {
+          "name": "Trick or Yeet",
+          "mode": "Solos/Doubles",
+          "slug": "trick-or-yeet",
+          "event": "Halloween"
+        },
+        {
+          "name": "Alaric (Catalyst)",
+          "mode": "3s/4s",
+          "slug": "alaric-catalyst",
+          "event": "Halloween"
+        },
+        {
+          "name": "Hell Temple (Obelisk)",
+          "mode": "3s/4s",
+          "slug": "hell-temple-obelisk",
+          "event": "Halloween"
+        },
+        {
+          "name": "Mortuus (Lectus)",
+          "mode": "3s/4s",
+          "slug": "mortuus-lectus",
+          "event": "Halloween"
+        },
+        {
+          "name": "Pumpkin Bay (Swashbuckle)",
+          "mode": "3s/4s",
+          "slug": "pumpkin-bay-swashbuckle",
+          "event": "Halloween"
+        },
+        {
+          "name": "Sanctuary",
+          "mode": "3s/4s",
+          "slug": "sanctuary",
+          "event": "Halloween"
+        },
+        {
+          "name": "Unchained (Chained)",
+          "mode": "3s/4s",
+          "slug": "unchained-chained",
+          "event": "Halloween"
+        },
+        {
+          "name": "Beldam",
+          "mode": "Solos/Doubles",
+          "slug": "beldam",
+          "event": "Halloween"
+        },
+        {
+          "name": "Witch's Bog",
+          "mode": "3s/4s",
+          "slug": "witch-s-bog",
+          "event": "Halloween"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41993725"
+    },
+    {
+      "id": "40ef8fabb2eb2fdb",
+      "kind": "rotation",
+      "timestamp": "2026-11-02T21:01:27+00:00",
+      "date": "November 02, 2026",
+      "event": "Halloween",
+      "entered": [
+        {
+          "name": "Hollow Hills",
+          "mode": "Solos/Doubles",
+          "slug": "hollow-hills",
+          "event": "Halloween"
+        }
+      ],
+      "left": [
+        {
+          "name": "Ghoulish",
+          "mode": "Solos/Doubles",
+          "slug": "ghoulish",
+          "event": "Halloween"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41986033"
+    },
+    {
+      "id": "399777f5d239c30f",
+      "kind": "rotation",
+      "timestamp": "2026-10-26T20:42:15+00:00",
+      "date": "October 26, 2026",
+      "event": "Halloween",
+      "entered": [
+        {
+          "name": "Ominosity (Crogorm)",
+          "mode": "Solos/Doubles",
+          "slug": "ominosity-crogorm",
+          "event": "Halloween"
+        }
+      ],
+      "left": [
+        {
+          "name": "Hollow Hills",
+          "mode": "Solos/Doubles",
+          "slug": "hollow-hills",
+          "event": "Halloween"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41975626"
+    },
+    {
+      "id": "3c097376250b2dd6",
+      "kind": "rotation",
+      "timestamp": "2026-10-13T12:31:39+00:00",
+      "date": "October 13, 2026",
+      "event": "Halloween",
+      "entered": [
+        {
+          "name": "Steampumpkin (Steampunk)",
+          "mode": "Solos/Doubles",
+          "slug": "steampumpkin-steampunk",
+          "event": "Halloween"
+        }
+      ],
+      "left": [
+        {
+          "name": "Ominosity (Crogorm)",
+          "mode": "Solos/Doubles",
+          "slug": "ominosity-crogorm",
+          "event": "Halloween"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41957648"
+    },
+    {
+      "id": "d348642606747dd7",
+      "kind": "rotation",
+      "timestamp": "2026-10-05T20:12:00+00:00",
+      "date": "October 05, 2026",
+      "event": "Halloween",
+      "entered": [
+        {
+          "name": "Beldam",
+          "mode": "Solos/Doubles",
+          "slug": "beldam",
+          "event": "Halloween",
+          "is_new": true
+        },
+        {
+          "name": "Witch's Bog",
+          "mode": "3s/4s",
+          "slug": "witch-s-bog",
+          "event": "Halloween",
+          "is_new": true
+        }
+      ],
+      "left": [],
+      "source_title": "Halloween Event Thread",
+      "source_url": "https://hypixel.net/threads/halloween-event-2026-new-maps-cosmetics.6157624/"
+    },
+    {
+      "id": "2634d7c1e5820bcd",
+      "kind": "rotation",
+      "timestamp": "2026-10-05T20:12:00+00:00",
+      "date": "October 05, 2026",
+      "event": "Halloween",
+      "entered": [
+        {
+          "name": "Darkened",
+          "mode": "Solos/Doubles",
+          "slug": "darkened",
+          "event": "Halloween"
+        },
+        {
+          "name": "Ghoulish",
+          "mode": "Solos/Doubles",
+          "slug": "ghoulish",
+          "event": "Halloween"
+        },
+        {
+          "name": "Hollow Hills",
+          "mode": "Solos/Doubles",
+          "slug": "hollow-hills",
+          "event": "Halloween"
+        },
+        {
+          "name": "Ominosity (Crogorm)",
+          "mode": "Solos/Doubles",
+          "slug": "ominosity-crogorm",
+          "event": "Halloween"
+        },
+        {
+          "name": "Scareshow (Airshow)",
+          "mode": "Solos/Doubles",
+          "slug": "scareshow-airshow",
+          "event": "Halloween"
+        },
+        {
+          "name": "Screamway (Speedway)",
+          "mode": "Solos/Doubles",
+          "slug": "screamway-speedway",
+          "event": "Halloween"
+        },
+        {
+          "name": "Trick or Yeet",
+          "mode": "Solos/Doubles",
+          "slug": "trick-or-yeet",
+          "event": "Halloween"
+        },
+        {
+          "name": "Alaric (Catalyst)",
+          "mode": "3s/4s",
+          "slug": "alaric-catalyst",
+          "event": "Halloween"
+        },
+        {
+          "name": "Hell Temple (Obelisk)",
+          "mode": "3s/4s",
+          "slug": "hell-temple-obelisk",
+          "event": "Halloween"
+        },
+        {
+          "name": "Mortuus (Lectus)",
+          "mode": "3s/4s",
+          "slug": "mortuus-lectus",
+          "event": "Halloween"
+        },
+        {
+          "name": "Pumpkin Bay (Swashbuckle)",
+          "mode": "3s/4s",
+          "slug": "pumpkin-bay-swashbuckle",
+          "event": "Halloween"
+        },
+        {
+          "name": "Sanctuary",
+          "mode": "3s/4s",
+          "slug": "sanctuary",
+          "event": "Halloween"
+        },
+        {
+          "name": "Unchained (Chained)",
+          "mode": "3s/4s",
+          "slug": "unchained-chained",
+          "event": "Halloween"
+        }
+      ],
+      "left": [],
+      "source_title": "In-game Map Selector",
+      "source_url": ""
+    },
+    {
+      "id": "a9b8bdaf07fff89e",
+      "kind": "rotation",
+      "timestamp": "2026-09-28T12:00:00+00:00",
+      "date": "September 28, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Acropolis",
+          "mode": "Solos/Doubles",
+          "slug": "acropolis"
+        },
+        {
+          "name": "Cascade",
+          "mode": "Solos/Doubles",
+          "slug": "cascade"
+        },
+        {
+          "name": "Highland Peaks",
+          "mode": "Solos/Doubles",
+          "slug": "highland-peaks"
+        },
+        {
+          "name": "Lighthouse",
+          "mode": "Solos/Doubles",
+          "slug": "lighthouse"
+        },
+        {
+          "name": "Orbit",
+          "mode": "Solos/Doubles",
+          "slug": "orbit"
+        },
+        {
+          "name": "Pernicious",
+          "mode": "Solos/Doubles",
+          "slug": "pernicious"
+        },
+        {
+          "name": "Speedway",
+          "mode": "Solos/Doubles",
+          "slug": "speedway"
+        },
+        {
+          "name": "Urban Plaza",
+          "mode": "Solos/Doubles",
+          "slug": "urban-plaza"
+        },
+        {
+          "name": "Crimson",
+          "mode": "3s/4s",
+          "slug": "crimson"
+        },
+        {
+          "name": "Eastwood",
+          "mode": "3s/4s",
+          "slug": "eastwood"
+        },
+        {
+          "name": "Haven",
+          "mode": "3s/4s",
+          "slug": "haven"
+        },
+        {
+          "name": "Nostalgia",
+          "mode": "3s/4s",
+          "slug": "nostalgia"
+        },
+        {
+          "name": "Rise",
+          "mode": "3s/4s",
+          "slug": "rise"
+        },
+        {
+          "name": "Sky Festival",
+          "mode": "3s/4s",
+          "slug": "sky-festival"
+        },
+        {
+          "name": "Unturned",
+          "mode": "3s/4s",
+          "slug": "unturned"
+        },
+        {
+          "name": "Yandi",
+          "mode": "3s/4s",
+          "slug": "yandi"
+        }
+      ],
+      "left": [
+        {
+          "name": "Amazon",
+          "mode": "Solos/Doubles",
+          "slug": "amazon"
+        },
+        {
+          "name": "Deadwood",
+          "mode": "Solos/Doubles",
+          "slug": "deadwood"
+        },
+        {
+          "name": "Harvest",
+          "mode": "Solos/Doubles",
+          "slug": "harvest"
+        },
+        {
+          "name": "Lucky Rush",
+          "mode": "Solos/Doubles",
+          "slug": "lucky-rush"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "slug": "mirage"
+        },
+        {
+          "name": "Rooted",
+          "mode": "Solos/Doubles",
+          "slug": "rooted"
+        },
+        {
+          "name": "Serenity",
+          "mode": "Solos/Doubles",
+          "slug": "serenity"
+        },
+        {
+          "name": "Silver Birch",
+          "mode": "Solos/Doubles",
+          "slug": "silver-birch"
+        },
+        {
+          "name": "Frogiton",
+          "mode": "3s/4s",
+          "slug": "frogiton"
+        },
+        {
+          "name": "Graveship",
+          "mode": "3s/4s",
+          "slug": "graveship"
+        },
+        {
+          "name": "Harvesting",
+          "mode": "3s/4s",
+          "slug": "harvesting"
+        },
+        {
+          "name": "Horizon",
+          "mode": "3s/4s",
+          "slug": "horizon"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "slug": "kubo"
+        },
+        {
+          "name": "Lost Temple",
+          "mode": "3s/4s",
+          "slug": "lost-temple"
+        },
+        {
+          "name": "Swashbuckle",
+          "mode": "3s/4s",
+          "slug": "swashbuckle"
+        },
+        {
+          "name": "Tengshe",
+          "mode": "3s/4s",
+          "slug": "tengshe"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41937159"
+    },
+    {
+      "id": "2733cf35d75a6460",
+      "kind": "rotation",
+      "timestamp": "2026-09-21T12:00:00+00:00",
+      "date": "September 21, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Lasagne",
+          "mode": "3s/4s",
+          "slug": "lasagne"
+        },
+        {
+          "name": "Shipment",
+          "mode": "3s/4s",
+          "slug": "shipment"
+        },
+        {
+          "name": "Ashfire",
+          "mode": "Solos/Doubles",
+          "slug": "ashfire"
+        },
+        {
+          "name": "Crogorm",
+          "mode": "Solos/Doubles",
+          "slug": "crogorm"
+        },
+        {
+          "name": "Gateway",
+          "mode": "Solos/Doubles",
+          "slug": "gateway"
+        },
+        {
+          "name": "Glacier",
+          "mode": "Solos/Doubles",
+          "slug": "glacier"
+        },
+        {
+          "name": "Playground",
+          "mode": "Solos/Doubles",
+          "slug": "playground"
+        },
+        {
+          "name": "Scorched Sands",
+          "mode": "Solos/Doubles",
+          "slug": "scorched-sands"
+        },
+        {
+          "name": "Solace",
+          "mode": "Solos/Doubles",
+          "slug": "solace"
+        },
+        {
+          "name": "Waterfall",
+          "mode": "Solos/Doubles",
+          "slug": "waterfall"
+        },
+        {
+          "name": "Aquarium",
+          "mode": "3s/4s",
+          "slug": "aquarium"
+        },
+        {
+          "name": "Artemis",
+          "mode": "3s/4s",
+          "slug": "artemis"
+        },
+        {
+          "name": "Catalyst",
+          "mode": "3s/4s",
+          "slug": "catalyst"
+        },
+        {
+          "name": "Fort Doon",
+          "mode": "3s/4s",
+          "slug": "fort-doon"
+        },
+        {
+          "name": "Infinite",
+          "mode": "3s/4s",
+          "slug": "infinite"
+        },
+        {
+          "name": "Paladin",
+          "mode": "3s/4s",
+          "slug": "paladin"
+        }
+      ],
+      "left": [
+        {
+          "name": "Aetius",
+          "mode": "Solos/Doubles",
+          "slug": "aetius"
+        },
+        {
+          "name": "Apollo",
+          "mode": "Solos/Doubles",
+          "slug": "apollo"
+        },
+        {
+          "name": "Aqil",
+          "mode": "Solos/Doubles",
+          "slug": "aqil"
+        },
+        {
+          "name": "Arid",
+          "mode": "Solos/Doubles",
+          "slug": "arid"
+        },
+        {
+          "name": "Cliffside",
+          "mode": "Solos/Doubles",
+          "slug": "cliffside"
+        },
+        {
+          "name": "Meso",
+          "mode": "Solos/Doubles",
+          "slug": "meso"
+        },
+        {
+          "name": "Pavilion",
+          "mode": "Solos/Doubles",
+          "slug": "pavilion"
+        },
+        {
+          "name": "Polygon",
+          "mode": "Solos/Doubles",
+          "slug": "polygon"
+        },
+        {
+          "name": "Chained",
+          "mode": "3s/4s",
+          "slug": "chained"
+        },
+        {
+          "name": "Chalk Cliffs",
+          "mode": "3s/4s",
+          "slug": "chalk-cliffs"
+        },
+        {
+          "name": "Enchanted",
+          "mode": "3s/4s",
+          "slug": "enchanted"
+        },
+        {
+          "name": "Mystery",
+          "mode": "3s/4s",
+          "slug": "mystery"
+        },
+        {
+          "name": "Obelisk",
+          "mode": "3s/4s",
+          "slug": "obelisk"
+        },
+        {
+          "name": "Seraph",
+          "mode": "3s/4s",
+          "slug": "seraph"
+        },
+        {
+          "name": "Stonekeep",
+          "mode": "3s/4s",
+          "slug": "stonekeep"
+        },
+        {
+          "name": "Treenan",
+          "mode": "3s/4s",
+          "slug": "treenan"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41924363/"
+    },
+    {
+      "id": "ee6694b6c5165b29",
+      "kind": "rotation",
+      "timestamp": "2026-09-14T12:00:00+00:00",
+      "date": "September 14, 2026",
+      "event": "Summer",
+      "entered": [],
+      "left": [
+        {
+          "name": "Acropora",
+          "mode": "Solos/Doubles",
+          "slug": "acropora",
+          "event": "Summer"
+        },
+        {
+          "name": "Fruitbrawl",
+          "mode": "Solos/Doubles",
+          "slug": "fruitbrawl",
+          "event": "Summer"
+        },
+        {
+          "name": "Gelato",
+          "mode": "Solos/Doubles",
+          "slug": "gelato",
+          "event": "Summer"
+        },
+        {
+          "name": "Montipora",
+          "mode": "Solos/Doubles",
+          "slug": "montipora",
+          "event": "Summer"
+        },
+        {
+          "name": "Retreat",
+          "mode": "Solos/Doubles",
+          "slug": "retreat",
+          "event": "Summer"
+        },
+        {
+          "name": "Symphonic (Orchestra)",
+          "mode": "Solos/Doubles",
+          "slug": "symphonic-orchestra",
+          "event": "Summer"
+        },
+        {
+          "name": "Turtle Cove",
+          "mode": "Solos/Doubles",
+          "slug": "turtle-cove",
+          "event": "Summer"
+        },
+        {
+          "name": "Beeeee",
+          "mode": "3s/4s",
+          "slug": "beeeee",
+          "event": "Summer"
+        },
+        {
+          "name": "Boardwalk",
+          "mode": "3s/4s",
+          "slug": "boardwalk",
+          "event": "Summer"
+        },
+        {
+          "name": "Bucket Bay",
+          "mode": "3s/4s",
+          "slug": "bucket-bay",
+          "event": "Summer"
+        },
+        {
+          "name": "Coastal (Eastwood)",
+          "mode": "3s/4s",
+          "slug": "coastal-eastwood",
+          "event": "Summer"
+        },
+        {
+          "name": "Gone Fishing",
+          "mode": "3s/4s",
+          "slug": "gone-fishing",
+          "event": "Summer"
+        },
+        {
+          "name": "Salmon Bay",
+          "mode": "3s/4s",
+          "slug": "salmon-bay",
+          "event": "Summer"
+        },
+        {
+          "name": "Shark Attack",
+          "mode": "3s/4s",
+          "slug": "shark-attack",
+          "event": "Summer"
+        },
+        {
+          "name": "Sandcastle (Enchanted)",
+          "mode": "3s/4s",
+          "slug": "sandcastle-enchanted",
+          "event": "Summer"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41914880/"
+    },
+    {
+      "id": "6cbccd2646f6e966",
+      "kind": "rotation",
+      "timestamp": "2026-09-14T12:00:00+00:00",
+      "date": "September 14, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Ambush",
+          "mode": "Solos/Doubles",
+          "slug": "ambush"
+        },
+        {
+          "name": "Babylon",
+          "mode": "Solos/Doubles",
+          "slug": "babylon"
+        },
+        {
+          "name": "Bio-Hazard",
+          "mode": "Solos/Doubles",
+          "slug": "bio-hazard"
+        },
+        {
+          "name": "Ironclad",
+          "mode": "Solos/Doubles",
+          "slug": "ironclad"
+        },
+        {
+          "name": "Lightstone",
+          "mode": "Solos/Doubles",
+          "slug": "lightstone"
+        },
+        {
+          "name": "Orchestra",
+          "mode": "Solos/Doubles",
+          "slug": "orchestra"
+        },
+        {
+          "name": "Rooftop",
+          "mode": "Solos/Doubles",
+          "slug": "rooftop"
+        },
+        {
+          "name": "Sanctum",
+          "mode": "Solos/Doubles",
+          "slug": "sanctum"
+        },
+        {
+          "name": "Archway",
+          "mode": "3s/4s",
+          "slug": "archway"
+        },
+        {
+          "name": "Build Site",
+          "mode": "3s/4s",
+          "slug": "build-site"
+        },
+        {
+          "name": "Carapace",
+          "mode": "3s/4s",
+          "slug": "carapace"
+        },
+        {
+          "name": "Holmgang",
+          "mode": "3s/4s",
+          "slug": "holmgang"
+        },
+        {
+          "name": "Invasion",
+          "mode": "3s/4s",
+          "slug": "invasion"
+        },
+        {
+          "name": "Katsu",
+          "mode": "3s/4s",
+          "slug": "katsu"
+        },
+        {
+          "name": "Lectus",
+          "mode": "3s/4s",
+          "slug": "lectus"
+        },
+        {
+          "name": "Terminal",
+          "mode": "3s/4s",
+          "slug": "terminal"
+        }
+      ],
+      "left": [
+        {
+          "name": "Airshow",
+          "mode": "Solos/Doubles",
+          "slug": "airshow"
+        },
+        {
+          "name": "Duye",
+          "mode": "Solos/Doubles",
+          "slug": "duye"
+        },
+        {
+          "name": "Highland Peaks",
+          "mode": "Solos/Doubles",
+          "slug": "highland-peaks"
+        },
+        {
+          "name": "Lotus",
+          "mode": "Solos/Doubles",
+          "slug": "lotus"
+        },
+        {
+          "name": "Nebuc",
+          "mode": "Solos/Doubles",
+          "slug": "nebuc"
+        },
+        {
+          "name": "Steampunk",
+          "mode": "Solos/Doubles",
+          "slug": "steampunk"
+        },
+        {
+          "name": "Toro",
+          "mode": "Solos/Doubles",
+          "slug": "toro"
+        },
+        {
+          "name": "Yue",
+          "mode": "Solos/Doubles",
+          "slug": "yue"
+        },
+        {
+          "name": "Dreamgrove",
+          "mode": "3s/4s",
+          "slug": "dreamgrove"
+        },
+        {
+          "name": "Extinction",
+          "mode": "3s/4s",
+          "slug": "extinction"
+        },
+        {
+          "name": "Nostalgia",
+          "mode": "3s/4s",
+          "slug": "nostalgia"
+        },
+        {
+          "name": "Orchid",
+          "mode": "3s/4s",
+          "slug": "orchid"
+        },
+        {
+          "name": "Raze",
+          "mode": "3s/4s",
+          "slug": "raze"
+        },
+        {
+          "name": "Stilted",
+          "mode": "3s/4s",
+          "slug": "stilted"
+        },
+        {
+          "name": "Tigris",
+          "mode": "3s/4s",
+          "slug": "tigris"
+        },
+        {
+          "name": "Zen Plaza",
+          "mode": "3s/4s",
+          "slug": "zen-plaza"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41914880/"
+    },
+    {
+      "id": "c9c086d8d79a298e",
+      "kind": "rotation",
+      "timestamp": "2026-09-07T19:18:45+00:00",
+      "date": "September 07, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Amazon",
+          "mode": "Solos/Doubles",
+          "slug": "amazon"
+        },
+        {
+          "name": "Dockyard",
+          "mode": "Solos/Doubles",
+          "slug": "dockyard"
+        },
+        {
+          "name": "Dragonstar",
+          "mode": "Solos/Doubles",
+          "slug": "dragonstar"
+        },
+        {
+          "name": "Impere",
+          "mode": "Solos/Doubles",
+          "slug": "impere"
+        },
+        {
+          "name": "Lucky Rush",
+          "mode": "Solos/Doubles",
+          "slug": "lucky-rush"
+        },
+        {
+          "name": "Rooted",
+          "mode": "Solos/Doubles",
+          "slug": "rooted"
+        },
+        {
+          "name": "Serenity",
+          "mode": "Solos/Doubles",
+          "slug": "serenity"
+        },
+        {
+          "name": "Sky Rise",
+          "mode": "Solos/Doubles",
+          "slug": "sky-rise"
+        },
+        {
+          "name": "Frogiton",
+          "mode": "3s/4s",
+          "slug": "frogiton"
+        },
+        {
+          "name": "Harvesting",
+          "mode": "3s/4s",
+          "slug": "harvesting"
+        },
+        {
+          "name": "Jurassic",
+          "mode": "3s/4s",
+          "slug": "jurassic"
+        },
+        {
+          "name": "Relic",
+          "mode": "3s/4s",
+          "slug": "relic"
+        },
+        {
+          "name": "Swashbuckle",
+          "mode": "3s/4s",
+          "slug": "swashbuckle"
+        },
+        {
+          "name": "Temple",
+          "mode": "3s/4s",
+          "slug": "temple"
+        },
+        {
+          "name": "Tengshe",
+          "mode": "3s/4s",
+          "slug": "tengshe"
+        },
+        {
+          "name": "Whiskers",
+          "mode": "3s/4s",
+          "slug": "whiskers"
+        }
+      ],
+      "left": [
+        {
+          "name": "Arcade",
+          "mode": "Solos/Doubles",
+          "slug": "arcade"
+        },
+        {
+          "name": "Hollow",
+          "mode": "Solos/Doubles",
+          "slug": "hollow"
+        },
+        {
+          "name": "Orbit",
+          "mode": "Solos/Doubles",
+          "slug": "orbit"
+        },
+        {
+          "name": "Playground",
+          "mode": "Solos/Doubles",
+          "slug": "playground"
+        },
+        {
+          "name": "Siege",
+          "mode": "Solos/Doubles",
+          "slug": "siege"
+        },
+        {
+          "name": "Slumber",
+          "mode": "Solos/Doubles",
+          "slug": "slumber"
+        },
+        {
+          "name": "Snails",
+          "mode": "Solos/Doubles",
+          "slug": "snails"
+        },
+        {
+          "name": "Terraced",
+          "mode": "Solos/Doubles",
+          "slug": "terraced"
+        },
+        {
+          "name": "Ashore",
+          "mode": "3s/4s",
+          "slug": "ashore"
+        },
+        {
+          "name": "Daolong",
+          "mode": "3s/4s",
+          "slug": "daolong"
+        },
+        {
+          "name": "Deposit",
+          "mode": "3s/4s",
+          "slug": "deposit"
+        },
+        {
+          "name": "Eastwood",
+          "mode": "3s/4s",
+          "slug": "eastwood"
+        },
+        {
+          "name": "Fang Outpost",
+          "mode": "3s/4s",
+          "slug": "fang-outpost"
+        },
+        {
+          "name": "Paladin",
+          "mode": "3s/4s",
+          "slug": "paladin"
+        },
+        {
+          "name": "Paradox",
+          "mode": "3s/4s",
+          "slug": "paradox"
+        },
+        {
+          "name": "Pool Party",
+          "mode": "3s/4s",
+          "slug": "pool-party"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41905850/"
+    },
+    {
+      "id": "84fe8f506b2722b3",
+      "kind": "rotation",
+      "timestamp": "2026-08-31T12:00:00+00:00",
+      "date": "August 31, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Aetius",
+          "mode": "Solos/Doubles",
+          "slug": "aetius"
+        },
+        {
+          "name": "Apollo",
+          "mode": "Solos/Doubles",
+          "slug": "apollo"
+        },
+        {
+          "name": "Arid",
+          "mode": "Solos/Doubles",
+          "slug": "arid"
+        },
+        {
+          "name": "Deadwood",
+          "mode": "Solos/Doubles",
+          "slug": "deadwood"
+        },
+        {
+          "name": "Harvest",
+          "mode": "Solos/Doubles",
+          "slug": "harvest"
+        },
+        {
+          "name": "Meso",
+          "mode": "Solos/Doubles",
+          "slug": "meso"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "slug": "mirage"
+        },
+        {
+          "name": "Silver Birch",
+          "mode": "Solos/Doubles",
+          "slug": "silver-birch"
+        },
+        {
+          "name": "Enchanted",
+          "mode": "3s/4s",
+          "slug": "enchanted"
+        },
+        {
+          "name": "Graveship",
+          "mode": "3s/4s",
+          "slug": "graveship"
+        },
+        {
+          "name": "Horizon",
+          "mode": "3s/4s",
+          "slug": "horizon"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "slug": "kubo"
+        },
+        {
+          "name": "Lost Temple",
+          "mode": "3s/4s",
+          "slug": "lost-temple"
+        },
+        {
+          "name": "Mystery",
+          "mode": "3s/4s",
+          "slug": "mystery"
+        },
+        {
+          "name": "Seraph",
+          "mode": "3s/4s",
+          "slug": "seraph"
+        },
+        {
+          "name": "Stonekeep",
+          "mode": "3s/4s",
+          "slug": "stonekeep"
+        }
+      ],
+      "left": [
+        {
+          "name": "Acropolis",
+          "mode": "Solos/Doubles",
+          "slug": "acropolis"
+        },
+        {
+          "name": "Ashfire",
+          "mode": "Solos/Doubles",
+          "slug": "ashfire"
+        },
+        {
+          "name": "Babylon",
+          "mode": "Solos/Doubles",
+          "slug": "babylon"
+        },
+        {
+          "name": "Cascade",
+          "mode": "Solos/Doubles",
+          "slug": "cascade"
+        },
+        {
+          "name": "Casita",
+          "mode": "Solos/Doubles",
+          "slug": "casita"
+        },
+        {
+          "name": "Dragon Light",
+          "mode": "Solos/Doubles",
+          "slug": "dragon-light"
+        },
+        {
+          "name": "Keep",
+          "mode": "Solos/Doubles",
+          "slug": "keep"
+        },
+        {
+          "name": "Vigilante",
+          "mode": "Solos/Doubles",
+          "slug": "vigilante"
+        },
+        {
+          "name": "Artemis",
+          "mode": "3s/4s",
+          "slug": "artemis"
+        },
+        {
+          "name": "Boletum",
+          "mode": "3s/4s",
+          "slug": "boletum"
+        },
+        {
+          "name": "Invasion",
+          "mode": "3s/4s",
+          "slug": "invasion"
+        },
+        {
+          "name": "Pharaoh",
+          "mode": "3s/4s",
+          "slug": "pharaoh"
+        },
+        {
+          "name": "Planet 98",
+          "mode": "3s/4s",
+          "slug": "planet-98"
+        },
+        {
+          "name": "Sky Festival",
+          "mode": "3s/4s",
+          "slug": "sky-festival"
+        },
+        {
+          "name": "Unturned",
+          "mode": "3s/4s",
+          "slug": "unturned"
+        },
+        {
+          "name": "Usagi",
+          "mode": "3s/4s",
+          "slug": "usagi"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41896029/"
+    },
+    {
+      "id": "d103c2e08c7f776a",
+      "kind": "rotation",
+      "timestamp": "2026-08-24T16:11:30+00:00",
+      "date": "August 24, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Aqil",
+          "mode": "Solos/Doubles",
+          "slug": "aqil"
+        },
+        {
+          "name": "Cliffside",
+          "mode": "Solos/Doubles",
+          "slug": "cliffside"
+        },
+        {
+          "name": "Duye",
+          "mode": "Solos/Doubles",
+          "slug": "duye"
+        },
+        {
+          "name": "Nebuc",
+          "mode": "Solos/Doubles",
+          "slug": "nebuc"
+        },
+        {
+          "name": "Pavilion",
+          "mode": "Solos/Doubles",
+          "slug": "pavilion"
+        },
+        {
+          "name": "Polygon",
+          "mode": "Solos/Doubles",
+          "slug": "polygon"
+        },
+        {
+          "name": "Steampunk",
+          "mode": "Solos/Doubles",
+          "slug": "steampunk"
+        },
+        {
+          "name": "Toro",
+          "mode": "Solos/Doubles",
+          "slug": "toro"
+        },
+        {
+          "name": "Chained",
+          "mode": "3s/4s",
+          "slug": "chained"
+        },
+        {
+          "name": "Chalk Cliffs",
+          "mode": "3s/4s",
+          "slug": "chalk-cliffs"
+        },
+        {
+          "name": "Dreamgrove",
+          "mode": "3s/4s",
+          "slug": "dreamgrove"
+        },
+        {
+          "name": "Obelisk",
+          "mode": "3s/4s",
+          "slug": "obelisk"
+        },
+        {
+          "name": "Orchid",
+          "mode": "3s/4s",
+          "slug": "orchid"
+        },
+        {
+          "name": "Tigris",
+          "mode": "3s/4s",
+          "slug": "tigris"
+        },
+        {
+          "name": "Treenan",
+          "mode": "3s/4s",
+          "slug": "treenan"
+        },
+        {
+          "name": "Zen Plaza",
+          "mode": "3s/4s",
+          "slug": "zen-plaza"
+        }
+      ],
+      "left": [
+        {
+          "name": "Atlas Prime",
+          "mode": "Solos/Doubles",
+          "slug": "atlas-prime"
+        },
+        {
+          "name": "Echo Ruins",
+          "mode": "Solos/Doubles",
+          "slug": "echo-ruins"
+        },
+        {
+          "name": "Pantheon",
+          "mode": "Solos/Doubles",
+          "slug": "pantheon"
+        },
+        {
+          "name": "Station",
+          "mode": "Solos/Doubles",
+          "slug": "station"
+        },
+        {
+          "name": "Crogorm",
+          "mode": "Solos/Doubles",
+          "slug": "crogorm"
+        },
+        {
+          "name": "Impere",
+          "mode": "Solos/Doubles",
+          "slug": "impere"
+        },
+        {
+          "name": "Ironclad",
+          "mode": "Solos/Doubles",
+          "slug": "ironclad"
+        },
+        {
+          "name": "Scorched Sands",
+          "mode": "Solos/Doubles",
+          "slug": "scorched-sands"
+        },
+        {
+          "name": "Antenna",
+          "mode": "3s/4s",
+          "slug": "antenna"
+        },
+        {
+          "name": "Aquarium",
+          "mode": "3s/4s",
+          "slug": "aquarium"
+        },
+        {
+          "name": "Catalyst",
+          "mode": "3s/4s",
+          "slug": "catalyst"
+        },
+        {
+          "name": "Crimson",
+          "mode": "3s/4s",
+          "slug": "crimson"
+        },
+        {
+          "name": "Jurassic",
+          "mode": "3s/4s",
+          "slug": "jurassic"
+        },
+        {
+          "name": "Lectus",
+          "mode": "3s/4s",
+          "slug": "lectus"
+        },
+        {
+          "name": "Rigged",
+          "mode": "3s/4s",
+          "slug": "rigged"
+        },
+        {
+          "name": "Yandi",
+          "mode": "3s/4s",
+          "slug": "yandi"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41883895/"
+    },
+    {
+      "id": "adc1f9dd889bebcd",
+      "kind": "rotation",
+      "timestamp": "2026-08-18T01:02:23+00:00",
+      "date": "August 17, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Airshow",
+          "mode": "Solos/Doubles",
+          "slug": "airshow"
+        },
+        {
+          "name": "Highland Peaks",
+          "mode": "Solos/Doubles",
+          "slug": "highland-peaks"
+        },
+        {
+          "name": "Hollow",
+          "mode": "Solos/Doubles",
+          "slug": "hollow"
+        },
+        {
+          "name": "Lotus",
+          "mode": "Solos/Doubles",
+          "slug": "lotus"
+        },
+        {
+          "name": "Siege",
+          "mode": "Solos/Doubles",
+          "slug": "siege"
+        },
+        {
+          "name": "Slumber",
+          "mode": "Solos/Doubles",
+          "slug": "slumber"
+        },
+        {
+          "name": "Snails",
+          "mode": "Solos/Doubles",
+          "slug": "snails"
+        },
+        {
+          "name": "Yue",
+          "mode": "Solos/Doubles",
+          "slug": "yue"
+        },
+        {
+          "name": "Daolong",
+          "mode": "3s/4s",
+          "slug": "daolong"
+        },
+        {
+          "name": "Deposit",
+          "mode": "3s/4s",
+          "slug": "deposit"
+        },
+        {
+          "name": "Extinction",
+          "mode": "3s/4s",
+          "slug": "extinction"
+        },
+        {
+          "name": "Fang Outpost",
+          "mode": "3s/4s",
+          "slug": "fang-outpost"
+        },
+        {
+          "name": "Nostalgia",
+          "mode": "3s/4s",
+          "slug": "nostalgia"
+        },
+        {
+          "name": "Paradox",
+          "mode": "3s/4s",
+          "slug": "paradox"
+        },
+        {
+          "name": "Raze",
+          "mode": "3s/4s",
+          "slug": "raze"
+        },
+        {
+          "name": "Stilted",
+          "mode": "3s/4s",
+          "slug": "stilted"
+        }
+      ],
+      "left": [
+        {
+          "name": "Lasagne",
+          "mode": "3s/4s",
+          "slug": "lasagne"
+        },
+        {
+          "name": "Manor Royale",
+          "mode": "3s/4s",
+          "slug": "manor-royale"
+        },
+        {
+          "name": "Shipment",
+          "mode": "3s/4s",
+          "slug": "shipment"
+        },
+        {
+          "name": "Shipwreck",
+          "mode": "3s/4s",
+          "slug": "shipwreck"
+        },
+        {
+          "name": "Bio-Hazard",
+          "mode": "Solos/Doubles",
+          "slug": "bio-hazard"
+        },
+        {
+          "name": "Dockyard",
+          "mode": "Solos/Doubles",
+          "slug": "dockyard"
+        },
+        {
+          "name": "Lightstone",
+          "mode": "Solos/Doubles",
+          "slug": "lightstone"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "slug": "mirage"
+        },
+        {
+          "name": "Pernicious",
+          "mode": "Solos/Doubles",
+          "slug": "pernicious"
+        },
+        {
+          "name": "Speedway",
+          "mode": "Solos/Doubles",
+          "slug": "speedway"
+        },
+        {
+          "name": "Tuzi",
+          "mode": "Solos/Doubles",
+          "slug": "tuzi"
+        },
+        {
+          "name": "Zarzul",
+          "mode": "Solos/Doubles",
+          "slug": "zarzul"
+        },
+        {
+          "name": "Carapace",
+          "mode": "3s/4s",
+          "slug": "carapace"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "slug": "kubo"
+        },
+        {
+          "name": "Terminal",
+          "mode": "3s/4s",
+          "slug": "terminal"
+        },
+        {
+          "name": "Whiskers",
+          "mode": "3s/4s",
+          "slug": "whiskers"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41871700/"
+    },
+    {
+      "id": "d13825d6b5965f5d",
+      "kind": "rotation",
+      "timestamp": "2026-08-10T16:22:41+00:00",
+      "date": "August 10, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Acropolis",
+          "mode": "Solos/Doubles",
+          "slug": "acropolis"
+        },
+        {
+          "name": "Arcade",
+          "mode": "Solos/Doubles",
+          "slug": "arcade"
+        },
+        {
+          "name": "Cascade",
+          "mode": "Solos/Doubles",
+          "slug": "cascade"
+        },
+        {
+          "name": "Dragon Light",
+          "mode": "Solos/Doubles",
+          "slug": "dragon-light"
+        },
+        {
+          "name": "Keep",
+          "mode": "Solos/Doubles",
+          "slug": "keep"
+        },
+        {
+          "name": "Orbit",
+          "mode": "Solos/Doubles",
+          "slug": "orbit"
+        },
+        {
+          "name": "Playground",
+          "mode": "Solos/Doubles",
+          "slug": "playground"
+        },
+        {
+          "name": "Terraced",
+          "mode": "Solos/Doubles",
+          "slug": "terraced"
+        },
+        {
+          "name": "Ashore",
+          "mode": "3s/4s",
+          "slug": "ashore"
+        },
+        {
+          "name": "Boletum",
+          "mode": "3s/4s",
+          "slug": "boletum"
+        },
+        {
+          "name": "Eastwood",
+          "mode": "3s/4s",
+          "slug": "eastwood"
+        },
+        {
+          "name": "Paladin",
+          "mode": "3s/4s",
+          "slug": "paladin"
+        },
+        {
+          "name": "Pool Party",
+          "mode": "3s/4s",
+          "slug": "pool-party"
+        },
+        {
+          "name": "Sky Festival",
+          "mode": "3s/4s",
+          "slug": "sky-festival"
+        },
+        {
+          "name": "Unturned",
+          "mode": "3s/4s",
+          "slug": "unturned"
+        },
+        {
+          "name": "Usagi",
+          "mode": "3s/4s",
+          "slug": "usagi"
+        }
+      ],
+      "left": [
+        {
+          "name": "Amazon",
+          "mode": "Solos/Doubles",
+          "slug": "amazon"
+        },
+        {
+          "name": "Blossom",
+          "mode": "Solos/Doubles",
+          "slug": "blossom"
+        },
+        {
+          "name": "Cliffside",
+          "mode": "Solos/Doubles",
+          "slug": "cliffside"
+        },
+        {
+          "name": "Crypt",
+          "mode": "Solos/Doubles",
+          "slug": "crypt"
+        },
+        {
+          "name": "Gateway",
+          "mode": "Solos/Doubles",
+          "slug": "gateway"
+        },
+        {
+          "name": "Rooted",
+          "mode": "Solos/Doubles",
+          "slug": "rooted"
+        },
+        {
+          "name": "Silver Birch",
+          "mode": "Solos/Doubles",
+          "slug": "silver-birch"
+        },
+        {
+          "name": "Waterfall",
+          "mode": "Solos/Doubles",
+          "slug": "waterfall"
+        },
+        {
+          "name": "Archway",
+          "mode": "3s/4s",
+          "slug": "archway"
+        },
+        {
+          "name": "Chalk Cliffs",
+          "mode": "3s/4s",
+          "slug": "chalk-cliffs"
+        },
+        {
+          "name": "Harvesting",
+          "mode": "3s/4s",
+          "slug": "harvesting"
+        },
+        {
+          "name": "Haven",
+          "mode": "3s/4s",
+          "slug": "haven"
+        },
+        {
+          "name": "Holmgang",
+          "mode": "3s/4s",
+          "slug": "holmgang"
+        },
+        {
+          "name": "Lost Temple",
+          "mode": "3s/4s",
+          "slug": "lost-temple"
+        },
+        {
+          "name": "Rise",
+          "mode": "3s/4s",
+          "slug": "rise"
+        },
+        {
+          "name": "Tengshe",
+          "mode": "3s/4s",
+          "slug": "tengshe"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41859669/"
+    },
+    {
+      "id": "9c535495753fb792",
+      "kind": "rotation",
+      "timestamp": "2026-08-03T16:55:35+00:00",
+      "date": "August 03, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Echo Ruins",
+          "mode": "Solos/Doubles",
+          "slug": "echo-ruins"
+        },
+        {
+          "name": "Station",
+          "mode": "Solos/Doubles",
+          "slug": "station"
+        },
+        {
+          "name": "Ashfire",
+          "mode": "Solos/Doubles",
+          "slug": "ashfire"
+        },
+        {
+          "name": "Babylon",
+          "mode": "Solos/Doubles",
+          "slug": "babylon"
+        },
+        {
+          "name": "Casita",
+          "mode": "Solos/Doubles",
+          "slug": "casita"
+        },
+        {
+          "name": "Crogorm",
+          "mode": "Solos/Doubles",
+          "slug": "crogorm"
+        },
+        {
+          "name": "Scorched Sands",
+          "mode": "Solos/Doubles",
+          "slug": "scorched-sands"
+        },
+        {
+          "name": "Vigilante",
+          "mode": "Solos/Doubles",
+          "slug": "vigilante"
+        },
+        {
+          "name": "Antenna",
+          "mode": "3s/4s",
+          "slug": "antenna"
+        },
+        {
+          "name": "Aquarium",
+          "mode": "3s/4s",
+          "slug": "aquarium"
+        },
+        {
+          "name": "Artemis",
+          "mode": "3s/4s",
+          "slug": "artemis"
+        },
+        {
+          "name": "Catalyst",
+          "mode": "3s/4s",
+          "slug": "catalyst"
+        },
+        {
+          "name": "Invasion",
+          "mode": "3s/4s",
+          "slug": "invasion"
+        },
+        {
+          "name": "Pharaoh",
+          "mode": "3s/4s",
+          "slug": "pharaoh"
+        },
+        {
+          "name": "Planet 98",
+          "mode": "3s/4s",
+          "slug": "planet-98"
+        },
+        {
+          "name": "Rigged",
+          "mode": "3s/4s",
+          "slug": "rigged"
+        }
+      ],
+      "left": [
+        {
+          "name": "Aetius",
+          "mode": "Solos/Doubles",
+          "slug": "aetius"
+        },
+        {
+          "name": "Ambush",
+          "mode": "Solos/Doubles",
+          "slug": "ambush"
+        },
+        {
+          "name": "Arid",
+          "mode": "Solos/Doubles",
+          "slug": "arid"
+        },
+        {
+          "name": "Highland Peaks",
+          "mode": "Solos/Doubles",
+          "slug": "highland-peaks"
+        },
+        {
+          "name": "Lighthouse",
+          "mode": "Solos/Doubles",
+          "slug": "lighthouse"
+        },
+        {
+          "name": "Pavilion",
+          "mode": "Solos/Doubles",
+          "slug": "pavilion"
+        },
+        {
+          "name": "Sanctum",
+          "mode": "Solos/Doubles",
+          "slug": "sanctum"
+        },
+        {
+          "name": "Urban Plaza",
+          "mode": "Solos/Doubles",
+          "slug": "urban-plaza"
+        },
+        {
+          "name": "Fort Doon",
+          "mode": "3s/4s",
+          "slug": "fort-doon"
+        },
+        {
+          "name": "Infinite",
+          "mode": "3s/4s",
+          "slug": "infinite"
+        },
+        {
+          "name": "Mystery",
+          "mode": "3s/4s",
+          "slug": "mystery"
+        },
+        {
+          "name": "Nostalgia",
+          "mode": "3s/4s",
+          "slug": "nostalgia"
+        },
+        {
+          "name": "Obelisk",
+          "mode": "3s/4s",
+          "slug": "obelisk"
+        },
+        {
+          "name": "Relic",
+          "mode": "3s/4s",
+          "slug": "relic"
+        },
+        {
+          "name": "Seraph",
+          "mode": "3s/4s",
+          "slug": "seraph"
+        },
+        {
+          "name": "Temple",
+          "mode": "3s/4s",
+          "slug": "temple"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41846021/"
+    },
+    {
+      "id": "9a196c43b9d0778c",
+      "kind": "rotation",
+      "timestamp": "2026-07-27T16:40:05+00:00",
+      "date": "July 27, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Atlas Prime",
+          "mode": "Solos/Doubles",
+          "slug": "atlas-prime"
+        },
+        {
+          "name": "Pantheon",
+          "mode": "Solos/Doubles",
+          "slug": "pantheon"
+        },
+        {
+          "name": "Manor Royale",
+          "mode": "3s/4s",
+          "slug": "manor-royale"
+        },
+        {
+          "name": "Shipwreck",
+          "mode": "3s/4s",
+          "slug": "shipwreck"
+        },
+        {
+          "name": "Bio-Hazard",
+          "mode": "Solos/Doubles",
+          "slug": "bio-hazard"
+        },
+        {
+          "name": "Impere",
+          "mode": "Solos/Doubles",
+          "slug": "impere"
+        },
+        {
+          "name": "Ironclad",
+          "mode": "Solos/Doubles",
+          "slug": "ironclad"
+        },
+        {
+          "name": "Lightstone",
+          "mode": "Solos/Doubles",
+          "slug": "lightstone"
+        },
+        {
+          "name": "Tuzi",
+          "mode": "Solos/Doubles",
+          "slug": "tuzi"
+        },
+        {
+          "name": "Zarzul",
+          "mode": "Solos/Doubles",
+          "slug": "zarzul"
+        },
+        {
+          "name": "Carapace",
+          "mode": "3s/4s",
+          "slug": "carapace"
+        },
+        {
+          "name": "Crimson",
+          "mode": "3s/4s",
+          "slug": "crimson"
+        },
+        {
+          "name": "Jurassic",
+          "mode": "3s/4s",
+          "slug": "jurassic"
+        },
+        {
+          "name": "Lectus",
+          "mode": "3s/4s",
+          "slug": "lectus"
+        },
+        {
+          "name": "Terminal",
+          "mode": "3s/4s",
+          "slug": "terminal"
+        },
+        {
+          "name": "Yandi",
+          "mode": "3s/4s",
+          "slug": "yandi"
+        }
+      ],
+      "left": [
+        {
+          "name": "Dragonstar",
+          "mode": "Solos/Doubles",
+          "slug": "dragonstar"
+        },
+        {
+          "name": "Glacier",
+          "mode": "Solos/Doubles",
+          "slug": "glacier"
+        },
+        {
+          "name": "Lotus",
+          "mode": "Solos/Doubles",
+          "slug": "lotus"
+        },
+        {
+          "name": "Playground",
+          "mode": "Solos/Doubles",
+          "slug": "playground"
+        },
+        {
+          "name": "Sky Rise",
+          "mode": "Solos/Doubles",
+          "slug": "sky-rise"
+        },
+        {
+          "name": "Solace",
+          "mode": "Solos/Doubles",
+          "slug": "solace"
+        },
+        {
+          "name": "Steampunk",
+          "mode": "Solos/Doubles",
+          "slug": "steampunk"
+        },
+        {
+          "name": "Toro",
+          "mode": "Solos/Doubles",
+          "slug": "toro"
+        },
+        {
+          "name": "Build Site",
+          "mode": "3s/4s",
+          "slug": "build-site"
+        },
+        {
+          "name": "Dreamgrove",
+          "mode": "3s/4s",
+          "slug": "dreamgrove"
+        },
+        {
+          "name": "Eastwood",
+          "mode": "3s/4s",
+          "slug": "eastwood"
+        },
+        {
+          "name": "Graveship",
+          "mode": "3s/4s",
+          "slug": "graveship"
+        },
+        {
+          "name": "Horizon",
+          "mode": "3s/4s",
+          "slug": "horizon"
+        },
+        {
+          "name": "Katsu",
+          "mode": "3s/4s",
+          "slug": "katsu"
+        },
+        {
+          "name": "Orchid",
+          "mode": "3s/4s",
+          "slug": "orchid"
+        },
+        {
+          "name": "Raze",
+          "mode": "3s/4s",
+          "slug": "raze"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41830958/"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-26T20:02:13+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Graveship",
+        "mode": "3s/4s",
+        "slug": "graveship"
+      },
+      "changes": [
+        {
+          "label": "Radius",
+          "old": "117",
+          "new": "118"
+        }
+      ],
+      "id": "chg-9241c5bbbe060532"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:31:02+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Whiskers",
+        "mode": "3s/4s",
+        "slug": "whiskers"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "88",
+          "new": "87"
+        },
+        {
+          "label": "Y Range",
+          "old": "23",
+          "new": "22"
+        },
+        {
+          "label": "Radius",
+          "old": "113",
+          "new": "112"
+        }
+      ],
+      "id": "chg-c20a02ff30a9dc42"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:30:38+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Tengshe",
+        "mode": "3s/4s",
+        "slug": "tengshe"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "65",
+          "new": "64"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "101",
+          "new": "100"
+        }
+      ],
+      "id": "chg-3015d1bbfebf0066"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:30:02+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Rise",
+        "mode": "3s/4s",
+        "slug": "rise"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "97",
+          "new": "96"
+        },
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "28"
+        },
+        {
+          "label": "Radius",
+          "old": "96",
+          "new": "95"
+        }
+      ],
+      "id": "chg-226c3470e9f25688"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:28:25+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Harvesting",
+        "mode": "3s/4s",
+        "slug": "harvesting"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "96",
+          "new": "95"
+        },
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "29"
+        },
+        {
+          "label": "Radius",
+          "old": "113",
+          "new": "112"
+        }
+      ],
+      "id": "chg-aa79b5561a4693bd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:27:49+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Speedway",
+        "mode": "Solos/Doubles",
+        "slug": "speedway"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "91",
+          "new": "90"
+        },
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "36"
+        },
+        {
+          "label": "Radius",
+          "old": "115",
+          "new": "114"
+        }
+      ],
+      "id": "chg-438cab581692c4cd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:27:06+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Rooted",
+        "mode": "Solos/Doubles",
+        "slug": "rooted"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "96",
+          "new": "95"
+        },
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "29"
+        },
+        {
+          "label": "Radius",
+          "old": "115",
+          "new": "114"
+        }
+      ],
+      "id": "chg-72b5df86462c4fcd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:26:25+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Pernicious",
+        "mode": "Solos/Doubles",
+        "slug": "pernicious"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "91",
+          "new": "90"
+        },
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "36"
+        },
+        {
+          "label": "Radius",
+          "old": "110",
+          "new": "109"
+        }
+      ],
+      "id": "chg-351ed7bf676a8622"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:25:47+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Dockyard",
+        "mode": "Solos/Doubles",
+        "slug": "dockyard"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "98",
+          "new": "97"
+        },
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "36"
+        },
+        {
+          "label": "Radius",
+          "old": "122",
+          "new": "121"
+        }
+      ],
+      "id": "chg-df6fcaec49d1dfe9"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:25:26+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Crypt",
+        "mode": "Solos/Doubles",
+        "slug": "crypt"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "96",
+          "new": "95"
+        },
+        {
+          "label": "Y Range",
+          "old": "52",
+          "new": "51"
+        },
+        {
+          "label": "Radius",
+          "old": "120",
+          "new": "119"
+        }
+      ],
+      "id": "chg-8f793944d9d2eb02"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:24:56+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Blossom",
+        "mode": "Solos/Doubles",
+        "slug": "blossom"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "97",
+          "new": "96"
+        },
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "24"
+        },
+        {
+          "label": "Radius",
+          "old": "108",
+          "new": "107"
+        }
+      ],
+      "id": "chg-65f103679a128960"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:24:17+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Amazon",
+        "mode": "Solos/Doubles",
+        "slug": "amazon"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "94",
+          "new": "93"
+        },
+        {
+          "label": "Y Range",
+          "old": "42",
+          "new": "41"
+        },
+        {
+          "label": "Radius",
+          "old": "130",
+          "new": "129"
+        }
+      ],
+      "id": "chg-cbbd492eef96eb57"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:23:36+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Lasagne",
+        "mode": "3s/4s",
+        "slug": "lasagne"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "62",
+          "new": "61"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "91",
+          "new": "90"
+        },
+        {
+          "label": "Radius",
+          "old": "",
+          "new": "120"
+        }
+      ],
+      "id": "chg-ce0163340ffe1f7e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:22:49+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Shipment",
+        "mode": "3s/4s",
+        "slug": "shipment"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "68",
+          "new": "67"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "102",
+          "new": "101"
+        },
+        {
+          "label": "Radius",
+          "old": "",
+          "new": "114"
+        }
+      ],
+      "id": "chg-cd5f60c3d6df9cf2"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-20T19:21:42+00:00",
+      "date": "July 20, 2026",
+      "map": {
+        "name": "Haven",
+        "mode": "3s/4s",
+        "slug": "haven"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "",
+          "new": "39"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "",
+          "new": "72"
+        },
+        {
+          "label": "Y Range",
+          "old": "",
+          "new": "34"
+        },
+        {
+          "label": "Radius",
+          "old": "",
+          "new": "121"
+        }
+      ],
+      "id": "chg-bcbf5c13af61c00b"
+    },
+    {
+      "id": "bcc4b1d973daff5e",
+      "kind": "rotation",
+      "timestamp": "2026-07-20T15:39:09+00:00",
+      "date": "July 20, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Lasagne",
+          "mode": "3s/4s",
+          "slug": "lasagne"
+        },
+        {
+          "name": "Shipment",
+          "mode": "3s/4s",
+          "slug": "shipment"
+        },
+        {
+          "name": "Amazon",
+          "mode": "Solos/Doubles",
+          "slug": "amazon"
+        },
+        {
+          "name": "Blossom",
+          "mode": "Solos/Doubles",
+          "slug": "blossom"
+        },
+        {
+          "name": "Crypt",
+          "mode": "Solos/Doubles",
+          "slug": "crypt"
+        },
+        {
+          "name": "Dockyard",
+          "mode": "Solos/Doubles",
+          "slug": "dockyard"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "slug": "mirage"
+        },
+        {
+          "name": "Pernicious",
+          "mode": "Solos/Doubles",
+          "slug": "pernicious"
+        },
+        {
+          "name": "Rooted",
+          "mode": "Solos/Doubles",
+          "slug": "rooted"
+        },
+        {
+          "name": "Speedway",
+          "mode": "Solos/Doubles",
+          "slug": "speedway"
+        },
+        {
+          "name": "Harvesting",
+          "mode": "3s/4s",
+          "slug": "harvesting"
+        },
+        {
+          "name": "Haven",
+          "mode": "3s/4s",
+          "slug": "haven"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "slug": "kubo"
+        },
+        {
+          "name": "Rise",
+          "mode": "3s/4s",
+          "slug": "rise"
+        },
+        {
+          "name": "Tengshe",
+          "mode": "3s/4s",
+          "slug": "tengshe"
+        },
+        {
+          "name": "Whiskers",
+          "mode": "3s/4s",
+          "slug": "whiskers"
+        }
+      ],
+      "left": [
+        {
+          "name": "Babylon",
+          "mode": "Solos/Doubles",
+          "slug": "babylon"
+        },
+        {
+          "name": "Deadwood",
+          "mode": "Solos/Doubles",
+          "slug": "deadwood"
+        },
+        {
+          "name": "Harvest",
+          "mode": "Solos/Doubles",
+          "slug": "harvest"
+        },
+        {
+          "name": "Hollow",
+          "mode": "Solos/Doubles",
+          "slug": "hollow"
+        },
+        {
+          "name": "Orbit",
+          "mode": "Solos/Doubles",
+          "slug": "orbit"
+        },
+        {
+          "name": "Orchestra",
+          "mode": "Solos/Doubles",
+          "slug": "orchestra"
+        },
+        {
+          "name": "Rooftop",
+          "mode": "Solos/Doubles",
+          "slug": "rooftop"
+        },
+        {
+          "name": "Siege",
+          "mode": "Solos/Doubles",
+          "slug": "siege"
+        },
+        {
+          "name": "Artemis",
+          "mode": "3s/4s",
+          "slug": "artemis"
+        },
+        {
+          "name": "Chained",
+          "mode": "3s/4s",
+          "slug": "chained"
+        },
+        {
+          "name": "Deposit",
+          "mode": "3s/4s",
+          "slug": "deposit"
+        },
+        {
+          "name": "Frogiton",
+          "mode": "3s/4s",
+          "slug": "frogiton"
+        },
+        {
+          "name": "Paladin",
+          "mode": "3s/4s",
+          "slug": "paladin"
+        },
+        {
+          "name": "Paradox",
+          "mode": "3s/4s",
+          "slug": "paradox"
+        },
+        {
+          "name": "Swashbuckle",
+          "mode": "3s/4s",
+          "slug": "swashbuckle"
+        },
+        {
+          "name": "Treenan",
+          "mode": "3s/4s",
+          "slug": "treenan"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41817303/"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:21:05+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Seraph",
+        "mode": "3s/4s",
+        "slug": "seraph"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "",
+          "new": "67"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "95",
+          "new": "94"
+        },
+        {
+          "label": "Y Range",
+          "old": "",
+          "new": "28"
+        },
+        {
+          "label": "Radius",
+          "old": "",
+          "new": "106"
+        }
+      ],
+      "id": "chg-7569bc71067a1c70"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:20:32+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Mystery",
+        "mode": "3s/4s",
+        "slug": "mystery"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "93",
+          "new": "92"
+        },
+        {
+          "label": "Y Range",
+          "old": "32",
+          "new": "31"
+        },
+        {
+          "label": "Radius",
+          "old": "110",
+          "new": "109"
+        }
+      ],
+      "id": "chg-4df35b2836b0ea1b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:20:08+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Lost Temple",
+        "mode": "3s/4s",
+        "slug": "lost-temple"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "92",
+          "new": "91"
+        },
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "24"
+        },
+        {
+          "label": "Radius",
+          "old": "111",
+          "new": "110"
+        }
+      ],
+      "id": "chg-3eefb6a1f17900b2"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:19:40+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Infinite",
+        "mode": "3s/4s",
+        "slug": "infinite"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "89",
+          "new": "88"
+        },
+        {
+          "label": "Y Range",
+          "old": "23",
+          "new": "22"
+        },
+        {
+          "label": "Radius",
+          "old": "89",
+          "new": "88"
+        }
+      ],
+      "id": "chg-a958e065610525ce"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:19:17+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Holmgang",
+        "mode": "3s/4s",
+        "slug": "holmgang"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "98",
+          "new": "97"
+        },
+        {
+          "label": "Y Range",
+          "old": "38",
+          "new": "37"
+        },
+        {
+          "label": "Radius",
+          "old": "103",
+          "new": "102"
+        }
+      ],
+      "id": "chg-a3a8dcb63643d0be"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:18:16+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Fort Doon",
+        "mode": "3s/4s",
+        "slug": "fort-doon"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "42",
+          "new": "68"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "140",
+          "new": "90"
+        },
+        {
+          "label": "Y Range",
+          "old": "99",
+          "new": "23"
+        },
+        {
+          "label": "Radius",
+          "old": "124",
+          "new": "113"
+        }
+      ],
+      "id": "chg-cb96664f8b13da09"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:17:29+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Chalk Cliffs",
+        "mode": "3s/4s",
+        "slug": "chalk-cliffs"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "70",
+          "new": "69"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "108",
+          "new": "107"
+        }
+      ],
+      "id": "chg-458d2852f2f7ac0a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:16:51+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Archway",
+        "mode": "3s/4s",
+        "slug": "archway"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "87",
+          "new": "86"
+        },
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "29"
+        }
+      ],
+      "id": "chg-a34f09ffdb279bdd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:16:24+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Waterfall",
+        "mode": "Solos/Doubles",
+        "slug": "waterfall"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "101",
+          "new": "100"
+        },
+        {
+          "label": "Y Range",
+          "old": "44",
+          "new": "43"
+        },
+        {
+          "label": "Radius",
+          "old": "98",
+          "new": "99"
+        }
+      ],
+      "id": "chg-680c0af84b7fffbc"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:15:51+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Urban Plaza",
+        "mode": "Solos/Doubles",
+        "slug": "urban-plaza"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "84",
+          "new": "83"
+        },
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "28"
+        },
+        {
+          "label": "Radius",
+          "old": "109",
+          "new": "108"
+        }
+      ],
+      "id": "chg-106df882f4484d98"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:15:05+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Silver Birch",
+        "mode": "Solos/Doubles",
+        "slug": "silver-birch"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "74",
+          "new": "73"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "115",
+          "new": "114"
+        }
+      ],
+      "id": "chg-6ab8909455a0e1f9"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:14:31+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Lighthouse",
+        "mode": "Solos/Doubles",
+        "slug": "lighthouse"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "111",
+          "new": "110"
+        },
+        {
+          "label": "Y Range",
+          "old": "52",
+          "new": "51"
+        },
+        {
+          "label": "Radius",
+          "old": "125",
+          "new": "99"
+        }
+      ],
+      "id": "chg-3932a2805c022f8d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:13:50+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Gateway",
+        "mode": "Solos/Doubles",
+        "slug": "gateway"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "129",
+          "new": "128"
+        },
+        {
+          "label": "Y Range",
+          "old": "42",
+          "new": "41"
+        },
+        {
+          "label": "Radius",
+          "old": "126",
+          "new": "118"
+        }
+      ],
+      "id": "chg-a9fe6068bfd765e3"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:13:16+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Cliffside",
+        "mode": "Solos/Doubles",
+        "slug": "cliffside"
+      },
+      "changes": [
+        {
+          "label": "Radius",
+          "old": "139",
+          "new": "138"
+        }
+      ],
+      "id": "chg-23ae37953af778ab"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T18:12:39+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Arid",
+        "mode": "Solos/Doubles",
+        "slug": "arid"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "84",
+          "new": "83"
+        },
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "30"
+        },
+        {
+          "label": "Radius",
+          "old": "130",
+          "new": "129"
+        }
+      ],
+      "id": "chg-1772c5979fc41052"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:59:14+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Temple",
+        "mode": "3s/4s",
+        "slug": "temple"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "",
+          "new": "43"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "107",
+          "new": "105"
+        },
+        {
+          "label": "Y Range",
+          "old": "",
+          "new": "63"
+        },
+        {
+          "label": "Radius",
+          "old": "",
+          "new": "100"
+        }
+      ],
+      "id": "chg-44a691f4a8fd5a8e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:58:32+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Relic",
+        "mode": "3s/4s",
+        "slug": "relic"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "91",
+          "new": "90"
+        },
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "30"
+        },
+        {
+          "label": "Radius",
+          "old": "91",
+          "new": "90"
+        }
+      ],
+      "id": "chg-3f96d2d6480cecba"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:58:09+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Orchid",
+        "mode": "3s/4s",
+        "slug": "orchid"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "87",
+          "new": "86"
+        },
+        {
+          "label": "Y Range",
+          "old": "23",
+          "new": "22"
+        },
+        {
+          "label": "Radius",
+          "old": "94",
+          "new": "93"
+        }
+      ],
+      "id": "chg-755831948d2d67b7"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:57:39+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Obelisk",
+        "mode": "3s/4s",
+        "slug": "obelisk"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "115",
+          "new": "114"
+        },
+        {
+          "label": "Y Range",
+          "old": "56",
+          "new": "55"
+        },
+        {
+          "label": "Radius",
+          "old": "110",
+          "new": "108"
+        }
+      ],
+      "id": "chg-2eca0759d5a2a75a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:57:13+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Nostalgia",
+        "mode": "3s/4s",
+        "slug": "nostalgia"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "97",
+          "new": "96"
+        },
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "28"
+        },
+        {
+          "label": "Radius",
+          "old": "111",
+          "new": "110"
+        }
+      ],
+      "id": "chg-7b69e3a4d056f85a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:56:46+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Katsu",
+        "mode": "3s/4s",
+        "slug": "katsu"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "97",
+          "new": "96"
+        },
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "30"
+        },
+        {
+          "label": "Radius",
+          "old": "104",
+          "new": "103"
+        }
+      ],
+      "id": "chg-673bbd458c8cd2cb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:56:16+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Dreamgrove",
+        "mode": "3s/4s",
+        "slug": "dreamgrove"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "80",
+          "new": "85"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "116",
+          "new": "115"
+        },
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "31"
+        },
+        {
+          "label": "Radius",
+          "old": "100",
+          "new": "81"
+        }
+      ],
+      "id": "chg-1b1d3ecda6124e43"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:55:39+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Build Site",
+        "mode": "3s/4s",
+        "slug": "build-site"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "97",
+          "new": "96"
+        },
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "34"
+        },
+        {
+          "label": "Radius",
+          "old": "105",
+          "new": "104"
+        }
+      ],
+      "id": "chg-c6141389ab63dbfb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:55:09+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Toro",
+        "mode": "Solos/Doubles",
+        "slug": "toro"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "93",
+          "new": "92"
+        },
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "28"
+        },
+        {
+          "label": "Radius",
+          "old": "118",
+          "new": "117"
+        }
+      ],
+      "id": "chg-65631ca767d4bad9"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:54:19+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Pavilion",
+        "mode": "Solos/Doubles",
+        "slug": "pavilion"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "95",
+          "new": "97"
+        },
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "30"
+        },
+        {
+          "label": "Radius",
+          "old": "123",
+          "new": "139"
+        }
+      ],
+      "id": "chg-2c360bd99e116e25"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:54:19+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Sanctum",
+        "mode": "Solos/Doubles",
+        "slug": "sanctum"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "92",
+          "new": "91"
+        },
+        {
+          "label": "Y Range",
+          "old": "33",
+          "new": "32"
+        },
+        {
+          "label": "Radius",
+          "old": "149",
+          "new": "148"
+        }
+      ],
+      "id": "chg-dfea2e303a9d3a05"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:54:19+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Solace",
+        "mode": "Solos/Doubles",
+        "slug": "solace"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "101",
+          "new": "100"
+        },
+        {
+          "label": "Y Range",
+          "old": "38",
+          "new": "37"
+        },
+        {
+          "label": "Radius",
+          "old": "102",
+          "new": "101"
+        }
+      ],
+      "id": "chg-54e420ba8e0f5b04"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:54:19+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Steampunk",
+        "mode": "Solos/Doubles",
+        "slug": "steampunk"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "100",
+          "new": "99"
+        },
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "36"
+        },
+        {
+          "label": "Radius",
+          "old": "132",
+          "new": "131"
+        }
+      ],
+      "id": "chg-995e64f831ee02e4"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:52:17+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Glacier",
+        "mode": "Solos/Doubles",
+        "slug": "glacier"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "106",
+          "new": "105"
+        },
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "36"
+        },
+        {
+          "label": "Radius",
+          "old": "110",
+          "new": "109"
+        }
+      ],
+      "id": "chg-231f48f4c7ab4acf"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:52:17+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Highland Peaks",
+        "mode": "Solos/Doubles",
+        "slug": "highland-peaks"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "62",
+          "new": "61"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "89",
+          "new": "88"
+        }
+      ],
+      "id": "chg-99200b24b24e06ea"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:51:11+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Ambush",
+        "mode": "Solos/Doubles",
+        "slug": "ambush"
+      },
+      "changes": [
+        {
+          "label": "Minimum Y",
+          "old": "75",
+          "new": "67"
+        },
+        {
+          "label": "Maximum Y",
+          "old": "102",
+          "new": "101"
+        },
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "35"
+        },
+        {
+          "label": "Radius",
+          "old": "131",
+          "new": "144"
+        }
+      ],
+      "id": "chg-8a695a3b733df76f"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-17T15:41:19+00:00",
+      "date": "July 13, 2026",
+      "map": {
+        "name": "Aetius",
+        "mode": "Solos/Doubles",
+        "slug": "aetius"
+      },
+      "changes": [
+        {
+          "label": "Maximum Y",
+          "old": "95",
+          "new": "94"
+        },
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "27"
+        },
+        {
+          "label": "Radius",
+          "old": "123",
+          "new": "122"
+        }
+      ],
+      "id": "chg-62be50f85017c8e9"
+    },
+    {
+      "id": "64c5758bf7151f33",
+      "kind": "rotation",
+      "timestamp": "2026-07-13T16:01:10+00:00",
+      "date": "July 13, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Aetius",
+          "mode": "Solos/Doubles",
+          "slug": "aetius"
+        },
+        {
+          "name": "Arid",
+          "mode": "Solos/Doubles",
+          "slug": "arid"
+        },
+        {
+          "name": "Cliffside",
+          "mode": "Solos/Doubles",
+          "slug": "cliffside"
+        },
+        {
+          "name": "Gateway",
+          "mode": "Solos/Doubles",
+          "slug": "gateway"
+        },
+        {
+          "name": "Lighthouse",
+          "mode": "Solos/Doubles",
+          "slug": "lighthouse"
+        },
+        {
+          "name": "Silver Birch",
+          "mode": "Solos/Doubles",
+          "slug": "silver-birch"
+        },
+        {
+          "name": "Urban Plaza",
+          "mode": "Solos/Doubles",
+          "slug": "urban-plaza"
+        },
+        {
+          "name": "Waterfall",
+          "mode": "Solos/Doubles",
+          "slug": "waterfall"
+        },
+        {
+          "name": "Archway",
+          "mode": "3s/4s",
+          "slug": "archway"
+        },
+        {
+          "name": "Chalk Cliffs",
+          "mode": "3s/4s",
+          "slug": "chalk-cliffs"
+        },
+        {
+          "name": "Fort Doon",
+          "mode": "3s/4s",
+          "slug": "fort-doon"
+        },
+        {
+          "name": "Holmgang",
+          "mode": "3s/4s",
+          "slug": "holmgang"
+        },
+        {
+          "name": "Infinite",
+          "mode": "3s/4s",
+          "slug": "infinite"
+        },
+        {
+          "name": "Lost Temple",
+          "mode": "3s/4s",
+          "slug": "lost-temple"
+        },
+        {
+          "name": "Mystery",
+          "mode": "3s/4s",
+          "slug": "mystery"
+        },
+        {
+          "name": "Seraph",
+          "mode": "3s/4s",
+          "slug": "seraph"
+        }
+      ],
+      "left": [
+        {
+          "name": "Acropolis",
+          "mode": "Solos/Doubles",
+          "slug": "acropolis"
+        },
+        {
+          "name": "Aqil",
+          "mode": "Solos/Doubles",
+          "slug": "aqil"
+        },
+        {
+          "name": "Ashfire",
+          "mode": "Solos/Doubles",
+          "slug": "ashfire"
+        },
+        {
+          "name": "Cascade",
+          "mode": "Solos/Doubles",
+          "slug": "cascade"
+        },
+        {
+          "name": "Impere",
+          "mode": "Solos/Doubles",
+          "slug": "impere"
+        },
+        {
+          "name": "Lucky Rush",
+          "mode": "Solos/Doubles",
+          "slug": "lucky-rush"
+        },
+        {
+          "name": "Polygon",
+          "mode": "Solos/Doubles",
+          "slug": "polygon"
+        },
+        {
+          "name": "Serenity",
+          "mode": "Solos/Doubles",
+          "slug": "serenity"
+        },
+        {
+          "name": "Enchanted",
+          "mode": "3s/4s",
+          "slug": "enchanted"
+        },
+        {
+          "name": "Extinction",
+          "mode": "3s/4s",
+          "slug": "extinction"
+        },
+        {
+          "name": "Invasion",
+          "mode": "3s/4s",
+          "slug": "invasion"
+        },
+        {
+          "name": "Jurassic",
+          "mode": "3s/4s",
+          "slug": "jurassic"
+        },
+        {
+          "name": "Sky Festival",
+          "mode": "3s/4s",
+          "slug": "sky-festival"
+        },
+        {
+          "name": "Stilted",
+          "mode": "3s/4s",
+          "slug": "stilted"
+        },
+        {
+          "name": "Stonekeep",
+          "mode": "3s/4s",
+          "slug": "stonekeep"
+        },
+        {
+          "name": "Unturned",
+          "mode": "3s/4s",
+          "slug": "unturned"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/41805106/"
+    },
+    {
+      "kind": "change",
+      "category": "playstyle",
+      "timestamp": "2026-07-13T00:43:06+00:00",
+      "date": "July 06, 2026",
+      "map": {
+        "name": "Rooftop",
+        "mode": "Solos/Doubles",
+        "slug": "rooftop"
+      },
+      "changes": [
+        {
+          "label": "Playstyle",
+          "old": "Long & Tactical",
+          "new": "Quick & Rushy"
+        }
+      ],
+      "id": "chg-8ccaa05dd51da222"
+    },
+    {
+      "kind": "change",
+      "category": "playstyle",
+      "timestamp": "2026-07-13T00:41:33+00:00",
+      "date": "July 06, 2026",
+      "map": {
+        "name": "Orbit",
+        "mode": "Solos/Doubles",
+        "slug": "orbit"
+      },
+      "changes": [
+        {
+          "label": "Playstyle",
+          "old": "Quick & Rushy",
+          "new": "Long & Tactical"
+        }
+      ],
+      "id": "chg-fc7db02d7ddfdcc8"
+    },
+    {
+      "kind": "change",
+      "category": "playstyle",
+      "timestamp": "2026-07-13T00:26:23+00:00",
+      "date": "July 06, 2026",
+      "map": {
+        "name": "Hollow",
+        "mode": "Solos/Doubles",
+        "slug": "hollow"
+      },
+      "changes": [
+        {
+          "label": "Playstyle",
+          "old": "Quick & Rushy",
+          "new": "Long & Tactical"
+        }
+      ],
+      "id": "chg-d23e53fd79c2423d"
+    },
+    {
+      "id": "3be4b22c657fd026",
+      "kind": "rotation",
+      "timestamp": "2026-07-07T02:02:57+00:00",
+      "date": "July 06, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Ambush",
+          "mode": "Solos/Doubles",
+          "slug": "ambush"
+        },
+        {
+          "name": "Glacier",
+          "mode": "Solos/Doubles",
+          "slug": "glacier"
+        },
+        {
+          "name": "Highland Peaks",
+          "mode": "Solos/Doubles",
+          "slug": "highland-peaks"
+        },
+        {
+          "name": "Pavilion",
+          "mode": "Solos/Doubles",
+          "slug": "pavilion"
+        },
+        {
+          "name": "Sanctum",
+          "mode": "Solos/Doubles",
+          "slug": "sanctum"
+        },
+        {
+          "name": "Solace",
+          "mode": "Solos/Doubles",
+          "slug": "solace"
+        },
+        {
+          "name": "Steampunk",
+          "mode": "Solos/Doubles",
+          "slug": "steampunk"
+        },
+        {
+          "name": "Toro",
+          "mode": "Solos/Doubles",
+          "slug": "toro"
+        },
+        {
+          "name": "Build Site",
+          "mode": "3s/4s",
+          "slug": "build-site"
+        },
+        {
+          "name": "Dreamgrove",
+          "mode": "3s/4s",
+          "slug": "dreamgrove"
+        },
+        {
+          "name": "Katsu",
+          "mode": "3s/4s",
+          "slug": "katsu"
+        },
+        {
+          "name": "Nostalgia",
+          "mode": "3s/4s",
+          "slug": "nostalgia"
+        },
+        {
+          "name": "Obelisk",
+          "mode": "3s/4s",
+          "slug": "obelisk"
+        },
+        {
+          "name": "Orchid",
+          "mode": "3s/4s",
+          "slug": "orchid"
+        },
+        {
+          "name": "Relic",
+          "mode": "3s/4s",
+          "slug": "relic"
+        },
+        {
+          "name": "Temple",
+          "mode": "3s/4s",
+          "slug": "temple"
+        }
+      ],
+      "left": [
+        {
+          "name": "Airshow",
+          "mode": "Solos/Doubles",
+          "slug": "airshow"
+        },
+        {
+          "name": "Apollo",
+          "mode": "Solos/Doubles",
+          "slug": "apollo"
+        },
+        {
+          "name": "Crogorm",
+          "mode": "Solos/Doubles",
+          "slug": "crogorm"
+        },
+        {
+          "name": "Ironclad",
+          "mode": "Solos/Doubles",
+          "slug": "ironclad"
+        },
+        {
+          "name": "Meso",
+          "mode": "Solos/Doubles",
+          "slug": "meso"
+        },
+        {
+          "name": "Mirage",
+          "mode": "Solos/Doubles",
+          "slug": "mirage"
+        },
+        {
+          "name": "Scorched Sands",
+          "mode": "Solos/Doubles",
+          "slug": "scorched-sands"
+        },
+        {
+          "name": "Yue",
+          "mode": "Solos/Doubles",
+          "slug": "yue"
+        },
+        {
+          "name": "Aquarium",
+          "mode": "3s/4s",
+          "slug": "aquarium"
+        },
+        {
+          "name": "Catalyst",
+          "mode": "3s/4s",
+          "slug": "catalyst"
+        },
+        {
+          "name": "Kubo",
+          "mode": "3s/4s",
+          "slug": "kubo"
+        },
+        {
+          "name": "Lectus",
+          "mode": "3s/4s",
+          "slug": "lectus"
+        },
+        {
+          "name": "Pool Party",
+          "mode": "3s/4s",
+          "slug": "pool-party"
+        },
+        {
+          "name": "Tigris",
+          "mode": "3s/4s",
+          "slug": "tigris"
+        },
+        {
+          "name": "Usagi",
+          "mode": "3s/4s",
+          "slug": "usagi"
+        },
+        {
+          "name": "Zen Plaza",
+          "mode": "3s/4s",
+          "slug": "zen-plaza"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/threads/bed-wars-map-rotation-log.4441812/post-41791326"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Atlas Prime",
+        "mode": "Solos/Doubles",
+        "slug": "atlas-prime"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "24",
+          "new": "25"
+        }
+      ],
+      "id": "chg-406ec4a6817fd4b3"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Echo Ruins",
+        "mode": "Solos/Doubles",
+        "slug": "echo-ruins"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-8ff48ab6c37d5a74"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Pantheon",
+        "mode": "Solos/Doubles",
+        "slug": "pantheon"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "38"
+        }
+      ],
+      "id": "chg-7d8a9cc7e826e183"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Station",
+        "mode": "Solos/Doubles",
+        "slug": "station"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "50",
+          "new": "51"
+        }
+      ],
+      "id": "chg-d4b047bfa59d6c34"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lasagne",
+        "mode": "3s/4s",
+        "slug": "lasagne"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-19d9487eb508e4c2"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Manor Royale",
+        "mode": "3s/4s",
+        "slug": "manor-royale"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-9ab587e288b74dc6"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Shipment",
+        "mode": "3s/4s",
+        "slug": "shipment"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "34",
+          "new": "35"
+        }
+      ],
+      "id": "chg-5ba5db8b4e63f479"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Shipwreck",
+        "mode": "3s/4s",
+        "slug": "shipwreck"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "40",
+          "new": "41"
+        }
+      ],
+      "id": "chg-d7c95c80bc413e4e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Acropolis",
+        "mode": "Solos/Doubles",
+        "slug": "acropolis"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "38",
+          "new": "39"
+        }
+      ],
+      "id": "chg-8d068e975afb6a54"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Aetius",
+        "mode": "Solos/Doubles",
+        "slug": "aetius"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-c233caa4311ce307"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Airshow",
+        "mode": "Solos/Doubles",
+        "slug": "airshow"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "50",
+          "new": "51"
+        }
+      ],
+      "id": "chg-d74dba9e4e81aaa1"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Amazon",
+        "mode": "Solos/Doubles",
+        "slug": "amazon"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "41",
+          "new": "42"
+        }
+      ],
+      "id": "chg-b2cbceac2df576e7"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Ambush",
+        "mode": "Solos/Doubles",
+        "slug": "ambush"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-eafe9aabd448d814"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Apollo",
+        "mode": "Solos/Doubles",
+        "slug": "apollo"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "40",
+          "new": "41"
+        }
+      ],
+      "id": "chg-ae1ed69aa1c06763"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Aqil",
+        "mode": "Solos/Doubles",
+        "slug": "aqil"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "26"
+        }
+      ],
+      "id": "chg-842871eae2e17604"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Arcade",
+        "mode": "Solos/Doubles",
+        "slug": "arcade"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-cb5d3c7638dfbe44"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Arid",
+        "mode": "Solos/Doubles",
+        "slug": "arid"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-76fa1ffa029b2e32"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Ashfire",
+        "mode": "Solos/Doubles",
+        "slug": "ashfire"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "54",
+          "new": "55"
+        }
+      ],
+      "id": "chg-ccca18a6b14a71b8"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Babylon",
+        "mode": "Solos/Doubles",
+        "slug": "babylon"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "52",
+          "new": "53"
+        }
+      ],
+      "id": "chg-41009e4a05de62e8"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Bio-Hazard",
+        "mode": "Solos/Doubles",
+        "slug": "bio-hazard"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "34",
+          "new": "35"
+        }
+      ],
+      "id": "chg-8429e47ccd913d2b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Blossom",
+        "mode": "Solos/Doubles",
+        "slug": "blossom"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "24",
+          "new": "25"
+        }
+      ],
+      "id": "chg-d7a650aec817717d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Cascade",
+        "mode": "Solos/Doubles",
+        "slug": "cascade"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-28b9608f045d9e18"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Casita",
+        "mode": "Solos/Doubles",
+        "slug": "casita"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "33",
+          "new": "34"
+        }
+      ],
+      "id": "chg-e2c58cf1f54cf52e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Cliffside",
+        "mode": "Solos/Doubles",
+        "slug": "cliffside"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-ff07f63337da2920"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Crogorm",
+        "mode": "Solos/Doubles",
+        "slug": "crogorm"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "44",
+          "new": "45"
+        }
+      ],
+      "id": "chg-2a4bba94c446cac9"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Crypt",
+        "mode": "Solos/Doubles",
+        "slug": "crypt"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "51",
+          "new": "52"
+        }
+      ],
+      "id": "chg-4be8ade92b73b10b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Deadwood",
+        "mode": "Solos/Doubles",
+        "slug": "deadwood"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-e13bf6e53a8619bd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Dockyard",
+        "mode": "Solos/Doubles",
+        "slug": "dockyard"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-46f2921cca54e467"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Dragon Light",
+        "mode": "Solos/Doubles",
+        "slug": "dragon-light"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "41",
+          "new": "42"
+        }
+      ],
+      "id": "chg-4f34fc3c529e804c"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Dragonstar",
+        "mode": "Solos/Doubles",
+        "slug": "dragonstar"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-9776dfb8bbe1754d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Duye",
+        "mode": "Solos/Doubles",
+        "slug": "duye"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-e01fff5bb640387d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Gateway",
+        "mode": "Solos/Doubles",
+        "slug": "gateway"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "41",
+          "new": "42"
+        }
+      ],
+      "id": "chg-f8b350d93d31d45d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Glacier",
+        "mode": "Solos/Doubles",
+        "slug": "glacier"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-c496b0cb85dbe988"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Harvest",
+        "mode": "Solos/Doubles",
+        "slug": "harvest"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "23",
+          "new": "24"
+        }
+      ],
+      "id": "chg-f3236bd2bb41969a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Highland Peaks",
+        "mode": "Solos/Doubles",
+        "slug": "highland-peaks"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-c99cfc0bb0bca9cc"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Hollow",
+        "mode": "Solos/Doubles",
+        "slug": "hollow"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-b4c9b40aa81ae911"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Impere",
+        "mode": "Solos/Doubles",
+        "slug": "impere"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "38"
+        }
+      ],
+      "id": "chg-48636433a880956b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Ironclad",
+        "mode": "Solos/Doubles",
+        "slug": "ironclad"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "32",
+          "new": "33"
+        }
+      ],
+      "id": "chg-d823405fb426539f"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Keep",
+        "mode": "Solos/Doubles",
+        "slug": "keep"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-a8a46fe3ab062bbf"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lighthouse",
+        "mode": "Solos/Doubles",
+        "slug": "lighthouse"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "51",
+          "new": "52"
+        }
+      ],
+      "id": "chg-75f1402df4a08d6c"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lightstone",
+        "mode": "Solos/Doubles",
+        "slug": "lightstone"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "43",
+          "new": "44"
+        }
+      ],
+      "id": "chg-60a3c7007ea2a426"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lotus",
+        "mode": "Solos/Doubles",
+        "slug": "lotus"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-ea8d87d6ffd303b3"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lucky Rush",
+        "mode": "Solos/Doubles",
+        "slug": "lucky-rush"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "26",
+          "new": "27"
+        }
+      ],
+      "id": "chg-d065c08b8c68248e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Meso",
+        "mode": "Solos/Doubles",
+        "slug": "meso"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-3fc3ae6d6bf315a1"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Mirage",
+        "mode": "Solos/Doubles",
+        "slug": "mirage"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "42",
+          "new": "43"
+        }
+      ],
+      "id": "chg-2ee99e4304e2f177"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Nebuc",
+        "mode": "Solos/Doubles",
+        "slug": "nebuc"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "33",
+          "new": "34"
+        }
+      ],
+      "id": "chg-10b67e27b47c97ee"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Orbit",
+        "mode": "Solos/Doubles",
+        "slug": "orbit"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "39",
+          "new": "40"
+        }
+      ],
+      "id": "chg-84910ff387db2aae"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Orchestra",
+        "mode": "Solos/Doubles",
+        "slug": "orchestra"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "39",
+          "new": "40"
+        }
+      ],
+      "id": "chg-8a7281712a3ca491"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Pavilion",
+        "mode": "Solos/Doubles",
+        "slug": "pavilion"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-065b4e7e3c8901e5"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Pernicious",
+        "mode": "Solos/Doubles",
+        "slug": "pernicious"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-668c06ab4093264c"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Playground",
+        "mode": "Solos/Doubles",
+        "slug": "playground"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "47",
+          "new": "48"
+        }
+      ],
+      "id": "chg-c21355846a4a713e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Polygon",
+        "mode": "Solos/Doubles",
+        "slug": "polygon"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "26",
+          "new": "27"
+        }
+      ],
+      "id": "chg-5132c419da0bc280"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Rooftop",
+        "mode": "Solos/Doubles",
+        "slug": "rooftop"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-5542a7992d5257c3"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Rooted",
+        "mode": "Solos/Doubles",
+        "slug": "rooted"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-a8d97a7c349b27a0"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Sanctum",
+        "mode": "Solos/Doubles",
+        "slug": "sanctum"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "32",
+          "new": "33"
+        }
+      ],
+      "id": "chg-cd00022d00e93bef"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Scorched Sands",
+        "mode": "Solos/Doubles",
+        "slug": "scorched-sands"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "38"
+        }
+      ],
+      "id": "chg-7adf9b58acdfa037"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Serenity",
+        "mode": "Solos/Doubles",
+        "slug": "serenity"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-aad979f4c7164d0a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Siege",
+        "mode": "Solos/Doubles",
+        "slug": "siege"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-97159e34367990fd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Silver Birch",
+        "mode": "Solos/Doubles",
+        "slug": "silver-birch"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "41",
+          "new": "42"
+        }
+      ],
+      "id": "chg-a98e52c8fb51812c"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Sky Rise",
+        "mode": "Solos/Doubles",
+        "slug": "sky-rise"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-bc0bf8a301401c13"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Slumber",
+        "mode": "Solos/Doubles",
+        "slug": "slumber"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-f511854804484860"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Snails",
+        "mode": "Solos/Doubles",
+        "slug": "snails"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "26",
+          "new": "27"
+        }
+      ],
+      "id": "chg-0c87eb389f454022"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Solace",
+        "mode": "Solos/Doubles",
+        "slug": "solace"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "38"
+        }
+      ],
+      "id": "chg-07d484df4cd760c6"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Speedway",
+        "mode": "Solos/Doubles",
+        "slug": "speedway"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-8d9475ff52bbbc5d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Steampunk",
+        "mode": "Solos/Doubles",
+        "slug": "steampunk"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-1b3344c6ba990003"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Toro",
+        "mode": "Solos/Doubles",
+        "slug": "toro"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-d34aedafbee33a87"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Tuzi",
+        "mode": "Solos/Doubles",
+        "slug": "tuzi"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-4e275ed0df67c7fb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Urban Plaza",
+        "mode": "Solos/Doubles",
+        "slug": "urban-plaza"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-2da35c37627b439b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Vigilante",
+        "mode": "Solos/Doubles",
+        "slug": "vigilante"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "26"
+        }
+      ],
+      "id": "chg-c0264044b27a81f2"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Waterfall",
+        "mode": "Solos/Doubles",
+        "slug": "waterfall"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "43",
+          "new": "44"
+        }
+      ],
+      "id": "chg-1071e3e57dfd20bc"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Yue",
+        "mode": "Solos/Doubles",
+        "slug": "yue"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-8c2ee31ce53d9f7e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Zarzul",
+        "mode": "Solos/Doubles",
+        "slug": "zarzul"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-1f13980e8b2dd45b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Antenna",
+        "mode": "3s/4s",
+        "slug": "antenna"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "26",
+          "new": "27"
+        }
+      ],
+      "id": "chg-e9399227115d33c1"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Aquarium",
+        "mode": "3s/4s",
+        "slug": "aquarium"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "45",
+          "new": "46"
+        }
+      ],
+      "id": "chg-66a8a2e7ef0e2f21"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Archway",
+        "mode": "3s/4s",
+        "slug": "archway"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-4b9567ca0a2e94a8"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Artemis",
+        "mode": "3s/4s",
+        "slug": "artemis"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-b3a0033754625da2"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Ashore",
+        "mode": "3s/4s",
+        "slug": "ashore"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-445f64584aa20a42"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Boletum",
+        "mode": "3s/4s",
+        "slug": "boletum"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "26",
+          "new": "27"
+        }
+      ],
+      "id": "chg-2c331258686085f3"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Build Site",
+        "mode": "3s/4s",
+        "slug": "build-site"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "34",
+          "new": "35"
+        }
+      ],
+      "id": "chg-ab74dffe88709ecb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Carapace",
+        "mode": "3s/4s",
+        "slug": "carapace"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-308edfe98afe30b6"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Catalyst",
+        "mode": "3s/4s",
+        "slug": "catalyst"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "38"
+        }
+      ],
+      "id": "chg-af511adf67b6c526"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Chained",
+        "mode": "3s/4s",
+        "slug": "chained"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-e44ab7106de7bf4b"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Chalk Cliffs",
+        "mode": "3s/4s",
+        "slug": "chalk-cliffs"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "38",
+          "new": "39"
+        }
+      ],
+      "id": "chg-571a678ed96ad46d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Daolong",
+        "mode": "3s/4s",
+        "slug": "daolong"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "26"
+        }
+      ],
+      "id": "chg-ddbb5c6ead5665c6"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Deposit",
+        "mode": "3s/4s",
+        "slug": "deposit"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "26"
+        }
+      ],
+      "id": "chg-8102437ec668b894"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Dreamgrove",
+        "mode": "3s/4s",
+        "slug": "dreamgrove"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-6b19e053b78900f6"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Eastwood",
+        "mode": "3s/4s",
+        "slug": "eastwood"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "48",
+          "new": "49"
+        }
+      ],
+      "id": "chg-b3959734b025a472"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Enchanted",
+        "mode": "3s/4s",
+        "slug": "enchanted"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-f5635f8224324000"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Extinction",
+        "mode": "3s/4s",
+        "slug": "extinction"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-ccb376ad8dec4681"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Fang Outpost",
+        "mode": "3s/4s",
+        "slug": "fang-outpost"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "33",
+          "new": "34"
+        }
+      ],
+      "id": "chg-a4894be0b077ffce"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Fort Doon",
+        "mode": "3s/4s",
+        "slug": "fort-doon"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "98",
+          "new": "99"
+        }
+      ],
+      "id": "chg-139f4c6db7326d1a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Frogiton",
+        "mode": "3s/4s",
+        "slug": "frogiton"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-2d6582c4db3317db"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Graveship",
+        "mode": "3s/4s",
+        "slug": "graveship"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "39",
+          "new": "40"
+        }
+      ],
+      "id": "chg-8c86b106f00ad923"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Harvesting",
+        "mode": "3s/4s",
+        "slug": "harvesting"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "29",
+          "new": "30"
+        }
+      ],
+      "id": "chg-5df485eaed7d2161"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Holmgang",
+        "mode": "3s/4s",
+        "slug": "holmgang"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "37",
+          "new": "38"
+        }
+      ],
+      "id": "chg-ec937ce5bd8afea7"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Horizon",
+        "mode": "3s/4s",
+        "slug": "horizon"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-401c62d059eb0046"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Infinite",
+        "mode": "3s/4s",
+        "slug": "infinite"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "22",
+          "new": "23"
+        }
+      ],
+      "id": "chg-3ff11faecedc9901"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Invasion",
+        "mode": "3s/4s",
+        "slug": "invasion"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "40",
+          "new": "41"
+        }
+      ],
+      "id": "chg-a37e803fc47589fb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Jurassic",
+        "mode": "3s/4s",
+        "slug": "jurassic"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-ac8f121e5208fcfd"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Katsu",
+        "mode": "3s/4s",
+        "slug": "katsu"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-80bcf61a3be8c4d3"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Kubo",
+        "mode": "3s/4s",
+        "slug": "kubo"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-1837c5314b08296a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lectus",
+        "mode": "3s/4s",
+        "slug": "lectus"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-092989b8fb958a43"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Lost Temple",
+        "mode": "3s/4s",
+        "slug": "lost-temple"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "24",
+          "new": "25"
+        }
+      ],
+      "id": "chg-84c4ee0072957086"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Mystery",
+        "mode": "3s/4s",
+        "slug": "mystery"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-d3d863ca0e450daf"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Nostalgia",
+        "mode": "3s/4s",
+        "slug": "nostalgia"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-f7d61b82ffcd8fc9"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Obelisk",
+        "mode": "3s/4s",
+        "slug": "obelisk"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "55",
+          "new": "56"
+        }
+      ],
+      "id": "chg-2bfb52a1dd59fb8a"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Orchid",
+        "mode": "3s/4s",
+        "slug": "orchid"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "22",
+          "new": "23"
+        }
+      ],
+      "id": "chg-42fe73565eda8652"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Paladin",
+        "mode": "3s/4s",
+        "slug": "paladin"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "35",
+          "new": "36"
+        }
+      ],
+      "id": "chg-ca60a9613848c853"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Paradox",
+        "mode": "3s/4s",
+        "slug": "paradox"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "25",
+          "new": "26"
+        }
+      ],
+      "id": "chg-e00fbc648e0a46ae"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Pharaoh",
+        "mode": "3s/4s",
+        "slug": "pharaoh"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "31",
+          "new": "32"
+        }
+      ],
+      "id": "chg-5f5ff20d4f4415ae"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Planet 98",
+        "mode": "3s/4s",
+        "slug": "planet-98"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "59",
+          "new": "60"
+        }
+      ],
+      "id": "chg-ffbc096030866455"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Pool Party",
+        "mode": "3s/4s",
+        "slug": "pool-party"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "20",
+          "new": "21"
+        }
+      ],
+      "id": "chg-094256d1e7f3c924"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Raze",
+        "mode": "3s/4s",
+        "slug": "raze"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "27",
+          "new": "28"
+        }
+      ],
+      "id": "chg-2fe2975985f46150"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Relic",
+        "mode": "3s/4s",
+        "slug": "relic"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-799cf59e52f41620"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Rigged",
+        "mode": "3s/4s",
+        "slug": "rigged"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "19",
+          "new": "20"
+        }
+      ],
+      "id": "chg-b4bb730b04ca09bc"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Rise",
+        "mode": "3s/4s",
+        "slug": "rise"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "28",
+          "new": "29"
+        }
+      ],
+      "id": "chg-e2012e115399c846"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Sky Festival",
+        "mode": "3s/4s",
+        "slug": "sky-festival"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-15e3c354bcd81d16"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Stilted",
+        "mode": "3s/4s",
+        "slug": "stilted"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "23",
+          "new": "24"
+        }
+      ],
+      "id": "chg-2ad95043ba976d8d"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Stonekeep",
+        "mode": "3s/4s",
+        "slug": "stonekeep"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "41",
+          "new": "42"
+        }
+      ],
+      "id": "chg-3df4c1a4ff69a0bb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Swashbuckle",
+        "mode": "3s/4s",
+        "slug": "swashbuckle"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-6100816187201c6e"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Tengshe",
+        "mode": "3s/4s",
+        "slug": "tengshe"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "36",
+          "new": "37"
+        }
+      ],
+      "id": "chg-29a90b0adc9b5dbe"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Terminal",
+        "mode": "3s/4s",
+        "slug": "terminal"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "30",
+          "new": "31"
+        }
+      ],
+      "id": "chg-d75fe14962743803"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Tigris",
+        "mode": "3s/4s",
+        "slug": "tigris"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "33",
+          "new": "34"
+        }
+      ],
+      "id": "chg-c5a4456a663a9fcc"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Treenan",
+        "mode": "3s/4s",
+        "slug": "treenan"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "73",
+          "new": "74"
+        }
+      ],
+      "id": "chg-621d8d1fdd2dad43"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Unturned",
+        "mode": "3s/4s",
+        "slug": "unturned"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "38",
+          "new": "39"
+        }
+      ],
+      "id": "chg-b850fa6a43bcd144"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Usagi",
+        "mode": "3s/4s",
+        "slug": "usagi"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "32",
+          "new": "33"
+        }
+      ],
+      "id": "chg-5a7dc5f1247765ac"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Whiskers",
+        "mode": "3s/4s",
+        "slug": "whiskers"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "22",
+          "new": "23"
+        }
+      ],
+      "id": "chg-b8a5f3e4e94dc1eb"
+    },
+    {
+      "kind": "change",
+      "category": "build_limit",
+      "timestamp": "2026-07-06T10:33:49+00:00",
+      "date": "June 29, 2026",
+      "map": {
+        "name": "Zen Plaza",
+        "mode": "3s/4s",
+        "slug": "zen-plaza"
+      },
+      "changes": [
+        {
+          "label": "Y Range",
+          "old": "26",
+          "new": "27"
+        }
+      ],
+      "id": "chg-9043858910fdeebf"
+    }
+  ]
+}
