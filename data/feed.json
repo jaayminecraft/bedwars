@@ -1,7 +1,181 @@
 {
   "version": 1,
-  "latest_rotation": "November 16, 2026",
+  "latest_rotation": "November 23, 2026",
   "events": [
+    {
+      "id": "7fb9c4d782f2f2af",
+      "kind": "rotation",
+      "timestamp": "2026-11-23T17:53:45+00:00",
+      "date": "November 23, 2026",
+      "event": "",
+      "entered": [
+        {
+          "name": "Echo Ruins",
+          "mode": "Solos/Doubles",
+          "slug": "echo-ruins"
+        },
+        {
+          "name": "Station",
+          "mode": "Solos/Doubles",
+          "slug": "station"
+        },
+        {
+          "name": "Aetius",
+          "mode": "Solos/Doubles",
+          "slug": "aetius"
+        },
+        {
+          "name": "Arcade",
+          "mode": "Solos/Doubles",
+          "slug": "arcade"
+        },
+        {
+          "name": "Arid",
+          "mode": "Solos/Doubles",
+          "slug": "arid"
+        },
+        {
+          "name": "Impere",
+          "mode": "Solos/Doubles",
+          "slug": "impere"
+        },
+        {
+          "name": "Silver Birch",
+          "mode": "Solos/Doubles",
+          "slug": "silver-birch"
+        },
+        {
+          "name": "Terraced",
+          "mode": "Solos/Doubles",
+          "slug": "terraced"
+        },
+        {
+          "name": "Boletum",
+          "mode": "3s/4s",
+          "slug": "boletum"
+        },
+        {
+          "name": "Extinction",
+          "mode": "3s/4s",
+          "slug": "extinction"
+        },
+        {
+          "name": "Jurassic",
+          "mode": "3s/4s",
+          "slug": "jurassic"
+        },
+        {
+          "name": "Lost Temple",
+          "mode": "3s/4s",
+          "slug": "lost-temple"
+        },
+        {
+          "name": "Mystery",
+          "mode": "3s/4s",
+          "slug": "mystery"
+        },
+        {
+          "name": "Seraph",
+          "mode": "3s/4s",
+          "slug": "seraph"
+        },
+        {
+          "name": "Stilted",
+          "mode": "3s/4s",
+          "slug": "stilted"
+        },
+        {
+          "name": "Usagi",
+          "mode": "3s/4s",
+          "slug": "usagi"
+        }
+      ],
+      "left": [
+        {
+          "name": "Lasagne",
+          "mode": "3s/4s",
+          "slug": "lasagne"
+        },
+        {
+          "name": "Shipment",
+          "mode": "3s/4s",
+          "slug": "shipment"
+        },
+        {
+          "name": "Acropolis",
+          "mode": "Solos/Doubles",
+          "slug": "acropolis"
+        },
+        {
+          "name": "Ashfire",
+          "mode": "Solos/Doubles",
+          "slug": "ashfire"
+        },
+        {
+          "name": "Cascade",
+          "mode": "Solos/Doubles",
+          "slug": "cascade"
+        },
+        {
+          "name": "Gateway",
+          "mode": "Solos/Doubles",
+          "slug": "gateway"
+        },
+        {
+          "name": "Lighthouse",
+          "mode": "Solos/Doubles",
+          "slug": "lighthouse"
+        },
+        {
+          "name": "Playground",
+          "mode": "Solos/Doubles",
+          "slug": "playground"
+        },
+        {
+          "name": "Urban Plaza",
+          "mode": "Solos/Doubles",
+          "slug": "urban-plaza"
+        },
+        {
+          "name": "Waterfall",
+          "mode": "Solos/Doubles",
+          "slug": "waterfall"
+        },
+        {
+          "name": "Artemis",
+          "mode": "3s/4s",
+          "slug": "artemis"
+        },
+        {
+          "name": "Haven",
+          "mode": "3s/4s",
+          "slug": "haven"
+        },
+        {
+          "name": "Paladin",
+          "mode": "3s/4s",
+          "slug": "paladin"
+        },
+        {
+          "name": "Rise",
+          "mode": "3s/4s",
+          "slug": "rise"
+        },
+        {
+          "name": "Sky Festival",
+          "mode": "3s/4s",
+          "slug": "sky-festival"
+        },
+        {
+          "name": "Unturned",
+          "mode": "3s/4s",
+          "slug": "unturned"
+        }
+      ],
+      "source_title": "Bed Wars Map Rotation Log",
+      "source_url": "https://hypixel.net/posts/42010555/",
+      "rotation_number": 218
+    },
     {
       "id": "a76fe8d6fe09dc58",
       "kind": "rotation",
@@ -173,8 +347,7 @@
         }
       ],
       "source_title": "Bed Wars Map Rotation Log",
-      "source_url": "https://hypixel.net/posts/42002183/",
-      "rotation_number": 217
+      "source_url": "https://hypixel.net/posts/42002183/"
     },
     {
       "id": "3735f4c77f4caa0d",
@@ -6815,25 +6988,6 @@
         }
       ],
       "id": "chg-b8a5f3e4e94dc1eb"
-    },
-    {
-      "kind": "change",
-      "category": "build_limit",
-      "timestamp": "2026-07-06T10:33:49+00:00",
-      "date": "June 29, 2026",
-      "map": {
-        "name": "Zen Plaza",
-        "mode": "3s/4s",
-        "slug": "zen-plaza"
-      },
-      "changes": [
-        {
-          "label": "Y Range",
-          "old": "26",
-          "new": "27"
-        }
-      ],
-      "id": "chg-9043858910fdeebf"
     }
   ]
 }
