@@ -2360,8 +2360,8 @@
   }
 
   const RESKIN_WIKI_LINKS = {
-    'Orientwood': 'https://hypixel.fandom.com/wiki/Orientwood_(Bed_Wars)',
-    'Lunarhouse': 'https://hypixel.fandom.com/wiki/Lunarhouse_(Bed_Wars)'
+    'Orientwood': 'https://hypixel.minecraft.wiki/w/Orientwood_(Bed_Wars)',
+    'Lunarhouse': 'https://hypixel.minecraft.wiki/w/Lunarhouse_(Bed_Wars)'
   };
 
   function mapTypeLabel(scope){
